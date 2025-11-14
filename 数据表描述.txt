@@ -1,0 +1,332 @@
+
+        "name": "ods_sc01_ntjt_zhgr_heat_station_inst_data",
+        "describe": "换热站实时数据表。主键为stn_id。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值、正常范围最小值（如有）、正常范围最大值（如有）
+        stn_id int 站点ID 2012
+        data_time datetime 数据时间 2024-11-01 00:00:04
+        data_id bigint 数据ID自增 1199882231
+        data_storage_time datetime 加载数据的时间 2024-11-01 00:00:44
+        stn_prim_sup_temp decimal 一次网供水温度 50.0200 30 100
+        stn_prim_ret_temp decimal 一次网回水温度 39.5700 20 90
+        stn_prim_sup_bdirt_press decimal 一次网供水污前压力 0.3891 0.01 1
+        stn_prim_sup_adirt_press decimal 一次网供水污后压力
+        stn_prim_ret_press decimal 一次网回水压力 0.3880 0.01 1
+        stn_prim_sup_htemp decimal 一次网热表供水温度 20.0200 30 100
+        stn_prim_ret_htemp decimal 一次网热表回水温度 19.5700 20 90
+        stn_prim_inst_hflow decimal 一次网热表瞬时流量 0.0000 1 500
+        stn_prim_total_hflow decimal 一次网热表累计流量 1032588.0000
+        stn_prim_inst_hheat decimal 一次网热表瞬时热量 0.0000 1 50
+        stn_prim_total_hheat decimal 一次网热表累计热量 159746.4531
+        stn_eney_sup_temp decimal 新能源供水温度 
+        stn_eney_ret_temp decimal 新能源回水温度 
+        stn_eney_sup_bdirt_press decimal 新能源供水污前压力 0.0033
+        stn_eney_sup_adirt_press decimal 新能源供水污后压力 0.0132
+        stn_eney_ret_press decimal 新能源回水压力 0.0000
+        stn_eney_sup_htemp decimal 新能源热表供水温度 21.3200
+        stn_eney_ret_htemp decimal 新能源热表回水温度 21.0800
+        stn_eney_inst_hflow decimal 新能源热表瞬时流量 0.0000
+        stn_eney_total_hflow decimal 新能源热表累计流量 601263.3125
+        stn_eney_inst_hheat decimal 新能源热表瞬时热量 0.0000
+        stn_eney_total_hheat decimal 新能源热表累计热量 45252.4883
+        stn_inst_elec decimal 瞬时用电功率 129987.6016
+        stn_total_elec decimal 累计用电电度 129987.6016
+        plant1_id bigint 机组1ID 201201
+        stn1_set_elec_valve_open decimal 电动调节阀给定开度1 71.3000 0 100
+        stn1_inst_elec_valve_open decimal 电动调节阀实际开度1 71.3537 0 100
+        stn1_seco_sup_temp decimal 二次网供水温度1 40.8000 30 80
+        stn1_seco_ret_temp decimal 二次网回水温度1 30.9000 20 70
+        stn1_seco_sup_press decimal 二次网供水压力1 0.3972 0.01 1
+        stn1_seco_ret_bdirt_press decimal 二次网回水污前压力1 0.3543 0.01 1
+        stn1_seco_ret_adirt_press decimal 二次网回水污后压力1 
+        stn1_seco_sup_htemp decimal 二次网热表供水温度1 49.6000 30 80
+        stn1_seco_ret_htemp decimal 二次网热表回水温度1 39.8800 20 70
+        stn1_seco_inst_hflow decimal 二次网热表瞬时流量1 351.3170 1 500
+        stn1_seco_total_hflow decimal 二次网热表累计流量1 1489721.0000
+        stn1_seco_inst_hheat decimal 二次网热表瞬时热量1 0.2520 1 50
+        stn1_seco_total_hheat decimal 二次网热表累计热量1 28709.3711
+        stn1_seco_repl_inst_flow decimal 补水瞬时流量1 0.0000
+        stn1_seco_repl_total_flow decimal 补水累计流量1 17888.0000
+        plant2_id bigint 机组2ID 
+        stn2_set_elec_valve_open decimal 电动调节阀给定开度2 0 100
+        stn2_inst_elec_valve_open decimal 电动调节阀实际开度2 0 100
+        stn2_seco_sup_temp decimal 二次网供水温度2 30 80
+        stn2_seco_ret_temp decimal 二次网回水温度2 20 70
+        stn2_seco_sup_press decimal 二次网供水压力2 0.01 1
+        stn2_seco_ret_bdirt_press decimal 二次网回水污前压力2 0.01 1
+        stn2_seco_ret_adirt_press decimal 二次网回水污后压力2 
+        stn2_seco_sup_htemp decimal 二次网热表供水温度2 30 80
+        stn2_seco_ret_htemp decimal 二次网热表回水温度2 20 70
+        stn2_seco_inst_hflow decimal 二次网热表瞬时流量2 1 500
+        stn2_seco_total_hflow decimal 二次网热表累计流量2 
+        stn2_seco_inst_hheat decimal 二次网热表瞬时热量2 1 50
+        stn2_seco_total_hheat decimal 二次网热表累计热量2 
+        stn2_seco_repl_inst_flow decimal 补水瞬时流量2 
+        stn2_seco_repl_total_flow decimal 补水累计流量2 
+        plant3_id bigint 机组3ID 
+        stn3_set_elec_valve_open decimal 电动调节阀给定开度3 0 100
+        stn3_inst_elec_valve_open decimal 电动调节阀实际开度3 0 100
+        stn3_seco_sup_temp decimal 二次网供水温度3 30 80
+        stn3_seco_ret_temp decimal 二次网回水温度3 20 70
+        stn3_seco_sup_press decimal 二次网供水压力3 0.01 1
+        stn3_seco_ret_bdirt_press decimal 二次网回水污前压力3 0.01 1
+        stn3_seco_ret_adirt_press decimal 二次网回水污后压力3 
+        stn3_seco_sup_htemp decimal 二次网热表供水温度3 30 80
+        stn3_seco_ret_htemp decimal 二次网热表回水温度3 20 70
+        stn3_seco_inst_hflow decimal 二次网热表瞬时流量3 1 500
+        stn3_seco_total_hflow decimal 二次网热表累计流量3 
+        stn3_seco_inst_hheat decimal 二次网热表瞬时热量3 1 50
+        stn3_seco_total_hheat decimal 二次网热表累计热量3 
+        stn3_seco_repl_inst_flow decimal 补水瞬时流量3 
+        stn3_seco_repl_total_flow decimal 补水累计流量3 
+ """
+    },#heat_station_inst_data,换热站实时数据表
+    {
+        "name": "ods_sc01_ntjt_zhgr_heat_station_info",
+        "describe": "换热站业务信息表。主键为id。heat_station_info.stn_id=heat_station_inst_data.stn_id",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        id integer 自增整数类型，用于唯一标识记录 2024
+        stn_name character varying 换热站名称 红星天铂八地块站，换热站名称可以近似的认为是小区名称
+        stn_state character 换热站状态（0：在运，1：停运，2：维修） 0
+        plan_num integer 机组数量 2
+        heat_method character 采暖方式 (0: 地暖 / 1: 挂暖 / 2: 中央空调 / 3: 挂暖 + 中央空调) 0
+        build_type character 站点性质 (0: 居民 / 1: 公建 / 2: 医院 / 3: 学校 / 4: 工业) 0
+        site_type character 站点类型（0：监控站，1：人工站，2：自管站） 0
+        heat_area numeric 供热面积（默认） 41330.80
+        state_time timestamp without time zone 状态变更时间
+        build_time timestamp without time zone 建设时间 83324.80
+        mesh_area numeric 入网面积 (建筑面积)
+        trans_area numeric 传热面积
+        actual_area numeric 实际供暖面积
+        belong_unit character varying 所属单位 商河恒泰供热公司
+        longitude numeric 经度 117.151121
+        latitude numeric 纬度 37.293410
+        charge_person character varying 负责人 燕景浩
+        contact_info character varying 联系人 15624072319
+        site_addr character varying 热站地址
+        create_by character varying
+        create_time timestamp without time zone 2024-10-14 21:57:17.029802
+        update_by character varying
+        update_time timestamp without time zone
+        is_delete character 0：未删除 1：已删除 0
+        remark character varying
+        distance numeric 距离（拓扑距离）真实管网距离
+        stn_id integer 实时表中对应的换热站 id 2024
+        heatstation_code character varying ERP 中换热站唯一编码 H2023252
+        source_num integer 热源数量 1
+        valve_num integer 阀门数量 2
+        source_type character 热源形式：(0: 地热井 / 风冷螺杆机 / 1: 空气源热泵 / 2: 燃气锅炉 / 3: 燃空气源热泵 / 4: 水网 / 5: 基汽 / 6: 综合能源) 4
+        energy_save_type character 节能类型：(0: 非节能 / 1: 一步节能 / 2: 二步节能 / 3: 三步节能 / 4: 四步节能) 4
+        serial_num integer 站点排序
+    """
+    },#heat_station_info,换热站信息表。静态表
+
+       {
+        "name": "ods_sc01_ntjt_zhgr_heat_source_inst_data",
+        "describe": "热源实时数据表。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值、正常范围最小值（如有）、正常范围最大值（如有）
+        src_id	int	热源ID 2
+        data_time	datetime	采集时间  2025-01-01 00:00:50
+        data_id	bigint	数据ID自增  86
+        data_storage_time	datetime	落库时间
+        src_repl_inst_flow	decimal	瞬时用水量
+        src_repl_total_flow	decimal	累计用水量
+        src_inst_elec	decimal	瞬时电功率
+        src_total_elec	decimal	累计用电量
+        src_run_load	decimal	运行负荷
+        src_sup_temp	decimal	供水温度  54 40 120
+        src_sup_press	decimal	供水压力  1 0.01 1
+        src_sup_sup_htemp	decimal	供水热表供温  54 40 120
+        src_sup_ret_htemp	decimal	供水热表回温 30 100
+        src_sup_inst_hflow	decimal	热表供水瞬时流量  2779 1 3500
+        src_sup_total_hflow	decimal	热表供水累计流量  2481597
+        src_sup_inst_hheat	decimal	热表供水瞬时热量  162 1 600
+        src_sup_total_hheat	decimal	热表供水累计热量  714622
+        src_ret_temp	decimal	回水温度  38 30 100
+        src_ret_press	decimal	回水压力  0 0.01 1
+        src_ret_sup_htemp	decimal	回水热表供温  
+        src_ret_ret_htemp	decimal	回水热表回温  39
+        src_ret_inst_hflow	decimal	回水瞬时流量  2779
+        src_ret_total_hflow	decimal	回水累计流量  2377179
+        src_ret_inst_hheat	decimal	回水瞬时热量  181
+        src_ret_total_hheat	decimal	回水累计热量  731239
+        src_ret_set_elec_valve_open	decimal	回水阀门设定开度
+        src_ret_inst_elec_valve_open	decimal	回水阀门实际开度
+        """
+
+    },#heat_source_inst_data,热源ID
+  
+      {
+        "name": "ods_sc01_ntjt_zhgr_heat_weather_info_log",
+        "describe": "商河县历史天气数据表。包含商河地区每日每小时的天气情况。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        data_time                 datetime  时间                                   2024-11-17 00:00:00  
+        data_id                   bigint   数据ID自增                              40641  
+        temp                      decimal  气温                                    18.40  
+        solar                     decimal  太阳辐射                                120  
+        longitude                 decimal  经度                                    117.200000  
+        latitude                  decimal  纬度                                    37.330000.00  
+        altitude                  decimal  海拔                                    50  
+        rh                        decimal  相对湿度                                62.40 
+        wind_dir                  decimal  风向                                    171.10  
+        wind_speed                decimal  风速                                    2.30  
+        air_pressure              decimal  气压                                    1015.00  
+        rain                      decimal  降水量(mm)                              2.00  
+        cloudiness_all            decimal  总云量(%)                               60.00  
+        cloudiness_low            decimal  低云量(%)                               30.00 
+        weather_code              int      "气天气现象(代码)0:晴,1:多云,2:阴,7:小雨  0  
+        weather_desc              varchar  "天气现象(描述)0:晴,1:多云,2:阴,7:小雨    晴  
+        rh_max                    decimal  最大相对湿度(%)                         75.00
+        rh_min                    decimal  最小相对湿度(%)                         60.00
+        """
+    },
+    {
+        "name": "ods_sc01_ntjt_zhgr_heat_source_info",
+        "describe": "供热热源厂信息表。信息为商河热源厂的相关信息。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        id                 int          数据主键ID自增                                                  1  
+        src_name           varchar      热源名称                                                       商河恒泰热源厂  
+        src_id             int          实时数据表中的热源ID                                            1  
+        src_type           bpchar       热源类型(0：燃煤锅炉1：燃气锅炉2：电锅炉3：热电联产4：能源站)      0  
+        src_state          bpchar       热源状态(0：在运，1：停运，2：维修)                              0  
+        state_time         timestamp    状态变更时间                                                   2024-10-08 17:34:23
+        build_time         timestamp    建设时间                                                       2024-09-26 00:00:00
+        heat_area          numeric      供热面积                                                       3300000.00
+        mesh_area          numeric      入网面积                                                       3300000.00     
+        design_heat        numeric      设计供热能力                                                   41.00
+        actual_heat        numeric      实际供热能力                                                   189.00
+        heat_price         numeric      热单价                                                         28.50
+        belong_unit        varchar      所属单位                                                       济南市商河恒泰供热有限公司
+        charge_person      varchar      负责人                                                         董作军
+        contact_info       varchar      联系人电话                                                     NULL
+        site_addr          varchar      地址                                                          NULL
+        create_by          varchar      信息创建人                                                     NULL
+        create_time        timestamp    信息创建时间                                                   2024-07-31 14:39:28 
+        update_by          varchar      信息更新人                                                     1
+        update_time        timestamp    信息更新时间                                                   2024-10-09 16:45:56 
+        is_delete          bpchar       是否删除(0：未删除, 1：已删除)                                  0
+        remark             varchar      备注                                                          NULL
+        longitude          numeric      经度                                                          117.138852
+        latitude           numeric      纬度                                                          37.293886
+        load_coefficient   numeric      负荷预测修正系数                                               1
+        """
+    },
+    {
+        "name": "ods_sc01_ntjt_zhgr_heat_heatpump_inst_data",
+        "describe": "热源厂热泵实时数据表。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        data_time	datetime	采集时间	2025/2/9 22:00:24
+        pump_id	varchar(10)	ID	2
+        data_id	bigint(20)	数据ID自增	3921074374
+        data_storage_time	datetime	Time when the data is loaded	2025/2/10 10:36:29
+        generator_smoke_out_temp	decimalv3(10, 4)	发生器_烟气出口温度	92.3
+        generator_gas_in_temp	decimalv3(10, 4)	发生器_燃气入口压力	0
+        generator_gas_in_elec_valve_open	decimalv3(10, 4)	发生器_燃气入口阀门开度	45
+        solution_in_temp	decimalv3(10, 4)	溶液板换_入口温度	41.3
+        solution_out_temp	decimalv3(10, 4)	溶液板换_出口温度	78
+        dilute_solution_set_frequency	decimalv3(10, 4)	稀溶液泵_频率给定	30
+        concentrated_solution_set_frequency	decimalv3(10, 4)	浓溶液泵_频率给定	42
+        condenser_temp	decimalv3(10, 4)	冷凝器_冷凝温度	50.5
+        evaporator_temp	decimalv3(10, 4)	蒸发器_蒸发温度	20.2
+        refrigerant_pump_set_frequency	decimalv3(10, 4)	冷剂泵_频率给定	38.9
+        heat_network_in_temp	decimalv3(10, 4)	热网水入口温度	36.8
+        heat_network_in_press	decimalv3(10, 4)	热网水入口压力	0.3999
+        heat_network_out_temp	decimalv3(10, 4)	热网水出口温度	48
+        heat_network_out_press	decimalv3(10, 4)	热网水出口压力	0.4663
+        spray_water_out_temp	decimalv3(10, 4)	喷淋水出口温度	40.1
+        spray_water_out_press	decimalv3(10, 4)	喷淋水出口压力	0.05
+        circulate_water_sup_htemp	decimalv3(10, 4)	循环水热表_供水温度	45.92
+        circulate_water_ret_htemp	decimalv3(10, 4)	循环水热表_回水温度	35.36
+        circulate_water_inst_hflow	decimalv3(10, 4)	循环水热表_瞬时流量	407.2
+        circulate_water_inst_hheat	decimalv3(10, 4)	循环水热表_瞬时热量	17.7182
+        circulate_water_total_hflow	decimalv3(12, 4)	循环水热表_累计流量	942597.125
+        circulate_water_total_hheat	decimalv3(12, 4)	循环水热表_累计热量	15903.1416
+        intermediary_water_sup_htemp	decimalv3(10, 4)	中介水热表_供水温度	36.8
+        intermediary_water_ret_htemp	decimalv3(10, 4)	中介水热表_回水温度	29.5
+        intermediary_water_inst_hflow	decimalv3(10, 4)	中介水热表_瞬时流量	0
+        intermediary_water_inst_hheat	decimalv3(10, 4)	中介水热表_瞬时热量	0
+        intermediary_water_total_hflow	decimalv3(12, 4)	中介水热表_累计流量	102646
+        intermediary_water_total_hheat	decimalv3(12, 4)	中介水热表_累计热量	3001
+        heatpump_total_gas	decimalv3(10, 2)	热泵耗气量	918179.94
+        oil_choke_pressure	decimalv3(10, 2)	阻油器压力	0
+        heatpump_inst_gas	decimalv3(10, 2)	热泵耗气量瞬时流量	278.18
+        """
+    },
+    {
+        "name": "ods_sc01_ntjt_zhgr_heat_boiler_inst_data",
+        "describe": "热源厂锅炉实时数据表。",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        data_time	datetime	采集时间	2024/9/23 22:06:37
+        blr_id	varchar(10)	锅炉ID	2
+        data_id	bigint(20)	数据ID自增	5194332224
+        data_storage_time	datetime	Time when the data is loaded	2024/12/3 16:58:55
+        blr_sup_temp	decimalv3(10, 4)	锅炉_供水温度	23.7
+        blr_sup_press	decimalv3(10, 4)	锅炉_供水压力	0.3424
+        blr_ret_temp	decimalv3(10, 4)	锅炉_回水温度	25.1
+        blr_ret_press	decimalv3(10, 4)	锅炉_回水压力	0.3469
+        blr_inst_flow	decimalv3(10, 4)	锅炉_供水瞬时流量	0
+        blr_total_hflow	decimalv3(12, 4)	锅炉_供水累计流量	461961.0938
+        blr_inst_heat	decimalv3(10, 4)	锅炉_供水热表瞬热	0
+        blr_total_heat	decimalv3(12, 4)	锅炉_供水热表累热	30951.9297
+        blr_gas_inst_flow	decimalv3(12, 4)	锅炉_燃气瞬时流量	0
+        blr_gas_total_hflow	decimalv3(12, 4)	锅炉_燃气累计流量	0
+        blr_pump_out_smoke_temp	decimalv3(10, 4)	锅炉_省煤气出口_热泵入口烟温	23
+        blr_pump_out_smoke_press	decimalv3(12, 4)	锅炉_省煤气出口_热泵入口烟压	0.0215
+        blr_out_smoke_temp	decimalv3(10, 4)	锅炉_锅炉出口_省煤器入口_烟温	163.3102
+        blr_out_smoke_press	decimalv3(10, 4)	锅炉_锅炉出口_省煤气入口_烟压	0.0331
+        blr_fan_out_smoke_temp	decimalv3(10, 4)	锅炉_风机_出口烟温	17.3
+        blr_fan_out_smoke_press	decimalv3(10, 4)	锅炉_风机_出口风压	0.076
+        blr_fan_gas_press	decimalv3(10, 4)	锅炉_风机_燃气压力	0
+        blr_fan_elec	decimalv3(10, 4)	锅炉_风机_电流	0
+        blr_front_container_temp	decimalv3(10, 4)	锅炉_前上集装箱温度	23.6
+        blr_back_container_temp	decimalv3(10, 4)	锅炉_后上集装箱温度	23.8
+        blr_economizer_in_smoke_temp	decimalv3(10, 4)	锅炉_省煤器_进口烟温	0
+        blr_economizer_in_smoke_press	decimalv3(10, 4)	锅炉_省煤器_进口烟压	0
+        blr_economizer_out_smoke_temp	decimalv3(10, 4)	锅炉_省煤器_出口烟温	23
+        blr_economizer_out_smoke_press	decimalv3(10, 4)	锅炉_省煤器_出口烟压	0.0215
+        blr_condenser_out_temp	decimalv3(10, 4)	锅炉_冷凝器_出水温度	23.3
+        blr_so2	decimalv3(10, 4)	锅炉_环保_出口SO2	0
+        blr_zkso2	decimalv3(10, 4)	锅炉_环保_出口SO2折算值	0
+        """
+    },
+    {
+        "name": "ods_sc01_ntjt_zhgr_heat_instruction_issue_detail",
+        "describe": "供热调控阀门下发指令表",
+        "detail": """
+        下面内容为：列名、数据类型、列描述、示例值
+        id	bigserial		134	
+        strategy_id	int8	算法推荐策略详情ID	2749	
+        strategy_version	varchar(14)		20241021184825	
+        cmd_guid	varchar(30)	与SCADA进行通信的唯一标识	FK1297994880152240142102001	
+        valve_id	varchar(60)	阀门ID	涌鑫花苑换热站.JZ1_DDFGD	
+        valve_open_issue	numeric(10, 2)	阀门开度-下发	24.65	
+        valve_is_work	bpchar(1)	阀门是否工作（0：未动作，1：已动作）		
+        valve_open_issue_inst	numeric(10, 2)	阀门开度-下发后的实际开度		
+        valve_open_issue_inst_time	timestamp	阀门开度-下发后的实际开度的时间		
+        issue_by	int4	下发人		
+        issue_time	timestamp	下发时间	2024/10/21 18:48:15	
+        issue_json	varchar(500)	下发JSON	{"cmdGuid":"FK1297994880152240142102001","code":"200","msg":"校验成功"}	
+        issue_result	bpchar(1)	下发结果：（0：失败，1：成功）	1	
+        issue_result_time	timestamp	下发结果时间	2024/10/21 18:48:15	
+        issue_result_json	varchar(500)	下发结果json		
+        issue_fail_reason	varchar(500)	下发失败的原因	校验成功	
+        feedback_time	timestamp	反馈时间		
+        feedback_result	bpchar(1)	反馈结果：（0：失败，1：成功）	0	
+        feedback_json	varchar(500)	反馈JSON		
+        create_by	int4			
+        create_time	timestamp		2024/10/21 18:42:48	
+        update_by	int4			
+        update_time	timestamp			
+        remark	varchar(500)			
+        stn_busi_id	int4		1020	
+        plant_busi_id	int4		102001	
+        send_id	int4		8	
+        """
+    }
+]
