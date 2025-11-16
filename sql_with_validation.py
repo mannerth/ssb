@@ -237,8 +237,8 @@ class DeepSeekTextToSQL:
         return validation_prompt
 
     def validate_sql(self, question, sql_query, max_retries=3):
-        time.sleep(0.1)
         """验证生成的SQL是否能正确解决问题"""
+        time.sleep(0.1)
         messages = [
             {"role": "system", "content": self.build_validation_prompt(question, sql_query)},
             {"role": "user", "content": "请评估这个SQL查询的质量。"}
