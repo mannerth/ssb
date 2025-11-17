@@ -92,7 +92,7 @@ def load_settings() -> AppSettings:
         start_row=_int_env("EXCEL_START_ROW", 2),
         start_col=_int_env("EXCEL_START_COL", 2),
         output_col=_int_env("EXCEL_OUTPUT_COL", 3),
-        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 25),
+        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 3),
         sheet_name=os.getenv("EXCEL_SHEET_NAME", "Sheet1"),
     )
     logging_cfg = LoggingConfig(
