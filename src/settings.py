@@ -1,3 +1,4 @@
+import logging
 import os
 from dataclasses import dataclass
 
@@ -31,12 +32,20 @@ class ExcelConfig:
 
 
 @dataclass
+class LoggingConfig:
+    log_dir: str
+    log_name: str
+    level: int
+
+
+@dataclass
 class AppSettings:
     llm: LLMConfig
     workflow: WorkflowConfig
     excel: ExcelConfig
     config_dir: str
     training_file_path: str
+    logging: LoggingConfig
 
 
 def _float_env(name: str, default: float) -> float:
@@ -51,6 +60,13 @@ def _int_env(name: str, default: int) -> int:
         return int(float(os.getenv(name, default)))
     except ValueError:
         return default
+
+
+def _log_level_env(name: str, default: str) -> int:
+    raw = os.getenv(name, default)
+    if raw.isdigit():
+        return int(raw)
+    return getattr(logging, raw.upper(), getattr(logging, default.upper(), logging.INFO))
 
 
 def load_settings() -> AppSettings:
@@ -79,11 +95,16 @@ def load_settings() -> AppSettings:
         num_questions=_int_env("EXCEL_NUM_QUESTIONS", 25),
         sheet_name=os.getenv("EXCEL_SHEET_NAME", "Sheet1"),
     )
+    logging_cfg = LoggingConfig(
+        log_dir=os.getenv("LOG_DIR", "logs"),
+        log_name=os.getenv("LOG_NAME", "validation"),
+        level=_log_level_env("LOG_LEVEL", "INFO"),
+    )
     return AppSettings(
         llm=llm,
         workflow=workflow,
         excel=excel,
         config_dir=os.getenv("APP_CONFIG_DIR", "config"),
         training_file_path=os.getenv("TRAINING_FILE", "算法训练集（75道问题及sql语句）.xlsx"),
+        logging=logging_cfg,
     )
-

@@ -47,3 +47,11 @@ python -m src.main
 - 若需单题调试，可仿照旧脚本调用 `workflow.generate_sql_with_validation(question)`。
 - 配置更��后可直接重新运行入口文件，无需修改其他模块。
 
+处理一个问题：
+1. analyzer.analyze 之后的生成都有这个分析
+2. _generate_sql <- 系统提示词:prompt_builder.build_system_prompt, 用户提示词:prompt_builder.build_generation_prompt
+3. _validate_sql <- 系统提示词:prompt_builder.build_validation_prompt
+4. 如果置信度低于阈值：
+   1. _generate_sql <- 系统提示词不变，用户提示词：prompt_builder.build_retry_prompt
+   2. _validate_sql <- 系统提示词:prompt_builder.build_validation_prompt
+5. 返回最终 SQL 及验证结果

@@ -13,6 +13,7 @@ from .llm_client import LLMClient
 from .prompt_builder import PromptBuilder
 from .settings import AppSettings, load_settings
 from .workflow import SQLGenerationWorkflow
+from .logger_manager import setup_logging
 
 DEEPSEEK_MODEL = "DeepSeek-V3"
 
@@ -44,8 +45,13 @@ def build_workflow(settings: AppSettings) -> SQLGenerationWorkflow:
 
 
 def main():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
     settings = load_settings()
+    setup_logging(
+        log_dir=settings.logging.log_dir,
+        log_name=settings.logging.log_name,
+        level=settings.logging.level,
+    )
+    logger = logging.getLogger(__name__)
     if not os.path.exists(settings.config_dir):
         raise FileNotFoundError(f"配置目录不存在: {settings.config_dir}")
     workflow = build_workflow(settings)
@@ -58,6 +64,7 @@ def main():
         num_questions=settings.excel.num_questions,
         sheet_name=settings.excel.sheet_name,
     )
+    logger.info("处理完成: %s", result)
     print(f"处理完成: {result}")
 
 
