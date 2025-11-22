@@ -1,19 +1,33 @@
 import logging
 import os
+import sys
+from pathlib import Path
 
-from .analyzer import QuestionAnalyzer
-from .config_loader import (
+# 添加项目根目录到 Python 路径，以便直接运行此文件
+project_root = Path(__file__).parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from src.analyzer import QuestionAnalyzer
+from src.config_loader import (
     load_common_expressions,
     load_formula_descriptions,
     load_few_shot_examples,
     load_table_descriptions,
 )
-from .excel_processor import ExcelProcessor
-from .llm_client import LLMClient
-from .prompt_builder import PromptBuilder
-from .settings import AppSettings, load_settings
-from .workflow import SQLGenerationWorkflow
-from .logger_manager import setup_logging
+from src.excel_processor import ExcelProcessor
+from src.llm_client import LLMClient
+from src.prompt_builder import PromptBuilder
+from src.settings import (
+    AppSettings,
+    ExcelConfig,
+    LLMConfig,
+    LoggingConfig,
+    WorkflowConfig,
+    load_settings,
+)
+from src.workflow import SQLGenerationWorkflow
+from src.logger_manager import setup_logging
 
 DEEPSEEK_MODEL = "DeepSeek-V3"
 
@@ -46,23 +60,72 @@ def build_workflow(settings: AppSettings) -> SQLGenerationWorkflow:
 
 def main():
     settings = load_settings()
+    
+    # 将相对路径转换为基于项目根目录的绝对路径
+    project_root = Path(__file__).parent.parent
+    
+    # 修正配置目录路径
+    if not os.path.isabs(settings.config_dir):
+        config_dir = project_root / settings.config_dir
+    else:
+        config_dir = Path(settings.config_dir)
+    
+    # 修正训练文件路径
+    if not os.path.isabs(settings.training_file_path):
+        training_file_path = project_root / settings.training_file_path
+    else:
+        training_file_path = Path(settings.training_file_path)
+    
+    # 修正 Excel 文件路径
+    if not os.path.isabs(settings.excel.file_path):
+        excel_file_path = project_root / settings.excel.file_path
+    else:
+        excel_file_path = Path(settings.excel.file_path)
+    
+    # 修正日志目录路径
+    if not os.path.isabs(settings.logging.log_dir):
+        log_dir = project_root / settings.logging.log_dir
+    else:
+        log_dir = Path(settings.logging.log_dir)
+    
+    # 创建更新后的 settings 对象
+    updated_settings = AppSettings(
+        llm=settings.llm,
+        workflow=settings.workflow,
+        excel=ExcelConfig(
+            file_path=str(excel_file_path),
+            start_row=settings.excel.start_row,
+            start_col=settings.excel.start_col,
+            output_col=settings.excel.output_col,
+            num_questions=settings.excel.num_questions,
+            sheet_name=settings.excel.sheet_name,
+        ),
+        config_dir=str(config_dir),
+        training_file_path=str(training_file_path),
+        logging=LoggingConfig(
+            log_dir=str(log_dir),
+            log_name=settings.logging.log_name,
+            level=settings.logging.level,
+        ),
+    )
+    
     setup_logging(
-        log_dir=settings.logging.log_dir,
-        log_name=settings.logging.log_name,
-        level=settings.logging.level,
+        log_dir=updated_settings.logging.log_dir,
+        log_name=updated_settings.logging.log_name,
+        level=updated_settings.logging.level,
     )
     logger = logging.getLogger(__name__)
-    if not os.path.exists(settings.config_dir):
-        raise FileNotFoundError(f"配置目录不存在: {settings.config_dir}")
-    workflow = build_workflow(settings)
+    if not os.path.exists(updated_settings.config_dir):
+        raise FileNotFoundError(f"配置目录不存在: {updated_settings.config_dir}")
+    workflow = build_workflow(updated_settings)
     processor = ExcelProcessor(workflow)
     result = processor.process(
-        file_path=settings.excel.file_path,
-        start_row=settings.excel.start_row,
-        start_col=settings.excel.start_col,
-        output_col=settings.excel.output_col,
-        num_questions=settings.excel.num_questions,
-        sheet_name=settings.excel.sheet_name,
+        file_path=updated_settings.excel.file_path,
+        start_row=updated_settings.excel.start_row,
+        start_col=updated_settings.excel.start_col,
+        output_col=updated_settings.excel.output_col,
+        num_questions=updated_settings.excel.num_questions,
+        sheet_name=updated_settings.excel.sheet_name,
     )
     logger.info("处理完成: %s", result)
     print(f"处理完成: {result}")
