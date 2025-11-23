@@ -19,6 +19,7 @@ class SQLGenerationWorkflow:
         max_retry_rounds: int = 10,
         validation_temperature: float = 0.1,
         validation_max_tokens: int = 4000,
+        consecutive_confidence_stagnation_limit: int = 3,
     ):
         self.llm_client = llm_client
         self.prompt_builder = prompt_builder
@@ -27,6 +28,7 @@ class SQLGenerationWorkflow:
         self.max_retry_rounds = max_retry_rounds
         self.validation_temperature = validation_temperature
         self.validation_max_tokens = validation_max_tokens
+        self.consecutive_confidence_stagnation_limit = consecutive_confidence_stagnation_limit
         self.validation_results: Dict[str, Dict[str, Dict]] = {}
         self.logger = logging.getLogger(__name__)
 
@@ -98,9 +100,31 @@ class SQLGenerationWorkflow:
             sql_query = self._generate_sql(question, analysis, previous_sql, feedback)
             time.sleep(0.1)
             validation = self._validate_sql(question, sql_query)
+            self.logger.info(
+                "评估置信度: %s, 当前重试轮数: %s/%s",
+                validation.get("confidence", "N/A"),
+                retry_round + 1,
+                self.max_retry_rounds,
+            )
             question_results.append({"sql": sql_query, "validation": validation, "round": retry_round + 1})
             if validation["passed"]:
+                self.logger.info("采纳SQL: %s", sql_query)
                 break
+
+            # 检查置信度是否连续N轮停滞
+            if len(question_results) >= self.consecutive_confidence_stagnation_limit:
+                recent_confidences = [
+                    res["validation"]["confidence"] for res in question_results[-self.consecutive_confidence_stagnation_limit:]
+                ]
+                if len(set(recent_confidences)) == 1:
+                    self.logger.warning(
+                        "置信度连续 %s 轮停滞在 %s, 提前采纳当前SQL。",
+                        self.consecutive_confidence_stagnation_limit,
+                        recent_confidences[0],
+                    )
+                    self.logger.info("采纳SQL: %s", sql_query)
+                    break
+
             retry_round += 1
             time.sleep(0.3)
         self.validation_results[question] = question_results[-1] if question_results else {}
@@ -109,4 +133,3 @@ class SQLGenerationWorkflow:
     def save_validation_details(self, file_path: str):
         with open(file_path, "w", encoding="utf-8") as fp:
             json.dump(self.validation_results, fp, ensure_ascii=False, indent=2, default=str)
-

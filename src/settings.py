@@ -19,6 +19,7 @@ class WorkflowConfig:
     max_retry_rounds: int
     validation_temperature: float
     validation_max_tokens: int
+    consecutive_confidence_stagnation_limit: int
 
 
 @dataclass
@@ -71,28 +72,38 @@ def _log_level_env(name: str, default: str) -> int:
 
 def load_settings() -> AppSettings:
     llm = LLMConfig(
-        api_key=os.getenv("DEEPSEEK_API_KEY", "82dbf778c5834eecad2bb21c1df632f9"),
+        api_key=os.getenv(
+            "DEEPSEEK_API_KEY",
+            #"82dbf778c5834eecad2bb21c1df632f9"
+            "sk-ccaa87bceda64383a44a36bd0c60c32b"
+        ),
         base_url=os.getenv(
             "DEEPSEEK_BASE_URL",
-            "https://www.ssfssp.com:8888/ssp/openApi/GkfFhhUy/kvshB4Rh/LNslKxsF/v1",
+            #"https://www.ssfssp.com:8888/ssp/openApi/GkfFhhUy/kvshB4Rh/LNslKxsF/v1"
+            "https://api.deepseek.com/v1"
         ),
-        model=os.getenv("DEEPSEEK_MODEL", "DeepSeek-V3"),
+        model=os.getenv(
+            "DEEPSEEK_MODEL",
+            #"DeepSeek-V3"
+            "deepseek-chat"
+        ),
         temperature=_float_env("GENERATION_TEMPERATURE", 0.1),
         max_tokens=_int_env("GENERATION_MAX_TOKENS", 3000),
-        max_retries=_int_env("GENERATION_MAX_RETRIES", 3),
+        max_retries=_int_env("GENERATION_MAX_RETRIES", 5),
     )
     workflow = WorkflowConfig(
-        confidence_threshold=_int_env("CONFIDENCE_THRESHOLD", 70),
+        confidence_threshold=_int_env("CONFIDENCE_THRESHOLD", 85),
         max_retry_rounds=_int_env("MAX_RETRY_ROUNDS", 20),
         validation_temperature=_float_env("VALIDATION_TEMPERATURE", 0.1),
         validation_max_tokens=_int_env("VALIDATION_MAX_TOKENS", 4000),
+        consecutive_confidence_stagnation_limit=_int_env("CONSECUTIVE_CONFIDENCE_STAGNATION_LIMIT", 4),
     )
     excel = ExcelConfig(
-        file_path=os.getenv("EXCEL_INPUT_FILE", "复赛-算法打榜评测结果集上传文档.xlsx"),
+        file_path=os.getenv("EXCEL_INPUT_FILE", "算法训练集（75道问题及sql语句）.xlsx"),
         start_row=_int_env("EXCEL_START_ROW", 2),
         start_col=_int_env("EXCEL_START_COL", 2),
         output_col=_int_env("EXCEL_OUTPUT_COL", 3),
-        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 3),
+        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 75),
         sheet_name=os.getenv("EXCEL_SHEET_NAME", "Sheet1"),
     )
     logging_cfg = LoggingConfig(

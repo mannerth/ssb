@@ -55,6 +55,7 @@ def build_workflow(settings: AppSettings) -> SQLGenerationWorkflow:
         max_retry_rounds=settings.workflow.max_retry_rounds,
         validation_temperature=settings.workflow.validation_temperature,
         validation_max_tokens=settings.workflow.validation_max_tokens,
+        consecutive_confidence_stagnation_limit=settings.workflow.consecutive_confidence_stagnation_limit,
     )
 
 

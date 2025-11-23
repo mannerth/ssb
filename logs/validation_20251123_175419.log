@@ -1,0 +1,9 @@
+2025-11-23 17:54:19,660 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 豪门又一城站的换热站ID是多少？
+2025-11-23 17:54:20,345 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-11-23 17:54:22,386 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-11-23 17:54:24,436 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-11-23 17:54:26,486 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-11-23 17:54:28,529 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-11-23 17:54:28,530 - src.excel_processor - ERROR - excel_processor.py:57 - 第2行处理失败: LLM 请求失败: Error code: 400 - {'error': {'message': 'Model Not Exist', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-11-23 17:54:28,530 - src.excel_processor - INFO - excel_processor.py:41 - 处理第3行问题: 豪门又一城站的换热站编码是多少？
+2025-11-23 17:54:28,572 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
