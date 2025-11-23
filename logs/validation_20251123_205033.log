@@ -1,0 +1,1857 @@
+2025-11-23 20:50:33,668 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 豪门又一城站的换热站ID是多少？
+2025-11-23 20:50:34,398 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:50:45,638 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的换热站ID是多少？》- 第 1 轮生成与验证
+2025-11-23 20:50:45,847 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:50:48,505 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:50:53,674 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 20:50:53,674 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT stn_id FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-23 20:50:53,675 - src.excel_processor - INFO - excel_processor.py:41 - 处理第3行问题: 豪门又一城站的换热站编码是多少？
+2025-11-23 20:50:53,746 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:05,187 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的换热站编码是多少？》- 第 1 轮生成与验证
+2025-11-23 20:51:05,409 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:09,045 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:17,383 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:51:17,383 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT heatstation_code FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:51:17,383 - src.excel_processor - INFO - excel_processor.py:41 - 处理第4行问题: 豪门又一城站的换热站状态是什么？
+2025-11-23 20:51:17,469 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:36,987 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的换热站状态是什么？》- 第 1 轮生成与验证
+2025-11-23 20:51:37,176 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:39,693 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:51:44,925 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:51:44,925 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT stn_state FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:51:44,925 - src.excel_processor - INFO - excel_processor.py:41 - 处理第5行问题: 豪门又一城站的机组数量是多少？
+2025-11-23 20:51:45,006 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:01,939 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的机组数量是多少？》- 第 1 轮生成与验证
+2025-11-23 20:52:02,166 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:05,423 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:09,922 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:52:09,922 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT plan_num FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:52:09,923 - src.excel_processor - INFO - excel_processor.py:41 - 处理第6行问题: 豪门又一城站的站点性质是什么？
+2025-11-23 20:52:10,036 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:26,557 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的站点性质是什么？》- 第 1 轮生成与验证
+2025-11-23 20:52:26,720 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:29,523 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:34,443 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:52:34,443 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT build_type FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:52:34,443 - src.excel_processor - INFO - excel_processor.py:41 - 处理第7行问题: 豪门又一城站2024-2025供暖季的建筑面积是多少？
+2025-11-23 20:52:34,532 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:49,515 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的建筑面积是多少？》- 第 1 轮生成与验证
+2025-11-23 20:52:49,727 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:52,043 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:52:58,305 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:52:58,305 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT heat_area FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-23 20:52:58,306 - src.excel_processor - INFO - excel_processor.py:41 - 处理第8行问题: 豪门又一城站的热源数量是多少？
+2025-11-23 20:52:58,405 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:16,910 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的热源数量是多少？》- 第 1 轮生成与验证
+2025-11-23 20:53:17,095 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:20,285 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:26,816 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:53:26,816 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT source_num FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:53:26,816 - src.excel_processor - INFO - excel_processor.py:41 - 处理第9行问题: 豪门又一城站2024-2025供暖季的热源形式是什么？
+2025-11-23 20:53:26,916 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:45,568 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的热源形式是什么？》- 第 1 轮生成与验证
+2025-11-23 20:53:45,750 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:48,422 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:55,432 - src.workflow - INFO - workflow.py:103 - 评估置信度: 70, 当前重试轮数: 1/20
+2025-11-23 20:53:55,733 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的热源形式是什么？》- 第 2 轮生成与验证
+2025-11-23 20:53:55,878 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:53:58,275 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:06,261 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 20:54:06,563 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的热源形式是什么？》- 第 3 轮生成与验证
+2025-11-23 20:54:06,766 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:08,886 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:17,106 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 20:54:17,409 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的热源形式是什么？》- 第 4 轮生成与验证
+2025-11-23 20:54:17,598 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:20,060 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:27,696 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 20:54:27,999 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站2024-2025供暖季的热源形式是什么？》- 第 5 轮生成与验证
+2025-11-23 20:54:28,187 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:30,856 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:54:38,487 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 20:54:38,487 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 20:54:38,487 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT source_type FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-23 20:54:38,487 - src.excel_processor - INFO - excel_processor.py:41 - 处理第10行问题: 豪门又一城换热站的节能类型是什么？
+2025-11-23 20:54:38,569 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:00,874 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城换热站的节能类型是什么？》- 第 1 轮生成与验证
+2025-11-23 20:55:01,048 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:03,607 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:10,208 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:55:10,208 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT energy_save_type FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-23 20:55:10,208 - src.excel_processor - INFO - excel_processor.py:41 - 处理第11行问题: 豪门又一城站的管网距离是多少？
+2025-11-23 20:55:10,313 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:30,693 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的管网距离是多少？》- 第 1 轮生成与验证
+2025-11-23 20:55:30,894 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:33,285 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:40,150 - src.workflow - INFO - workflow.py:103 - 评估置信度: 75, 当前重试轮数: 1/20
+2025-11-23 20:55:40,451 - src.workflow - INFO - workflow.py:97 - 问题《豪门又一城站的管网距离是多少？》- 第 2 轮生成与验证
+2025-11-23 20:55:40,619 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:43,692 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:55:48,952 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 2/20
+2025-11-23 20:55:48,954 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT distance FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-23 20:55:48,954 - src.excel_processor - INFO - excel_processor.py:41 - 处理第12行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低循环水热表供水温度是多少？
+2025-11-23 20:55:49,045 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:13,195 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低循环水热表供水温度是多少？》- 第 1 轮生成与验证
+2025-11-23 20:56:13,387 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:19,348 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:25,432 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:56:25,432 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(circulate_water_sup_htemp) AS avg_data, MAX(circulate_water_sup_htemp) AS max_data, MIN(circulate_water_sup_htemp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 20:56:25,432 - src.excel_processor - INFO - excel_processor.py:41 - 处理第13行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低供水温度是多少？
+2025-11-23 20:56:25,509 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:47,862 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低供水温度是多少？》- 第 1 轮生成与验证
+2025-11-23 20:56:48,026 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:52,779 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:56:56,411 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:56:56,411 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_sup_temp) AS avg_data, MAX(blr_sup_temp) AS max_data, MIN(blr_sup_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 20:56:56,412 - src.excel_processor - INFO - excel_processor.py:41 - 处理第14行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低供水压力是多少？
+2025-11-23 20:56:56,483 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:57:20,236 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低供水压力是多少？》- 第 1 轮生成与验证
+2025-11-23 20:57:20,402 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:57:24,902 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:57:31,752 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:57:31,752 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_sup_press) AS avg_data, MAX(blr_sup_press) AS max_data, MIN(blr_sup_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 20:57:31,753 - src.excel_processor - INFO - excel_processor.py:41 - 处理第15行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低回水压力是多少？
+2025-11-23 20:57:31,831 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:57:50,620 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低回水压力是多少？》- 第 1 轮生成与验证
+2025-11-23 20:57:50,801 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:57:56,110 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:01,267 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:58:01,269 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_ret_press) AS avg_data, MAX(blr_ret_press) AS max_data, MIN(blr_ret_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 20:58:01,269 - src.excel_processor - INFO - excel_processor.py:41 - 处理第16行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低燃气瞬时流量是多少？
+2025-11-23 20:58:01,338 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:28,520 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低燃气瞬时流量是多少？》- 第 1 轮生成与验证
+2025-11-23 20:58:28,746 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:34,162 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:39,229 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 20:58:39,229 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_gas_inst_flow) AS avg_data, MAX(blr_gas_inst_flow) AS max_data, MIN(blr_gas_inst_flow) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 20:58:39,230 - src.excel_processor - INFO - excel_processor.py:41 - 处理第17行问题: 恒泰热源厂的热源厂ID是多少？
+2025-11-23 20:58:39,311 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:56,202 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热源厂ID是多少？》- 第 1 轮生成与验证
+2025-11-23 20:58:56,479 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:58:59,386 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:04,798 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:59:04,798 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT src_id FROM ods_sc01_ntjt_zhgr_heat_source_info WHERE src_name LIKE '%恒泰热源%';
+2025-11-23 20:59:04,798 - src.excel_processor - INFO - excel_processor.py:41 - 处理第18行问题: 热源厂ID为1的热源厂名称是什么？
+2025-11-23 20:59:04,882 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:19,351 - src.workflow - INFO - workflow.py:97 - 问题《热源厂ID为1的热源厂名称是什么？》- 第 1 轮生成与验证
+2025-11-23 20:59:19,603 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:22,416 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:25,174 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 20:59:25,174 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT src_name FROM ods_sc01_ntjt_zhgr_heat_source_info WHERE src_id = 1;
+2025-11-23 20:59:25,174 - src.excel_processor - INFO - excel_processor.py:41 - 处理第19行问题: 恒泰热源厂的热源状态是什么？
+2025-11-23 20:59:25,258 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:46,772 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热源状态是什么？》- 第 1 轮生成与验证
+2025-11-23 20:59:46,932 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:49,985 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 20:59:55,817 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 20:59:55,818 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT src_state FROM ods_sc01_ntjt_zhgr_heat_source_info WHERE src_name LIKE '%恒泰热源%';
+2025-11-23 20:59:55,818 - src.excel_processor - INFO - excel_processor.py:41 - 处理第20行问题: 商河所有热源厂有多少种不同的热源状态？分别占比多少？
+2025-11-23 20:59:55,912 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:21,244 - src.workflow - INFO - workflow.py:97 - 问题《商河所有热源厂有多少种不同的热源状态？分别占比多少？》- 第 1 轮生成与验证
+2025-11-23 21:00:21,415 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:25,068 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:32,645 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:00:32,945 - src.workflow - INFO - workflow.py:97 - 问题《商河所有热源厂有多少种不同的热源状态？分别占比多少？》- 第 2 轮生成与验证
+2025-11-23 21:00:33,118 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:37,256 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:46,007 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:00:46,308 - src.workflow - INFO - workflow.py:97 - 问题《商河所有热源厂有多少种不同的热源状态？分别占比多少？》- 第 3 轮生成与验证
+2025-11-23 21:00:46,466 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:49,790 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:00:58,550 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:00:58,852 - src.workflow - INFO - workflow.py:97 - 问题《商河所有热源厂有多少种不同的热源状态？分别占比多少？》- 第 4 轮生成与验证
+2025-11-23 21:00:59,022 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:03,229 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:11,868 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:01:11,869 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:01:11,869 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+    COALESCE(src_state, '未知') AS src_state,
+    COUNT(*) AS count,
+    COUNT(*) * 100.0 / SUM(COUNT(*)) OVER() AS percentage
+FROM ods_sc01_ntjt_zhgr_heat_source_info 
+WHERE src_id IN (1, 2)
+GROUP BY src_state;
+2025-11-23 21:01:11,869 - src.excel_processor - INFO - excel_processor.py:41 - 处理第21行问题: 恒泰热源厂的实际供热能力是多少？
+2025-11-23 21:01:11,949 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:34,349 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的实际供热能力是多少？》- 第 1 轮生成与验证
+2025-11-23 21:01:34,522 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:37,722 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:46,683 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:01:46,984 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的实际供热能力是多少？》- 第 2 轮生成与验证
+2025-11-23 21:01:47,136 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:49,684 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:01:58,437 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:01:58,738 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的实际供热能力是多少？》- 第 3 轮生成与验证
+2025-11-23 21:01:58,927 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:01,147 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:08,562 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:02:08,864 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的实际供热能力是多少？》- 第 4 轮生成与验证
+2025-11-23 21:02:09,056 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:11,488 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:22,478 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:02:22,478 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:02:22,478 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT actual_heat FROM ods_sc01_ntjt_zhgr_heat_source_info WHERE src_name LIKE '%恒泰热源%';
+2025-11-23 21:02:22,478 - src.excel_processor - INFO - excel_processor.py:41 - 处理第22行问题: 恒泰热源厂的热单价是多少？
+2025-11-23 21:02:22,578 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:47,230 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热单价是多少？》- 第 1 轮生成与验证
+2025-11-23 21:02:47,409 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:02:50,438 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:00,031 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:03:00,333 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热单价是多少？》- 第 2 轮生成与验证
+2025-11-23 21:03:00,518 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:03,709 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:11,635 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:03:11,938 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热单价是多少？》- 第 3 轮生成与验证
+2025-11-23 21:03:12,097 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:14,798 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:23,374 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:03:23,679 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂的热单价是多少？》- 第 4 轮生成与验证
+2025-11-23 21:03:23,835 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:26,419 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:35,280 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:03:35,280 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:03:35,280 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT heat_price FROM ods_sc01_ntjt_zhgr_heat_source_info WHERE src_id = 1 ORDER BY update_time DESC LIMIT 1;
+2025-11-23 21:03:35,280 - src.excel_processor - INFO - excel_processor.py:41 - 处理第23行问题: 恒泰热源厂2025年1月1日平均/最高/最低供水热表供温是多少？
+2025-11-23 21:03:35,368 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:03:59,545 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低供水热表供温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:03:59,695 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:04,264 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:13,442 - src.workflow - INFO - workflow.py:103 - 评估置信度: 70, 当前重试轮数: 1/20
+2025-11-23 21:04:13,742 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低供水热表供温是多少？》- 第 2 轮生成与验证
+2025-11-23 21:04:13,919 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:19,273 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:24,854 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 2/20
+2025-11-23 21:04:24,854 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(src_sup_sup_htemp) AS avg_data, MAX(src_sup_sup_htemp) AS max_data, MIN(src_sup_sup_htemp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_source_inst_data WHERE src_id IN (1, 2) AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59' AND src_sup_sup_htemp IS NOT NULL;
+2025-11-23 21:04:24,854 - src.excel_processor - INFO - excel_processor.py:41 - 处理第24行问题: 恒泰热源厂2025年1月1日平均/最高/最低回水温度是多少？
+2025-11-23 21:04:24,931 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:49,289 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低回水温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:04:49,480 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:04:54,519 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:02,684 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:05:02,985 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低回水温度是多少？》- 第 2 轮生成与验证
+2025-11-23 21:05:03,174 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:07,923 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:15,891 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 2/20
+2025-11-23 21:05:15,891 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(src_ret_temp) AS avg_data, MAX(src_ret_temp) AS max_data, MIN(src_ret_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_source_inst_data WHERE src_id IN (1, 2) AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:05:15,891 - src.excel_processor - INFO - excel_processor.py:41 - 处理第25行问题: 恒泰热源厂2025年1月1日平均/最高/最低回水热表供温是多少？
+2025-11-23 21:05:15,969 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:38,459 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低回水热表供温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:05:38,750 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:43,776 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:54,600 - src.workflow - INFO - workflow.py:103 - 评估置信度: 70, 当前重试轮数: 1/20
+2025-11-23 21:05:54,903 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2025年1月1日平均/最高/最低回水热表供温是多少？》- 第 2 轮生成与验证
+2025-11-23 21:05:55,081 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:05:59,747 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:06:07,494 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 2/20
+2025-11-23 21:06:07,494 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(src_ret_temp) AS avg_data, MAX(src_ret_temp) AS max_data, MIN(src_ret_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_source_inst_data WHERE src_id IN (1, 2) AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:06:07,494 - src.excel_processor - INFO - excel_processor.py:41 - 处理第26行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低锅炉出口烟温是多少？
+2025-11-23 21:06:07,570 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:06:34,611 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低锅炉出口烟温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:06:34,769 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:06:40,213 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:06:48,515 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:06:48,518 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_out_smoke_temp) AS avg_data, MAX(blr_out_smoke_temp) AS max_data, MIN(blr_out_smoke_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:06:48,518 - src.excel_processor - INFO - excel_processor.py:41 - 处理第27行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低锅炉出口烟压是多少？
+2025-11-23 21:06:48,587 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:15,102 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低锅炉出口烟压是多少？》- 第 1 轮生成与验证
+2025-11-23 21:07:15,253 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:19,882 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:24,852 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:07:24,852 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_out_smoke_press) AS avg_data, MAX(blr_out_smoke_press) AS max_data, MIN(blr_out_smoke_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:07:24,852 - src.excel_processor - INFO - excel_processor.py:41 - 处理第28行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机出口烟温是多少？
+2025-11-23 21:07:24,938 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:46,640 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机出口烟温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:07:46,813 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:53,631 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:07:59,577 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:07:59,577 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_fan_out_smoke_temp) AS avg_data, MAX(blr_fan_out_smoke_temp) AS max_data, MIN(blr_fan_out_smoke_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:07:59,577 - src.excel_processor - INFO - excel_processor.py:41 - 处理第29行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机燃气压力是多少？
+2025-11-23 21:07:59,654 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:08:23,682 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机燃气压力是多少？》- 第 1 轮生成与验证
+2025-11-23 21:08:23,868 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:08:29,711 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:08:39,353 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:08:39,354 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_fan_gas_press) AS avg_data, MAX(blr_fan_gas_press) AS max_data, MIN(blr_fan_gas_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:08:39,354 - src.excel_processor - INFO - excel_processor.py:41 - 处理第30行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机电流是多少？
+2025-11-23 21:08:39,452 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:02,846 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低风机电流是多少？》- 第 1 轮生成与验证
+2025-11-23 21:09:03,038 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:08,769 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:16,357 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:09:16,357 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_fan_elec) AS avg_data, MAX(blr_fan_elec) AS max_data, MIN(blr_fan_elec) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:09:16,357 - src.excel_processor - INFO - excel_processor.py:41 - 处理第31行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低前上集装箱温度是多少？
+2025-11-23 21:09:16,495 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:39,989 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低前上集装箱温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:09:40,181 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:44,673 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:09:49,197 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:09:49,197 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_front_container_temp) AS avg_data, MAX(blr_front_container_temp) AS max_data, MIN(blr_front_container_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:09:49,197 - src.excel_processor - INFO - excel_processor.py:41 - 处理第32行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低后上集装箱温度是多少？
+2025-11-23 21:09:49,275 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:07,663 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低后上集装箱温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:10:07,873 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:12,663 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:17,329 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:10:17,329 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_back_container_temp) AS avg_data, MAX(blr_back_container_temp) AS max_data, MIN(blr_back_container_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:10:17,329 - src.excel_processor - INFO - excel_processor.py:41 - 处理第33行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器进口烟温是多少？
+2025-11-23 21:10:17,422 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:42,904 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器进口烟温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:10:43,068 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:48,444 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:10:53,185 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:10:53,185 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_economizer_in_smoke_temp) AS avg_data, MAX(blr_economizer_in_smoke_temp) AS max_data, MIN(blr_economizer_in_smoke_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:10:53,186 - src.excel_processor - INFO - excel_processor.py:41 - 处理第34行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器进口烟压是多少？
+2025-11-23 21:10:53,258 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:11:14,921 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器进口烟压是多少？》- 第 1 轮生成与验证
+2025-11-23 21:11:15,116 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:11:20,246 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:11:26,496 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:11:26,496 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_economizer_in_smoke_press) AS avg_data, MAX(blr_economizer_in_smoke_press) AS max_data, MIN(blr_economizer_in_smoke_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:11:26,496 - src.excel_processor - INFO - excel_processor.py:41 - 处理第35行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器出口烟温是多少？
+2025-11-23 21:11:26,602 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:11:48,858 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器出口烟温是多少？》- 第 1 轮生成与验证
+2025-11-23 21:11:49,006 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:11:54,561 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:12:00,991 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:12:00,991 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_economizer_out_smoke_temp) AS avg_data, MAX(blr_economizer_out_smoke_temp) AS max_data, MIN(blr_economizer_out_smoke_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:12:00,991 - src.excel_processor - INFO - excel_processor.py:41 - 处理第36行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器出口烟压是多少？
+2025-11-23 21:12:01,099 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:12:23,986 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低省煤器出口烟压是多少？》- 第 1 轮生成与验证
+2025-11-23 21:12:24,149 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:12:29,330 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:12:38,411 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:12:38,411 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_economizer_out_smoke_press) AS avg_data, MAX(blr_economizer_out_smoke_press) AS max_data, MIN(blr_economizer_out_smoke_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:12:38,411 - src.excel_processor - INFO - excel_processor.py:41 - 处理第37行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低冷凝器出水温度是多少？
+2025-11-23 21:12:38,501 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:00,396 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低冷凝器出水温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:13:00,568 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:05,603 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:09,971 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:13:09,971 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_condenser_out_temp) AS avg_data, MAX(blr_condenser_out_temp) AS max_data, MIN(blr_condenser_out_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:13:09,971 - src.excel_processor - INFO - excel_processor.py:41 - 处理第38行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低环保出口SO2是多少？
+2025-11-23 21:13:10,066 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:38,153 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低环保出口SO2是多少？》- 第 1 轮生成与验证
+2025-11-23 21:13:38,331 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:42,640 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:13:49,885 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:13:49,885 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_so2) AS avg_data, MAX(blr_so2) AS max_data, MIN(blr_so2) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:13:49,885 - src.excel_processor - INFO - excel_processor.py:41 - 处理第39行问题: 恒泰热源厂2号锅炉2025年1月1日平均/最高/最低环保出口SO2折算值是多少？
+2025-11-23 21:13:49,974 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:12,270 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号锅炉2025年1月1日平均/最高/最低环保出口SO2折算值是多少？》- 第 1 轮生成与验证
+2025-11-23 21:14:12,431 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:17,053 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:22,866 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:14:22,867 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(blr_zkso2) AS avg_data, MAX(blr_zkso2) AS max_data, MIN(blr_zkso2) AS min_data FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data WHERE blr_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:14:22,867 - src.excel_processor - INFO - excel_processor.py:41 - 处理第40行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器烟气出口温度是多少？
+2025-11-23 21:14:22,955 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:47,995 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器烟气出口温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:14:48,167 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:52,578 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:14:57,367 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:14:57,367 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(generator_smoke_out_temp) AS avg_data, MAX(generator_smoke_out_temp) AS max_data, MIN(generator_smoke_out_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:14:57,367 - src.excel_processor - INFO - excel_processor.py:41 - 处理第41行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？
+2025-11-23 21:14:57,445 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:17,717 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 1 轮生成与验证
+2025-11-23 21:15:17,872 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:22,945 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:33,543 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:15:33,845 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 2 轮生成与验证
+2025-11-23 21:15:33,995 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:38,764 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:49,315 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:15:49,617 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 3 轮生成与验证
+2025-11-23 21:15:49,782 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:15:54,368 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:00,473 - src.workflow - INFO - workflow.py:103 - 评估置信度: 20, 当前重试轮数: 3/20
+2025-11-23 21:16:00,774 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 4 轮生成与验证
+2025-11-23 21:16:00,922 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:05,650 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:15,541 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:16:15,843 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 5 轮生成与验证
+2025-11-23 21:16:16,032 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:20,849 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:28,033 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 21:16:28,336 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 6 轮生成与验证
+2025-11-23 21:16:28,543 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:34,087 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:42,151 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-23 21:16:42,455 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低发生器燃气入口压力是多少？》- 第 7 轮生成与验证
+2025-11-23 21:16:42,608 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:47,338 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:16:55,380 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-23 21:16:55,380 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:16:55,380 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT AVG(generator_gas_in_temp) AS avg_data, MAX(generator_gas_in_temp) AS max_data, MIN(generator_gas_in_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:16:55,380 - src.excel_processor - INFO - excel_processor.py:41 - 处理第42行问题: 恒泰热源厂2号热泵最新的发生器燃气入口阀门开度是多少？
+2025-11-23 21:16:55,475 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:14,842 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵最新的发生器燃气入口阀门开度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:17:15,021 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:18,670 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:26,753 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:17:26,753 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT generator_gas_in_elec_valve_open FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' ORDER BY data_time DESC LIMIT 1;
+2025-11-23 21:17:26,753 - src.excel_processor - INFO - excel_processor.py:41 - 处理第43行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低溶液板换入口温度是多少？
+2025-11-23 21:17:26,822 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:45,214 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低溶液板换入口温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:17:45,393 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:49,682 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:17:55,026 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:17:55,026 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(solution_in_temp) AS avg_data, MAX(solution_in_temp) AS max_data, MIN(solution_in_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:17:55,026 - src.excel_processor - INFO - excel_processor.py:41 - 处理第44行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低溶液板换出口温度是多少？
+2025-11-23 21:17:55,110 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:18:15,713 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低溶液板换出口温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:18:15,871 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:18:23,453 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:18:31,838 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:18:31,838 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(solution_out_temp) AS avg_data, MAX(solution_out_temp) AS max_data, MIN(solution_out_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:18:31,838 - src.excel_processor - INFO - excel_processor.py:41 - 处理第45行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低稀溶液泵频率给定是多少？
+2025-11-23 21:18:31,932 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:18:56,720 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低稀溶液泵频率给定是多少？》- 第 1 轮生成与验证
+2025-11-23 21:18:56,891 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:19:01,810 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:19:06,856 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:19:06,856 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(dilute_solution_set_frequency) AS avg_data, MAX(dilute_solution_set_frequency) AS max_data, MIN(dilute_solution_set_frequency) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:19:06,857 - src.excel_processor - INFO - excel_processor.py:41 - 处理第46行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低浓溶液泵频率给定是多少？
+2025-11-23 21:19:06,954 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:19:30,552 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低浓溶液泵频率给定是多少？》- 第 1 轮生成与验证
+2025-11-23 21:19:30,743 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:19:35,829 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:19:41,975 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:19:41,978 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(concentrated_solution_set_frequency) AS avg_data, MAX(concentrated_solution_set_frequency) AS max_data, MIN(concentrated_solution_set_frequency) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:19:41,978 - src.excel_processor - INFO - excel_processor.py:41 - 处理第47行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低冷凝器冷凝温度是多少？
+2025-11-23 21:19:42,060 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:04,283 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低冷凝器冷凝温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:20:04,465 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:09,046 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:16,595 - src.workflow - INFO - workflow.py:103 - 评估置信度: 95, 当前重试轮数: 1/20
+2025-11-23 21:20:16,595 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(condenser_temp) AS avg_data, MAX(condenser_temp) AS max_data, MIN(condenser_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:20:16,595 - src.excel_processor - INFO - excel_processor.py:41 - 处理第48行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低蒸发器蒸发温度是多少？
+2025-11-23 21:20:16,675 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:43,292 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低蒸发器蒸发温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:20:43,472 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:48,360 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:20:53,868 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:20:53,868 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(evaporator_temp) AS avg_data, MAX(evaporator_temp) AS max_data, MIN(evaporator_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:20:53,868 - src.excel_processor - INFO - excel_processor.py:41 - 处理第49行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低冷剂泵频率给定是多少？
+2025-11-23 21:20:53,954 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:21:22,882 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低冷剂泵频率给定是多少？》- 第 1 轮生成与验证
+2025-11-23 21:21:23,050 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:21:28,699 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:21:36,911 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:21:36,911 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(refrigerant_pump_set_frequency) AS avg_data, MAX(refrigerant_pump_set_frequency) AS max_data, MIN(refrigerant_pump_set_frequency) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:21:36,911 - src.excel_processor - INFO - excel_processor.py:41 - 处理第50行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水入口温度是多少？
+2025-11-23 21:21:36,993 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:21:56,758 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水入口温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:21:57,011 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:22:01,490 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:22:09,253 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:22:09,253 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(heat_network_in_temp) AS avg_data, MAX(heat_network_in_temp) AS max_data, MIN(heat_network_in_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:22:09,253 - src.excel_processor - INFO - excel_processor.py:41 - 处理第51行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水入口压力是多少？
+2025-11-23 21:22:09,333 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:22:31,273 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水入口压力是多少？》- 第 1 轮生成与验证
+2025-11-23 21:22:31,566 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:22:37,170 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:22:42,450 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:22:42,450 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(heat_network_in_press) AS avg_data, MAX(heat_network_in_press) AS max_data, MIN(heat_network_in_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:22:42,450 - src.excel_processor - INFO - excel_processor.py:41 - 处理第52行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水出口温度是多少？
+2025-11-23 21:22:42,524 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:04,646 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水出口温度是多少？》- 第 1 轮生成与验证
+2025-11-23 21:23:05,056 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:11,511 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:20,210 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:23:20,210 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(heat_network_out_temp) AS avg_data, MAX(heat_network_out_temp) AS max_data, MIN(heat_network_out_temp) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:23:20,210 - src.excel_processor - INFO - excel_processor.py:41 - 处理第53行问题: 恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水出口压力是多少？
+2025-11-23 21:23:20,299 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:42,355 - src.workflow - INFO - workflow.py:97 - 问题《恒泰热源厂2号热泵2025年1月1日平均/最高/最低热网水出口压力是多少？》- 第 1 轮生成与验证
+2025-11-23 21:23:42,585 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:47,761 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:23:56,929 - src.workflow - INFO - workflow.py:103 - 评估置信度: 85, 当前重试轮数: 1/20
+2025-11-23 21:23:56,929 - src.workflow - INFO - workflow.py:111 - 采纳SQL: SELECT AVG(heat_network_out_press) AS avg_data, MAX(heat_network_out_press) AS max_data, MIN(heat_network_out_press) AS min_data FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data WHERE pump_id = '2' AND data_time >= '2025-01-01 00:00:00' AND data_time <= '2025-01-01 23:59:59';
+2025-11-23 21:23:56,930 - src.excel_processor - INFO - excel_processor.py:41 - 处理第54行问题: 2024-2025供暖季商河恒泰热源厂的产热量是多少？
+2025-11-23 21:23:57,387 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:24:18,051 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂的产热量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:24:18,442 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:24:28,299 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:24:43,696 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:24:43,997 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂的产热量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:24:44,190 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:24:54,850 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:25:12,441 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:25:12,743 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂的产热量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:25:13,050 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:25:20,931 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:25:38,809 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:25:39,110 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂的产热量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:25:39,403 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:25:48,317 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:26:03,464 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:26:03,464 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:26:03,464 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT src_id, src_sup_total_hheat AS start_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+    WHERE src_id = 1 
+    AND data_time >= '2024-11-15 00:00:00'
+    ORDER BY data_time ASC 
+    LIMIT 1
+),
+end_period AS (
+    SELECT src_id, src_sup_total_hheat AS end_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+    WHERE src_id = 1 
+    AND data_time >= '2025-03-15 00:00:00'
+    ORDER BY data_time ASC 
+    LIMIT 1
+)
+SELECT s.src_id, (COALESCE(e.end_heat,0) - COALESCE(s.start_heat,0)) AS total_heat 
+FROM start_period s 
+JOIN end_period e ON s.src_id = e.src_id;
+2025-11-23 21:26:03,465 - src.excel_processor - INFO - excel_processor.py:41 - 处理第55行问题: 2024-2025供暖季商河恒泰热源厂每月的产热量是多少？
+2025-11-23 21:26:03,771 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:26:30,701 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂每月的产热量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:26:31,559 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:26:47,024 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:26:57,649 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:26:57,951 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂每月的产热量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:26:58,154 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:27:11,370 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:27:23,603 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:27:23,904 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂每月的产热量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:27:24,099 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:27:36,785 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:27:49,273 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:27:49,574 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂每月的产热量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:27:49,785 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:28:07,880 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:28:24,777 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:28:24,777 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:28:24,777 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        '2024-11' AS month, 
+        '2024-11-15 00:00:00' AS start_time, 
+        '2024-11-30 23:59:59' AS end_time
+    UNION ALL SELECT '2024-12', '2024-12-01 00:00:00', '2024-12-31 23:59:59'
+    UNION ALL SELECT '2025-01', '2025-01-01 00:00:00', '2025-01-31 23:59:59'
+    UNION ALL SELECT '2025-02', '2025-02-01 00:00:00', '2025-02-28 23:59:59'
+    UNION ALL SELECT '2025-03', '2025-03-01 00:00:00', '2025-03-15 00:00:00'
+),
+start_values AS (
+    SELECT 
+        m.month,
+        d.src_sup_total_hheat AS start_heat
+    FROM monthly_ranges m
+    JOIN ods_sc01_ntjt_zhgr_heat_source_inst_data d ON d.src_id = 1
+    WHERE d.data_time = (
+        SELECT MIN(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+        WHERE src_id = 1 
+        AND data_time >= m.start_time
+    )
+),
+end_values AS (
+    SELECT 
+        m.month,
+        d.src_sup_total_hheat AS end_heat
+    FROM monthly_ranges m
+    JOIN ods_sc01_ntjt_zhgr_heat_source_inst_data d ON d.src_id = 1
+    WHERE d.data_time = (
+        SELECT MAX(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+        WHERE src_id = 1 
+        AND data_time <= m.end_time
+    )
+)
+SELECT 
+    s.month,
+    (e.end_heat - s.start_heat) AS monthly_total_heat
+FROM start_values s
+JOIN end_values e ON s.month = e.month
+ORDER BY s.month;
+2025-11-23 21:28:24,777 - src.excel_processor - INFO - excel_processor.py:41 - 处理第56行问题: 2024-2025供暖季商河热源总产热量是多少？
+2025-11-23 21:28:24,900 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:28:47,707 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热源总产热量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:28:47,913 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:28:59,801 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:29:10,675 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:29:10,976 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热源总产热量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:29:11,166 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:29:24,343 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:29:35,461 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:29:35,762 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热源总产热量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:29:36,002 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:29:48,756 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:29:58,491 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:29:58,792 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热源总产热量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:29:59,001 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:30:11,072 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:30:22,455 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:30:22,455 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:30:22,455 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        d.src_id, 
+        d.src_sup_total_hheat AS start_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN (
+        SELECT src_id, MIN(data_time) AS min_time
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+        WHERE data_time >= '2024-11-15 00:00:00'
+        AND src_id IN (1, 2)
+        GROUP BY src_id
+    ) t ON d.src_id = t.src_id AND d.data_time = t.min_time
+),
+end_period AS (
+    SELECT 
+        d.src_id, 
+        d.src_sup_total_hheat AS end_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN (
+        SELECT src_id, MAX(data_time) AS max_time
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+        WHERE data_time <= '2025-03-15 00:00:00'
+        AND src_id IN (1, 2)
+        GROUP BY src_id
+    ) t ON d.src_id = t.src_id AND d.data_time = t.max_time
+)
+SELECT 
+    SUM(COALESCE(e.end_heat, 0) - COALESCE(s.start_heat, 0)) AS total_cumulative_heat
+FROM 
+    start_period s
+    JOIN end_period e ON s.src_id = e.src_id;
+2025-11-23 21:30:22,455 - src.excel_processor - INFO - excel_processor.py:41 - 处理第57行问题: 2024-2025供暖季商河恒泰热源厂和玉泉生物质电厂分别产热量是多少？
+2025-11-23 21:30:22,633 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:30:44,007 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂和玉泉生物质电厂分别产热量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:30:44,367 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:30:56,889 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:31:08,930 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:31:09,231 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂和玉泉生物质电厂分别产热量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:31:09,433 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:31:23,550 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:31:32,146 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:31:32,447 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂和玉泉生物质电厂分别产热量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:31:32,641 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:31:47,126 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:31:55,216 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:31:55,518 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂和玉泉生物质电厂分别产热量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:31:55,783 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:32:10,689 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:32:18,967 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:32:18,967 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:32:18,968 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        d.src_id, 
+        d.src_sup_total_hheat AS start_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN (
+        SELECT src_id, MIN(data_time) AS min_time
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+        WHERE data_time >= '2024-11-15 00:00:00'
+        AND src_id IN (1, 2)
+        GROUP BY src_id
+    ) t ON d.src_id = t.src_id AND d.data_time = t.min_time
+),
+end_period AS (
+    SELECT 
+        d.src_id, 
+        d.src_sup_total_hheat AS end_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN (
+        SELECT src_id, MAX(data_time) AS max_time
+        FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+        WHERE data_time <= '2025-03-15 00:00:00'
+        AND src_id IN (1, 2)
+        GROUP BY src_id
+    ) t ON d.src_id = t.src_id AND d.data_time = t.max_time
+)
+SELECT 
+    s.src_id,
+    CASE 
+        WHEN s.src_id = 1 THEN '商河恒泰热源厂'
+        WHEN s.src_id = 2 THEN '玉泉生物质电厂'
+    END AS heat_source_name,
+    COALESCE(e.end_heat, 0) - COALESCE(s.start_heat, 0) AS total_heat_production
+FROM start_period s
+JOIN end_period e ON s.src_id = e.src_id
+WHERE s.src_id IN (1, 2);
+2025-11-23 21:32:18,968 - src.excel_processor - INFO - excel_processor.py:41 - 处理第58行问题: 2024-2025供热季商河恒泰热源厂和玉恒生物质电厂每月的产热量分别是多少？
+2025-11-23 21:32:19,091 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:32:43,690 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供热季商河恒泰热源厂和玉恒生物质电厂每月的产热量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:32:43,882 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:00,856 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:14,524 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:33:14,825 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供热季商河恒泰热源厂和玉恒生物质电厂每月的产热量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:33:14,989 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:22,417 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:38,736 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:33:39,037 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供热季商河恒泰热源厂和玉恒生物质电厂每月的产热量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:33:39,240 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:46,595 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:33:58,368 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:33:58,669 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供热季商河恒泰热源厂和玉恒生物质电厂每月的产热量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:33:58,889 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:34:17,238 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:34:28,425 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:34:28,425 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:34:28,425 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        src_id, 
+        DATE_FORMAT(data_time, '%Y-%m') AS month, 
+        MIN(data_time) AS start_time 
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+    WHERE src_id IN (1, 2) 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00' 
+    GROUP BY src_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+end_period AS (
+    SELECT 
+        src_id, 
+        DATE_FORMAT(data_time, '%Y-%m') AS month, 
+        MAX(data_time) AS end_time 
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data 
+    WHERE src_id IN (1, 2) 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00' 
+    GROUP BY src_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+start_values AS (
+    SELECT 
+        s.src_id, 
+        s.month, 
+        d.src_sup_total_hheat AS start_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d 
+    JOIN start_period s ON d.src_id = s.src_id AND d.data_time = s.start_time
+),
+end_values AS (
+    SELECT 
+        e.src_id, 
+        e.month, 
+        d.src_sup_total_hheat AS end_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d 
+    JOIN end_period e ON d.src_id = e.src_id AND d.data_time = e.end_time
+)
+SELECT 
+    s.src_id,
+    CASE 
+        WHEN s.src_id = 1 THEN '商河恒泰热源厂'
+        WHEN s.src_id = 2 THEN '玉泉生物质电厂'
+    END AS src_name,
+    s.month, 
+    (e.end_heat - s.start_heat) AS monthly_total_heat 
+FROM start_values s 
+JOIN end_values e ON s.src_id = e.src_id AND s.month = e.month 
+ORDER BY s.src_id, s.month;
+2025-11-23 21:34:28,425 - src.excel_processor - INFO - excel_processor.py:41 - 处理第59行问题: 2024-2025供暖季商河热网的热单耗是多少？
+2025-11-23 21:34:28,522 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:34:55,575 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热网的热单耗是多少？》- 第 1 轮生成与验证
+2025-11-23 21:34:55,771 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:35:20,144 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:35:32,586 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:35:32,887 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热网的热单耗是多少？》- 第 2 轮生成与验证
+2025-11-23 21:35:33,079 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:35:50,357 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:36:02,086 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:36:02,386 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热网的热单耗是多少？》- 第 3 轮生成与验证
+2025-11-23 21:36:02,598 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:36:17,138 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:36:29,013 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:36:29,315 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河热网的热单耗是多少？》- 第 4 轮生成与验证
+2025-11-23 21:36:29,517 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:36:47,064 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:36:59,877 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:36:59,877 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:36:59,877 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        src_id,
+        MIN(data_time) AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+    WHERE src_id IN (1, 2)
+    AND data_time >= '2024-11-15 00:00:00'
+    GROUP BY src_id
+),
+end_period AS (
+    SELECT 
+        src_id,
+        MIN(data_time) AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data
+    WHERE src_id IN (1, 2)
+    AND data_time >= '2025-03-15 00:00:00'
+    GROUP BY src_id
+),
+start_values AS (
+    SELECT 
+        d.src_id,
+        d.src_sup_total_hheat AS start_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN start_period s ON d.src_id = s.src_id AND d.data_time = s.start_time
+),
+end_values AS (
+    SELECT 
+        d.src_id,
+        d.src_sup_total_hheat AS end_heat
+    FROM ods_sc01_ntjt_zhgr_heat_source_inst_data d
+    JOIN end_period e ON d.src_id = e.src_id AND d.data_time = e.end_time
+),
+total_heat_area AS (
+    SELECT SUM(heat_area) AS total_heat_area
+    FROM ods_sc01_ntjt_zhgr_heat_station_info
+),
+heat_diff AS (
+    SELECT SUM(e.end_heat - s.start_heat) AS total_heat
+    FROM start_values s
+    JOIN end_values e ON s.src_id = e.src_id
+),
+time_range AS (
+    SELECT 
+        TIMESTAMPDIFF(HOUR, '2024-11-15 00:00:00', '2025-03-15 00:00:00') AS total_hours
+)
+SELECT 
+    (h.total_heat / t.total_heat_area) * 24 * 120 / (r.total_hours + 1) AS avg_heat_consumption
+FROM heat_diff h
+CROSS JOIN total_heat_area t
+CROSS JOIN time_range r;
+2025-11-23 21:36:59,877 - src.excel_processor - INFO - excel_processor.py:41 - 处理第60行问题: 2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？
+2025-11-23 21:36:59,997 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:37:22,604 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:37:22,829 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:37:31,289 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:37:50,230 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 1/20
+2025-11-23 21:37:50,531 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:37:50,782 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:37:58,828 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:38:08,559 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:38:08,860 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:38:09,006 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:38:16,913 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:38:29,220 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:38:29,520 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:38:29,833 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:38:40,878 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:38:59,305 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:38:59,606 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的产热量是多少？》- 第 5 轮生成与验证
+2025-11-23 21:38:59,792 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:39:12,407 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:39:29,926 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 21:39:29,926 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:39:29,926 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT circulate_water_total_hheat AS start_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+    AND data_time = (
+        SELECT MIN(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+        WHERE pump_id = '1' 
+        AND data_time >= '2024-11-15 00:00:00'
+    )
+), 
+end_period AS (
+    SELECT circulate_water_total_hheat AS end_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+    AND data_time = (
+        SELECT MAX(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+        WHERE pump_id = '1' 
+        AND data_time <= '2025-03-15 00:00:00'
+    )
+) 
+SELECT (end_data - start_data) AS total_heat_production 
+FROM start_period, end_period;
+2025-11-23 21:39:29,926 - src.excel_processor - INFO - excel_processor.py:41 - 处理第61行问题: 2024-2025供暖季商河恒泰热源厂1号热泵各月的产热量分别是多少？
+2025-11-23 21:39:30,028 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:39:56,056 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的产热量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:39:56,264 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:40:14,087 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:40:26,973 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:40:27,275 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的产热量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:40:27,493 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:40:34,936 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:40:45,266 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:40:45,568 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的产热量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:40:45,733 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:41:02,103 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:41:11,551 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:41:11,852 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的产热量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:41:12,002 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:41:28,818 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:41:36,802 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:41:36,802 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:41:36,803 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        pump_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MIN(data_time) AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+monthly_end AS (
+    SELECT 
+        pump_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MAX(data_time) AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+start_values AS (
+    SELECT 
+        s.pump_id,
+        s.month,
+        d.circulate_water_total_hheat AS start_heat
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN monthly_start s ON d.pump_id = s.pump_id AND d.data_time = s.start_time
+),
+end_values AS (
+    SELECT 
+        e.pump_id,
+        e.month,
+        d.circulate_water_total_hheat AS end_heat
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN monthly_end e ON d.pump_id = e.pump_id AND d.data_time = e.end_time
+)
+SELECT 
+    s.pump_id,
+    s.month,
+    (e.end_heat - s.start_heat) AS monthly_heat_production
+FROM start_values s
+JOIN end_values e ON s.pump_id = e.pump_id AND s.month = e.month
+ORDER BY s.month;
+2025-11-23 21:41:36,803 - src.excel_processor - INFO - excel_processor.py:41 - 处理第62行问题: 2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？
+2025-11-23 21:41:36,885 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:01,157 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:42:01,325 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:11,985 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:23,107 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 1/20
+2025-11-23 21:42:23,407 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:42:23,593 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:33,508 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:45,731 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:42:46,033 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:42:46,251 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:42:56,940 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:43:09,091 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:43:09,392 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:43:09,596 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:43:21,303 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:43:42,551 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:43:42,852 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的产热量分别是多少？》- 第 5 轮生成与验证
+2025-11-23 21:43:43,029 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:43:59,731 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:44:08,647 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 21:44:08,647 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:44:08,647 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT hp.pump_id, hp.circulate_water_total_hheat AS start_data 
+    FROM (
+        SELECT hp.pump_id, hp.circulate_water_total_hheat, hp.data_time,
+               ROW_NUMBER() OVER (PARTITION BY hp.pump_id ORDER BY hp.data_time ASC) AS rn 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data hp
+        JOIN ods_sc01_ntjt_zhgr_heat_source_info src ON hp.src_id = src.src_id
+        WHERE hp.data_time >= '2024-11-15 00:00:00'
+          AND src.src_name LIKE '%商河恒泰热源厂%'
+    ) t 
+    WHERE rn = 1
+),
+end_period AS (
+    SELECT hp.pump_id, hp.circulate_water_total_hheat AS end_data 
+    FROM (
+        SELECT hp.pump_id, hp.circulate_water_total_hheat, hp.data_time,
+               ROW_NUMBER() OVER (PARTITION BY hp.pump_id ORDER BY hp.data_time DESC) AS rn 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data hp
+        JOIN ods_sc01_ntjt_zhgr_heat_source_info src ON hp.src_id = src.src_id
+        WHERE hp.data_time <= '2025-03-15 00:00:00'
+          AND src.src_name LIKE '%商河恒泰热源厂%'
+    ) t 
+    WHERE rn = 1
+)
+SELECT s.pump_id, (e.end_data - s.start_data) AS total_heat 
+FROM start_period s 
+JOIN end_period e ON s.pump_id = e.pump_id
+WHERE s.pump_id IN ('1', '2');
+2025-11-23 21:44:08,647 - src.excel_processor - INFO - excel_processor.py:41 - 处理第63行问题: 2024-2025供暖季商河恒泰热源厂2台热泵各月的产热量分别是多少？
+2025-11-23 21:44:08,738 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:44:37,421 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的产热量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:44:37,637 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:44:55,250 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:45:04,021 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:45:04,322 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的产热量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:45:04,487 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:45:22,634 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:45:32,590 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:45:32,891 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的产热量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:45:33,101 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:45:51,186 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:46:04,104 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:46:04,405 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的产热量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:46:04,584 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:46:10,371 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:46:21,039 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:46:21,040 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:46:21,040 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+    pump_id,
+    DATE_FORMAT(data_time, '%Y-%m') AS month,
+    AVG(circulate_water_total_hheat) AS monthly_heat_output
+FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+WHERE pump_id IN ('1','2') 
+    AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+ORDER BY pump_id, month;
+2025-11-23 21:46:21,040 - src.excel_processor - INFO - excel_processor.py:41 - 处理第64行问题: 2024-2025供暖季商河恒泰热源厂1号热泵的用气量是多少？
+2025-11-23 21:46:21,116 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:46:42,645 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的用气量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:46:42,799 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:46:50,441 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:02,764 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:47:03,066 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的用气量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:47:03,285 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:11,121 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:26,780 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:47:27,080 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的用气量是多少？》- 第 3 轮生成与验证
+2025-11-23 21:47:27,243 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:36,775 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:46,541 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:47:46,842 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵的用气量是多少？》- 第 4 轮生成与验证
+2025-11-23 21:47:47,055 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:47:54,997 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:48:05,466 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:48:05,467 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:48:05,467 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT heatpump_total_gas AS start_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' AND src_id = 1 AND data_time >= '2024-11-15 00:00:00' 
+    ORDER BY data_time ASC LIMIT 1
+), 
+end_period AS (
+    SELECT heatpump_total_gas AS end_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' AND src_id = 1 AND data_time >= '2025-03-15 00:00:00' 
+    ORDER BY data_time ASC LIMIT 1
+)
+SELECT (end_data - start_data) AS total_gas_consumption
+FROM start_period, end_period;
+2025-11-23 21:48:05,467 - src.excel_processor - INFO - excel_processor.py:41 - 处理第65行问题: 2024-2025供暖季商河恒泰热源厂1号热泵各月的用气量分别是多少？
+2025-11-23 21:48:05,588 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:48:34,151 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的用气量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:48:34,323 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:48:52,240 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:49:04,979 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:49:05,280 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的用气量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:49:05,481 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:49:23,439 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:49:31,760 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:49:32,061 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的用气量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:49:32,241 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:49:48,992 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:50:00,625 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:50:00,926 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂1号热泵各月的用气量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:50:01,103 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:50:19,299 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:50:28,778 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:50:28,778 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:50:28,778 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        pump_id, 
+        DATE_FORMAT(data_time, '%Y-%m') AS month, 
+        MIN(data_time) AS start_time 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00' 
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+end_period AS (
+    SELECT 
+        pump_id, 
+        DATE_FORMAT(data_time, '%Y-%m') AS month, 
+        MAX(data_time) AS end_time 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id = '1' 
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00' 
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+start_values AS (
+    SELECT 
+        s.pump_id, 
+        s.month, 
+        d.heatpump_total_gas AS start_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d 
+    JOIN start_period s ON d.pump_id = s.pump_id AND d.data_time = s.start_time
+),
+end_values AS (
+    SELECT 
+        e.pump_id, 
+        e.month, 
+        d.heatpump_total_gas AS end_data 
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d 
+    JOIN end_period e ON d.pump_id = e.pump_id AND d.data_time = e.end_time
+)
+SELECT 
+    s.pump_id, 
+    s.month, 
+    (e.end_data - s.start_data) AS monthly_total_data 
+FROM start_values s 
+JOIN end_values e ON s.pump_id = e.pump_id AND s.month = e.month 
+WHERE s.pump_id = '1'
+ORDER BY s.pump_id, s.month;
+2025-11-23 21:50:28,778 - src.excel_processor - INFO - excel_processor.py:41 - 处理第66行问题: 2024-2025供暖季商河恒泰热源厂2台热泵的用气量分别是多少？
+2025-11-23 21:50:28,864 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:50:51,252 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的用气量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:50:51,482 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:51:02,551 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:51:11,426 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:51:11,728 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的用气量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:51:11,954 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:51:25,947 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:51:37,176 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:51:37,477 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的用气量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:51:37,661 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:51:50,075 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:52:01,362 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:52:01,664 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵的用气量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:52:01,832 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:52:13,763 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:52:23,803 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:52:23,803 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:52:23,803 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT pump_id, heatpump_total_gas AS start_data 
+    FROM (
+        SELECT pump_id, heatpump_total_gas, data_time, 
+               ROW_NUMBER() OVER (PARTITION BY pump_id ORDER BY data_time ASC) AS rn 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+        WHERE data_time >= '2024-11-15 00:00:00'
+    ) t 
+    WHERE rn = 1
+), 
+end_period AS (
+    SELECT pump_id, heatpump_total_gas AS end_data 
+    FROM (
+        SELECT pump_id, heatpump_total_gas, data_time, 
+               ROW_NUMBER() OVER (PARTITION BY pump_id ORDER BY data_time DESC) AS rn 
+        FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+        WHERE data_time <= '2025-03-15 00:00:00'
+    ) t 
+    WHERE rn = 1
+)
+SELECT s.pump_id, (e.end_data - s.start_data) AS total_gas_consumption 
+FROM start_period s 
+JOIN end_period e ON s.pump_id = e.pump_id
+JOIN ods_sc01_ntjt_zhgr_heat_heatpump_info hpi ON s.pump_id = hpi.pump_id
+WHERE hpi.src_id = 1;
+2025-11-23 21:52:23,803 - src.excel_processor - INFO - excel_processor.py:41 - 处理第67行问题: 2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？
+2025-11-23 21:52:23,904 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:52:51,108 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 1 轮生成与验证
+2025-11-23 21:52:51,343 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:53:08,594 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:53:18,984 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:53:19,285 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 2 轮生成与验证
+2025-11-23 21:53:19,492 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:53:37,371 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:53:50,610 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:53:50,912 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 3 轮生成与验证
+2025-11-23 21:53:51,098 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:53:57,825 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:54:11,424 - src.workflow - INFO - workflow.py:103 - 评估置信度: 75, 当前重试轮数: 3/20
+2025-11-23 21:54:11,726 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 4 轮生成与验证
+2025-11-23 21:54:12,043 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:54:19,851 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:54:28,530 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:54:28,831 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 5 轮生成与验证
+2025-11-23 21:54:29,077 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:54:45,802 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:54:55,343 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 21:54:55,644 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 6 轮生成与验证
+2025-11-23 21:54:55,890 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:55:13,417 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:55:22,313 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-23 21:55:22,615 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂2台热泵各月的用气量分别是多少？》- 第 7 轮生成与验证
+2025-11-23 21:55:22,830 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:55:40,998 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:55:51,733 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-23 21:55:51,735 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:55:51,735 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        pump_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MIN(data_time) AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id IN (SELECT pump_id FROM ods_sc01_ntjt_zhgr_heat_heatpump_info WHERE src_id = 1)
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+
+pump_end_period AS (
+    SELECT 
+        pump_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MAX(data_time) AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data 
+    WHERE pump_id IN (SELECT pump_id FROM ods_sc01_ntjt_zhgr_heat_heatpump_info WHERE src_id = 1)
+        AND data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY pump_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+
+pump_start_values AS (
+    SELECT 
+        s.pump_id,
+        s.month,
+        d.heatpump_total_gas AS start_data
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN pump_start_period s ON d.pump_id = s.pump_id AND d.data_time = s.start_time
+),
+
+pump_end_values AS (
+    SELECT 
+        e.pump_id,
+        e.month,
+        d.heatpump_total_gas AS end_data
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN pump_end_period e ON d.pump_id = e.pump_id AND d.data_time = e.end_time
+)
+
+SELECT 
+    s.pump_id,
+    s.month,
+    (e.end_data - s.start_data) AS monthly_total_data
+FROM pump_start_values s
+JOIN pump_end_values e ON s.pump_id = e.pump_id AND s.month = e.month
+ORDER BY s.pump_id, s.month;
+2025-11-23 21:55:51,735 - src.excel_processor - INFO - excel_processor.py:41 - 处理第68行问题: 2024-2025供暖季商河所有换热站的度日数热单耗最高的5个是哪5个？
+2025-11-23 21:55:51,815 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:56:19,711 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河所有换热站的度日数热单耗最高的5个是哪5个？》- 第 1 轮生成与验证
+2025-11-23 21:56:19,907 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:56:41,693 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:56:50,248 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:56:50,549 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河所有换热站的度日数热单耗最高的5个是哪5个？》- 第 2 轮生成与验证
+2025-11-23 21:56:50,757 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:57:14,919 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:57:22,895 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 21:57:23,196 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河所有换热站的度日数热单耗最高的5个是哪5个？》- 第 3 轮生成与验证
+2025-11-23 21:57:23,370 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:57:46,548 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:57:56,634 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 21:57:56,938 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河所有换热站的度日数热单耗最高的5个是哪5个？》- 第 4 轮生成与验证
+2025-11-23 21:57:57,144 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:58:20,301 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:58:29,934 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 21:58:29,934 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 21:58:29,934 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area, plan_num 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE belong_unit LIKE '%商河%'
+),
+start_period AS (
+    SELECT stn_id, MIN(data_time) AS start_time 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE data_time >= '2024-11-15 00:00:00' 
+    GROUP BY stn_id
+),
+end_period AS (
+    SELECT stn_id, MAX(data_time) AS end_time 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE data_time <= '2025-03-15 00:00:00' 
+    GROUP BY stn_id
+),
+start_heat AS (
+    SELECT d.stn_id, d.stn_prim_total_hheat AS start_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN start_period s ON d.stn_id = s.stn_id AND d.data_time = s.start_time
+),
+end_heat AS (
+    SELECT d.stn_id, d.stn_prim_total_hheat AS end_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN end_period e ON d.stn_id = e.stn_id AND d.data_time = e.end_time
+),
+daily_avg_temp AS (
+    SELECT DATE(data_time) AS date, AVG(temp) AS avg_temp 
+    FROM ods_sc01_ntjt_zhgr_heat_weather_info_log 
+    WHERE data_time >= '2024-11-15 00:00:00' AND data_time < '2025-03-15 00:00:00' 
+    GROUP BY DATE(data_time)
+),
+degree_days AS (
+    SELECT SUM(GREATEST(22 - avg_temp, 0)) AS HDD_season 
+    FROM daily_avg_temp
+),
+heat_specific_consumption AS (
+    SELECT 
+        s.stn_id, 
+        (e.end_heat - s.start_heat) / i.heat_area * 24 * 120 / (TIMESTAMPDIFF(HOUR, '2024-11-15 00:00:00', '2025-03-15 00:00:00') + 1) AS heat_per_area
+    FROM start_heat s
+    JOIN end_heat e ON s.stn_id = e.stn_id
+    JOIN station_info i ON s.stn_id = i.stn_id
+    WHERE e.end_heat IS NOT NULL AND s.start_heat IS NOT NULL AND i.heat_area > 0
+)
+SELECT 
+    h.stn_id, 
+    h.heat_per_area / d.HDD_season AS heat_per_area_per_degree_day 
+FROM heat_specific_consumption h, degree_days d 
+ORDER BY heat_per_area_per_degree_day DESC 
+LIMIT 5;
+2025-11-23 21:58:29,934 - src.excel_processor - INFO - excel_processor.py:41 - 处理第69行问题: 2024-2025供暖季商河恒泰热源厂各月总燃气用量是多少？
+2025-11-23 21:58:30,020 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:58:52,772 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂各月总燃气用量是多少？》- 第 1 轮生成与验证
+2025-11-23 21:58:52,952 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:59:34,543 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 21:59:48,310 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 21:59:48,611 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂各月总燃气用量是多少？》- 第 2 轮生成与验证
+2025-11-23 21:59:48,759 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:33:06,299 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.424353 seconds
+2025-11-23 22:33:07,146 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:33:49,875 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:33:59,905 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:34:00,206 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂各月总燃气用量是多少？》- 第 3 轮生成与验证
+2025-11-23 22:34:00,409 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:34:47,175 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:34:57,258 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 22:34:57,559 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季商河恒泰热源厂各月总燃气用量是多少？》- 第 4 轮生成与验证
+2025-11-23 22:34:57,766 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:35:38,497 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:35:47,862 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:35:47,862 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:35:47,862 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        d.blr_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        MIN(d.data_time) AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data d
+    WHERE d.data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY d.blr_id, DATE_FORMAT(d.data_time, '%Y-%m')
+),
+
+boiler_end_period AS (
+    SELECT 
+        d.blr_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        MAX(d.data_time) AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data d
+    WHERE d.data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY d.blr_id, DATE_FORMAT(d.data_time, '%Y-%m')
+),
+
+boiler_start_values AS (
+    SELECT 
+        s.blr_id,
+        s.month,
+        d.blr_gas_total_hflow AS start_data
+    FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data d
+    JOIN boiler_start_period s ON d.blr_id = s.blr_id AND d.data_time = s.start_time
+),
+
+boiler_end_values AS (
+    SELECT 
+        e.blr_id,
+        e.month,
+        d.blr_gas_total_hflow AS end_data
+    FROM ods_sc01_ntjt_zhgr_heat_boiler_inst_data d
+    JOIN boiler_end_period e ON d.blr_id = e.blr_id AND d.data_time = e.end_time
+),
+
+month_boiler_gas AS (
+    SELECT 
+        s.blr_id,
+        s.month,
+        COALESCE(COALESCE(e.end_data, 0) - COALESCE(s.start_data, 0), 0) AS monthly_total_data
+    FROM boiler_start_values s
+    JOIN boiler_end_values e ON s.blr_id = e.blr_id AND s.month = e.month
+),
+
+pump_start_period AS (
+    SELECT 
+        d.pump_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        MIN(d.data_time) AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    WHERE d.data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY d.pump_id, DATE_FORMAT(d.data_time, '%Y-%m')
+),
+
+pump_end_period AS (
+    SELECT 
+        d.pump_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        MAX(d.data_time) AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    WHERE d.data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    GROUP BY d.pump_id, DATE_FORMAT(d.data_time, '%Y-%m')
+),
+
+pump_start_values AS (
+    SELECT 
+        s.pump_id,
+        s.month,
+        d.heatpump_total_gas AS start_data
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN pump_start_period s ON d.pump_id = s.pump_id AND d.data_time = s.start_time
+),
+
+pump_end_values AS (
+    SELECT 
+        e.pump_id,
+        e.month,
+        d.heatpump_total_gas AS end_data
+    FROM ods_sc01_ntjt_zhgr_heat_heatpump_inst_data d
+    JOIN pump_end_period e ON d.pump_id = e.pump_id AND d.data_time = e.end_time
+),
+
+month_pump_gas AS (
+    SELECT 
+        s.pump_id,
+        s.month,
+        COALESCE(COALESCE(e.end_data, 0) - COALESCE(s.start_data, 0), 0) AS monthly_total_data
+    FROM pump_start_values s
+    JOIN pump_end_values e ON s.pump_id = e.pump_id AND s.month = e.month
+),
+
+month_boiler_gas_usage AS (
+    SELECT 
+        month,
+        SUM(monthly_total_data) AS month_total_boiler_gas
+    FROM month_boiler_gas
+    GROUP BY month
+),
+
+month_pump_gas_usage AS (
+    SELECT 
+        month,
+        SUM(monthly_total_data) AS month_total_pump_gas
+    FROM month_pump_gas
+    GROUP BY month
+),
+
+all_months AS (
+    SELECT DISTINCT month FROM month_boiler_gas_usage
+    UNION
+    SELECT DISTINCT month FROM month_pump_gas_usage
+)
+
+SELECT
+    m.month,
+    COALESCE(b.month_total_boiler_gas, 0) + COALESCE(p.month_total_pump_gas, 0) AS total_gas_usage
+FROM all_months m
+LEFT JOIN month_boiler_gas_usage b ON m.month = b.month
+LEFT JOIN month_pump_gas_usage p ON m.month = p.month
+ORDER BY m.month;
+2025-11-23 22:35:47,862 - src.excel_processor - INFO - excel_processor.py:41 - 处理第70行问题: 2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？
+2025-11-23 22:35:47,946 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:36:12,792 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 1 轮生成与验证
+2025-11-23 22:36:12,960 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:36:37,742 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:36:49,434 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:36:49,738 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 2 轮生成与验证
+2025-11-23 22:36:49,903 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:14,927 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:24,683 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:37:24,985 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 3 轮生成与验证
+2025-11-23 22:37:25,167 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:37:41,820 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:05,136 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 22:38:05,438 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 4 轮生成与验证
+2025-11-23 22:38:05,632 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:22,719 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:33,311 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:38:33,311 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:38:33,311 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area, plan_num 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE stn_name LIKE '%豪门又一城%'
+),
+monthly_data AS (
+    SELECT 
+        stn_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MIN(data_time) AS start_time,
+        MAX(data_time) AS end_time,
+        (MAX(stn1_seco_repl_total_flow) - MIN(stn1_seco_repl_total_flow)) AS water_diff1,
+        (MAX(stn2_seco_repl_total_flow) - MIN(stn2_seco_repl_total_flow)) AS water_diff2,
+        (MAX(stn3_seco_repl_total_flow) - MIN(stn3_seco_repl_total_flow)) AS water_diff3
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00' 
+        AND stn_id = (SELECT stn_id FROM station_info)
+    GROUP BY stn_id, DATE_FORMAT(data_time, '%Y-%m')
+)
+SELECT 
+    m.month,
+    ((CASE WHEN i.plan_num >= 1 THEN COALESCE(m.water_diff1, 0) ELSE 0 END +
+      CASE WHEN i.plan_num >= 2 THEN COALESCE(m.water_diff2, 0) ELSE 0 END +
+      CASE WHEN i.plan_num >= 3 THEN COALESCE(m.water_diff3, 0) ELSE 0 END) * 1000 * 120 * 24 / i.heat_area) / 
+    (TIMESTAMPDIFF(HOUR, m.start_time, m.end_time) + 1) AS water_specific_consumption 
+FROM monthly_data m
+JOIN station_info i ON m.stn_id = i.stn_id
+ORDER BY water_specific_consumption DESC 
+LIMIT 1;
+2025-11-23 22:38:33,312 - src.excel_processor - INFO - excel_processor.py:41 - 处理第71行问题: 2024-2025供暖季豪门又一城站的用热量是多少？
+2025-11-23 22:38:33,383 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:38:56,971 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的用热量是多少？》- 第 1 轮生成与验证
+2025-11-23 22:38:57,139 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:39:11,022 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:39:19,159 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:39:19,460 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的用热量是多少？》- 第 2 轮生成与验证
+2025-11-23 22:39:19,615 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:39:32,440 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:39:45,110 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:39:45,412 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的用热量是多少？》- 第 3 轮生成与验证
+2025-11-23 22:39:45,608 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:39:58,016 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:40:07,122 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 22:40:07,423 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的用热量是多少？》- 第 4 轮生成与验证
+2025-11-23 22:40:07,588 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:40:22,023 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:40:31,869 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:40:31,869 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:40:31,869 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE stn_name LIKE '%豪门又一城%'
+),
+start_period AS (
+    SELECT stn_id, stn_prim_total_hheat AS start_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE stn_id = (SELECT stn_id FROM station_info) 
+    AND data_time = (
+        SELECT MIN(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+        WHERE data_time >= '2024-11-15 00:00:00' 
+        AND stn_id = (SELECT stn_id FROM station_info)
+    )
+),
+end_period AS (
+    SELECT stn_id, stn_prim_total_hheat AS end_heat 
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE stn_id = (SELECT stn_id FROM station_info) 
+    AND data_time = (
+        SELECT MAX(data_time) 
+        FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+        WHERE data_time <= '2025-03-15 00:00:00' 
+        AND stn_id = (SELECT stn_id FROM station_info)
+    )
+)
+SELECT 
+    (e.end_heat - s.start_heat) AS total_heat_consumption
+FROM start_period s
+JOIN end_period e ON s.stn_id = e.stn_id;
+2025-11-23 22:40:31,871 - src.excel_processor - INFO - excel_processor.py:41 - 处理第72行问题: 2024-2025供暖季用热量最多的5个换热站是哪5个？
+2025-11-23 22:40:31,963 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:40:54,735 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季用热量最多的5个换热站是哪5个？》- 第 1 轮生成与验证
+2025-11-23 22:40:54,921 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:41:06,809 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:41:17,843 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:41:18,144 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季用热量最多的5个换热站是哪5个？》- 第 2 轮生成与验证
+2025-11-23 22:41:18,294 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:41:31,195 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:41:48,016 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:41:48,318 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季用热量最多的5个换热站是哪5个？》- 第 3 轮生成与验证
+2025-11-23 22:41:48,488 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:42:02,733 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:42:13,468 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 22:42:13,770 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季用热量最多的5个换热站是哪5个？》- 第 4 轮生成与验证
+2025-11-23 22:42:14,032 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:42:26,987 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:42:36,088 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:42:36,088 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:42:36,088 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT 
+        stn_id,
+        stn_prim_total_hheat AS start_heat
+    FROM (
+        SELECT 
+            stn_id,
+            stn_prim_total_hheat,
+            data_time,
+            ROW_NUMBER() OVER (PARTITION BY stn_id ORDER BY data_time ASC) AS rn
+        FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+        WHERE data_time >= '2024-11-15 00:00:00'
+    ) t 
+    WHERE rn = 1
+), 
+end_period AS (
+    SELECT 
+        stn_id,
+        stn_prim_total_hheat AS end_heat
+    FROM (
+        SELECT 
+            stn_id,
+            stn_prim_total_hheat,
+            data_time,
+            ROW_NUMBER() OVER (PARTITION BY stn_id ORDER BY data_time DESC) AS rn
+        FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+        WHERE data_time <= '2025-03-15 00:00:00'
+    ) t 
+    WHERE rn = 1
+)
+SELECT 
+    s.stn_id, 
+    i.stn_name, 
+    (e.end_heat - s.start_heat) AS total_heat 
+FROM start_period s 
+JOIN end_period e ON s.stn_id = e.stn_id 
+JOIN ods_sc01_ntjt_zhgr_heat_station_info i ON i.stn_id = s.stn_id 
+WHERE i.is_delete = '0'
+ORDER BY total_heat DESC 
+LIMIT 5;
+2025-11-23 22:42:36,088 - src.excel_processor - INFO - excel_processor.py:41 - 处理第73行问题: 2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？
+2025-11-23 22:42:36,160 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:43:03,000 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 1 轮生成与验证
+2025-11-23 22:43:03,149 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:43:29,320 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:43:41,341 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:43:41,642 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 2 轮生成与验证
+2025-11-23 22:43:41,831 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:44:06,613 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:44:17,603 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:44:17,904 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 3 轮生成与验证
+2025-11-23 22:44:18,062 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:44:43,837 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:44:57,742 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 3/20
+2025-11-23 22:44:58,043 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 4 轮生成与验证
+2025-11-23 22:44:58,193 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:45:24,167 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:45:35,686 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:45:35,986 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 5 轮生成与验证
+2025-11-23 22:45:36,142 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:46:01,290 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:46:11,910 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 22:46:12,212 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 6 轮生成与验证
+2025-11-23 22:46:12,373 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:46:38,354 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:46:50,295 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-23 22:46:50,598 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月电单耗最高的是哪一个月？》- 第 7 轮生成与验证
+2025-11-23 22:46:50,743 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:47:15,753 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:47:28,181 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-23 22:47:28,181 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:47:28,181 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE stn_name LIKE '%豪门又一城%'
+),
+month_ranges AS (
+    SELECT '2024-11' AS month, '2024-11-15 00:00:00' AS start_time, '2024-11-30 23:59:59' AS end_time
+    UNION ALL SELECT '2024-12', '2024-12-01 00:00:00', '2024-12-31 23:59:59'
+    UNION ALL SELECT '2025-01', '2025-01-01 00:00:00', '2025-01-31 23:59:59'
+    UNION ALL SELECT '2025-02', '2025-02-01 00:00:00', '2025-02-28 23:59:59'
+    UNION ALL SELECT '2025-03', '2025-03-01 00:00:00', '2025-03-15 00:00:00'
+),
+start_data AS (
+    SELECT
+        m.month,
+        s.stn_id,
+        MIN(d.data_time) AS start_time
+    FROM month_ranges m
+    CROSS JOIN station_info s
+    JOIN ods_sc01_ntjt_zhgr_heat_station_inst_data d ON d.stn_id = s.stn_id
+    WHERE d.data_time BETWEEN m.start_time AND m.end_time
+    GROUP BY m.month, s.stn_id
+),
+end_data AS (
+    SELECT
+        m.month,
+        s.stn_id,
+        MAX(d.data_time) AS end_time
+    FROM month_ranges m
+    CROSS JOIN station_info s
+    JOIN ods_sc01_ntjt_zhgr_heat_station_inst_data d ON d.stn_id = s.stn_id
+    WHERE d.data_time BETWEEN m.start_time AND m.end_time
+    GROUP BY m.month, s.stn_id
+),
+start_values AS (
+    SELECT
+        sd.month,
+        sd.stn_id,
+        sd.start_time,
+        d.stn_total_elec AS start_elec
+    FROM start_data sd
+    JOIN ods_sc01_ntjt_zhgr_heat_station_inst_data d ON sd.stn_id = d.stn_id AND sd.start_time = d.data_time
+),
+end_values AS (
+    SELECT
+        ed.month,
+        ed.stn_id,
+        ed.end_time,
+        d.stn_total_elec AS end_elec
+    FROM end_data ed
+    JOIN ods_sc01_ntjt_zhgr_heat_station_inst_data d ON ed.stn_id = d.stn_id AND ed.end_time = d.data_time
+)
+SELECT
+    s.month,
+    (e.end_elec - s.start_elec) * 24 * 120 / i.heat_area / (TIMESTAMPDIFF(HOUR, s.start_time, e.end_time) + 1) AS elec_specific_consumption
+FROM start_values s
+JOIN end_values e ON s.stn_id = e.stn_id AND s.month = e.month
+JOIN station_info i ON s.stn_id = i.stn_id
+ORDER BY elec_specific_consumption DESC 
+LIMIT 1;
+2025-11-23 22:47:28,181 - src.excel_processor - INFO - excel_processor.py:41 - 处理第74行问题: 2024-2025供暖季豪门又一城站各月的水单耗分别是多少？
+2025-11-23 22:47:28,274 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:47:53,955 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 1 轮生成与验证
+2025-11-23 22:47:54,152 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:48:23,201 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:48:34,672 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 1/20
+2025-11-23 22:48:34,974 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 2 轮生成与验证
+2025-11-23 22:48:35,176 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:48:58,303 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:49:10,212 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 2/20
+2025-11-23 22:49:10,512 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 3 轮生成与验证
+2025-11-23 22:49:10,663 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:49:34,882 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:49:45,701 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 3/20
+2025-11-23 22:49:46,002 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 4 轮生成与验证
+2025-11-23 22:49:46,184 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:50:04,334 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:50:14,828 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:50:15,130 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 5 轮生成与验证
+2025-11-23 22:50:15,325 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:50:39,175 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:50:50,741 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 5/20
+2025-11-23 22:50:51,044 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 6 轮生成与验证
+2025-11-23 22:50:51,231 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:51:17,943 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:51:40,098 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 6/20
+2025-11-23 22:51:40,401 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 7 轮生成与验证
+2025-11-23 22:51:40,550 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:51:54,557 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:52:05,003 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 7/20
+2025-11-23 22:52:05,306 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站各月的水单耗分别是多少？》- 第 8 轮生成与验证
+2025-11-23 22:52:05,461 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:52:29,710 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:52:41,796 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 8/20
+2025-11-23 22:52:41,796 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 45, 提前采纳当前SQL。
+2025-11-23 22:52:41,796 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area, plan_num 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE stn_name LIKE '%豪门又一城%'
+),
+monthly_ranges AS (
+    SELECT 
+        DATE_FORMAT(data_time, '%Y-%m') AS month_period,
+        MIN(data_time) AS month_start,
+        MAX(data_time) AS month_end
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE data_time BETWEEN '2024-11-15 00:00:00' AND '2025-03-15 00:00:00'
+    AND stn_id = (SELECT stn_id FROM station_info)
+    GROUP BY DATE_FORMAT(data_time, '%Y-%m')
+),
+start_values AS (
+    SELECT 
+        m.month_period,
+        d.stn_id,
+        d.stn1_seco_repl_total_flow AS start_water1,
+        d.stn2_seco_repl_total_flow AS start_water2,
+        d.stn3_seco_repl_total_flow AS start_water3
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN monthly_ranges m ON d.stn_id = (SELECT stn_id FROM station_info) 
+        AND d.data_time = m.month_start
+),
+end_values AS (
+    SELECT 
+        m.month_period,
+        d.stn_id,
+        d.stn1_seco_repl_total_flow AS end_water1,
+        d.stn2_seco_repl_total_flow AS end_water2,
+        d.stn3_seco_repl_total_flow AS end_water3
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN monthly_ranges m ON d.stn_id = (SELECT stn_id FROM station_info) 
+        AND d.data_time = m.month_end
+)
+SELECT 
+    s.month_period,
+    ((COALESCE(e.end_water1, 0) - COALESCE(s.start_water1, 0)) * 
+     CASE WHEN (SELECT plan_num FROM station_info) >= 1 THEN 1 ELSE 0 END +
+     (COALESCE(e.end_water2, 0) - COALESCE(s.start_water2, 0)) * 
+     CASE WHEN (SELECT plan_num FROM station_info) >= 2 THEN 1 ELSE 0 END +
+     (COALESCE(e.end_water3, 0) - COALESCE(s.start_water3, 0)) * 
+     CASE WHEN (SELECT plan_num FROM station_info) >= 3 THEN 1 ELSE 0 END) * 
+    1000 * 120 * 24 / 
+    (SELECT heat_area FROM station_info) / 
+    (TIMESTAMPDIFF(HOUR, m.month_start, m.month_end) + 1) AS water_specific_consumption
+FROM start_values s
+JOIN end_values e ON s.month_period = e.month_period
+JOIN monthly_ranges m ON s.month_period = m.month_period
+ORDER BY s.month_period;
+2025-11-23 22:52:41,796 - src.excel_processor - INFO - excel_processor.py:41 - 处理第75行问题: 2025年1月商河所有换热站阀门指令下发成功率最低的5个换热站是哪5个？成功率分别是多少？
+2025-11-23 22:52:41,888 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:06,452 - src.workflow - INFO - workflow.py:97 - 问题《2025年1月商河所有换热站阀门指令下发成功率最低的5个换热站是哪5个？成功率分别是多少？》- 第 1 轮生成与验证
+2025-11-23 22:53:06,823 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:15,272 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:29,884 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:53:30,186 - src.workflow - INFO - workflow.py:97 - 问题《2025年1月商河所有换热站阀门指令下发成功率最低的5个换热站是哪5个？成功率分别是多少？》- 第 2 轮生成与验证
+2025-11-23 22:53:30,359 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:39,500 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:49,045 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:53:49,347 - src.workflow - INFO - workflow.py:97 - 问题《2025年1月商河所有换热站阀门指令下发成功率最低的5个换热站是哪5个？成功率分别是多少？》- 第 3 轮生成与验证
+2025-11-23 22:53:49,490 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:53:59,144 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:54:09,113 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-23 22:54:09,414 - src.workflow - INFO - workflow.py:97 - 问题《2025年1月商河所有换热站阀门指令下发成功率最低的5个换热站是哪5个？成功率分别是多少？》- 第 4 轮生成与验证
+2025-11-23 22:54:09,575 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:54:18,565 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:54:28,765 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:54:28,765 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 22:54:28,765 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT
+        d.stn_busi_id,
+        s.stn_name,
+        COUNT(*) AS total_issues,
+        SUM(CASE WHEN d.issue_result = '1' THEN 1 ELSE 0 END) AS success_issues
+    FROM
+        ods_sc01_ntjt_zhgr_heat_instruction_issue_detail d
+    JOIN
+        ods_sc01_ntjt_zhgr_heat_station_info s ON d.stn_busi_id = s.stn_id
+    WHERE
+        d.issue_time >= '2025-01-01 00:00:00'
+        AND d.issue_time < '2025-02-01 00:00:00'
+        AND s.belong_unit LIKE '%商河%'
+    GROUP BY
+        d.stn_busi_id, s.stn_name
+)
+SELECT
+    stn_name,
+    success_issues * 100.0 / total_issues AS success_rate
+FROM
+    valve_issue
+ORDER BY
+    success_rate ASC
+LIMIT 5;
+2025-11-23 22:54:28,765 - src.excel_processor - INFO - excel_processor.py:41 - 处理第76行问题: 2024-2025供暖季豪门又一城站的电单耗是多少？
+2025-11-23 22:54:28,845 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:54:55,458 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 1 轮生成与验证
+2025-11-23 22:54:55,650 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:55:23,230 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.468957 seconds
+2025-11-23 22:55:23,892 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.843035 seconds
+2025-11-23 22:56:46,726 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:57:06,460 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:57:36,011 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.475303 seconds
+2025-11-23 22:57:36,511 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.890145 seconds
+2025-11-23 22:57:37,894 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:57:46,491 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-23 22:57:46,792 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 2 轮生成与验证
+2025-11-23 22:57:47,025 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:58:01,087 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:58:11,322 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-23 22:58:11,629 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 3 轮生成与验证
+2025-11-23 22:58:11,781 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:58:24,921 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:58:35,918 - src.workflow - INFO - workflow.py:103 - 评估置信度: 45, 当前重试轮数: 3/20
+2025-11-23 22:58:36,219 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 4 轮生成与验证
+2025-11-23 22:58:36,419 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:58:49,632 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:59:00,899 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-23 22:59:01,207 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 5 轮生成与验证
+2025-11-23 22:59:01,435 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:59:14,287 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:59:26,591 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-23 22:59:26,902 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 6 轮生成与验证
+2025-11-23 22:59:27,492 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:59:40,822 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 22:59:51,870 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-23 22:59:52,176 - src.workflow - INFO - workflow.py:97 - 问题《2024-2025供暖季豪门又一城站的电单耗是多少？》- 第 7 轮生成与验证
+2025-11-23 22:59:56,462 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 23:00:27,558 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-23 23:00:44,089 - src.workflow - INFO - workflow.py:103 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-23 23:00:44,089 - src.workflow - WARNING - workflow.py:120 - 置信度连续 4 轮停滞在 65, 提前采纳当前SQL。
+2025-11-23 23:00:44,089 - src.workflow - INFO - workflow.py:125 - 采纳SQL: SELECT stn_id, heat_area 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE stn_name = '豪门又一城站'
+),
+start_period AS (
+    SELECT 
+        stn_id,
+        stn_total_elec AS start_elec,
+        data_time AS start_time
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE stn_id = (SELECT stn_id FROM station_info)
+    AND data_time >= '2024-11-15 00:00:00'
+    ORDER BY data_time ASC
+    LIMIT 1
+),
+end_period AS (
+    SELECT 
+        stn_id,
+        stn_total_elec AS end_elec,
+        data_time AS end_time
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data 
+    WHERE stn_id = (SELECT stn_id FROM station_info)
+    AND data_time <= '2025-03-15 00:00:00'
+    ORDER BY data_time DESC
+    LIMIT 1
+)
+SELECT 
+    (e.end_elec - s.start_elec) * 24 * 120 / i.heat_area / (TIMESTAMPDIFF(HOUR, s.start_time, e.end_time) + 1) AS elec_specific_consumption
+FROM 
+    start_period s
+JOIN 
+    end_period e ON s.stn_id = e.stn_id
+JOIN 
+    station_info i ON s.stn_id = i.stn_id;
+2025-11-23 23:00:44,252 - __main__ - INFO - main.py:131 - 处理完成: {'processed_count': 75, 'total_questions': 75, 'output_file': 'D:\\allwork\\AAAproject\\AI\\validation\\算法训练集（75道问题及sql语句）_with_sql.xlsx', 'validation_stats': {'total_questions': 75, 'passed_validation': 47, 'average_confidence': 78.46666666666667, 'max_rounds_used': 8}, 'errors': []}

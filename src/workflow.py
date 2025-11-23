@@ -19,7 +19,8 @@ class SQLGenerationWorkflow:
         max_retry_rounds: int = 10,
         validation_temperature: float = 0.1,
         validation_max_tokens: int = 4000,
-        consecutive_confidence_stagnation_limit: int = 3,
+        confidence_repeat_count: int = 3,
+        confidence_variation_threshold: int = 3,
     ):
         self.llm_client = llm_client
         self.prompt_builder = prompt_builder
@@ -28,7 +29,8 @@ class SQLGenerationWorkflow:
         self.max_retry_rounds = max_retry_rounds
         self.validation_temperature = validation_temperature
         self.validation_max_tokens = validation_max_tokens
-        self.consecutive_confidence_stagnation_limit = consecutive_confidence_stagnation_limit
+        self.confidence_repeat_count = confidence_repeat_count
+        self.confidence_variation_threshold = confidence_variation_threshold
         self.validation_results: Dict[str, Dict[str, Dict]] = {}
         self.logger = logging.getLogger(__name__)
 
@@ -111,16 +113,19 @@ class SQLGenerationWorkflow:
                 self.logger.info("采纳SQL: %s", sql_query)
                 break
 
-            # 检查置信度是否连续N轮停滞
-            if len(question_results) >= self.consecutive_confidence_stagnation_limit:
+            # 检查置信度是否在容差范围内重复n次
+            if len(question_results) >= self.confidence_repeat_count:
                 recent_confidences = [
-                    res["validation"]["confidence"] for res in question_results[-self.consecutive_confidence_stagnation_limit:]
+                    res["validation"]["confidence"] for res in question_results[-self.confidence_repeat_count:]
                 ]
-                if len(set(recent_confidences)) == 1:
+                # 计算最大值和最小值的差
+                confidence_range = max(recent_confidences) - min(recent_confidences)
+                if confidence_range <= self.confidence_variation_threshold:
                     self.logger.warning(
-                        "置信度连续 %s 轮停滞在 %s, 提前采纳当前SQL。",
-                        self.consecutive_confidence_stagnation_limit,
-                        recent_confidences[0],
+                        "置信度在 %s 分差范围内连续重复 %s 次(%s), 提前采纳当前SQL。",
+                        self.confidence_variation_threshold,
+                        self.confidence_repeat_count,
+                        recent_confidences,
                     )
                     self.logger.info("采纳SQL: %s", sql_query)
                     break
