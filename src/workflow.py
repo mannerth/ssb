@@ -41,13 +41,31 @@ class SQLGenerationWorkflow:
             self.max_retry_rounds = max_retry_rounds
 
     def _clean_sql(self, sql_query: str) -> str:
-        sql_query = sql_query.replace("```sql", "").replace("```", "").strip()
-        if not sql_query.upper().startswith("SELECT"):
-            select_idx = sql_query.upper().find("SELECT")
-            if select_idx == -1:
-                raise ValueError("生成内容未包含 SELECT 语句")
-            sql_query = sql_query[select_idx:]
+        """验证和清理SQL语句，确保只包含SELECT查询"""
+        # 移除Markdown代码块标记
+        sql_query = sql_query.replace('```sql', '').replace('```', '').strip()
+
+        # 检查是否包含危险的SQL操作
+        dangerous_keywords = ['INSERT', 'UPDATE', 'DELETE', 'DROP', 'ALTER', 'CREATE', 'TRUNCATE']
+        sql_upper = sql_query.upper()
+
+        for keyword in dangerous_keywords:
+            if keyword in sql_upper and f'SELECT' not in sql_upper:
+                raise ValueError(f"生成的SQL包含危险操作: {keyword}，只允许SELECT查询")
         return sql_query
+
+    def validate_and_clean_sql(self, sql_query):
+        """验证和清理SQL语句，确保只包含SELECT查询"""
+        # 移除Markdown代码块标记
+        sql_query = sql_query.replace('```sql', '').replace('```', '').strip()
+
+        # 检查是否包含危险的SQL操作
+        dangerous_keywords = ['INSERT', 'UPDATE', 'DELETE', 'DROP', 'ALTER', 'CREATE', 'TRUNCATE']
+        sql_upper = sql_query.upper()
+
+        for keyword in dangerous_keywords:
+            if keyword in sql_upper and f'SELECT' not in sql_upper:
+                raise ValueError(f"生成的SQL包含危险操作: {keyword}，只允许SELECT查询")
 
     def _generate_sql(
         self,
@@ -95,6 +113,8 @@ class SQLGenerationWorkflow:
         analysis = self.analyzer.analyze(question)
         retry_round = 0
         question_results = []
+        last_val_s:int = 0
+        same_s_repeat_count = 0
         while retry_round < self.max_retry_rounds:
             self.logger.info("问题《%s》- 第 %s 轮生成与验证", question, retry_round + 1)
             previous_sql = question_results[-1]["sql"] if question_results else None
@@ -113,22 +133,38 @@ class SQLGenerationWorkflow:
                 self.logger.info("采纳SQL: %s", sql_query)
                 break
 
-            # 检查置信度是否在容差范围内重复n次
-            if len(question_results) >= self.confidence_repeat_count:
-                recent_confidences = [
-                    res["validation"]["confidence"] for res in question_results[-self.confidence_repeat_count:]
-                ]
-                # 计算最大值和最小值的差
-                confidence_range = max(recent_confidences) - min(recent_confidences)
-                if confidence_range <= self.confidence_variation_threshold:
+            if validation["confidence"] == last_val_s and self.confidence_threshold - last_val_s <= self.confidence_variation_threshold:
+                same_s_repeat_count += 1
+                if same_s_repeat_count >= self.confidence_repeat_count:
                     self.logger.warning(
-                        "置信度在 %s 分差范围内连续重复 %s 次(%s), 提前采纳当前SQL。",
-                        self.confidence_variation_threshold,
+                        "置信度连续 %s 次未提升且在 %s 分差范围内(%s), 提前采纳当前SQL。",
                         self.confidence_repeat_count,
-                        recent_confidences,
+                        self.confidence_variation_threshold,
+                        validation["confidence"],
                     )
                     self.logger.info("采纳SQL: %s", sql_query)
                     break
+            else:
+                last_val_s = validation["confidence"]
+                same_s_repeat_count = 1
+
+
+            # # 检查置信度是否在容差范围内重复n次
+            # if len(question_results) >= self.confidence_repeat_count:
+            #     recent_confidences = [
+            #         res["validation"]["confidence"] for res in question_results[-self.confidence_repeat_count:]
+            #     ]
+            #     # 计算最大值和最小值的差
+            #     confidence_range = max(recent_confidences) - min(recent_confidences)
+            #     if confidence_range <= self.confidence_variation_threshold:
+            #         self.logger.warning(
+            #             "置信度在 %s 分差范围内连续重复 %s 次(%s), 提前采纳当前SQL。",
+            #             self.confidence_variation_threshold,
+            #             self.confidence_repeat_count,
+            #             recent_confidences,
+            #         )
+            #         self.logger.info("采纳SQL: %s", sql_query)
+            #         break
 
             retry_round += 1
             time.sleep(0.3)

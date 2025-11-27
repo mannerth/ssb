@@ -1,0 +1,93 @@
+2025-11-26 22:58:51,232 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？
+2025-11-26 22:58:51,940 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 22:59:18,410 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 1 轮生成与验证
+2025-11-26 22:59:18,604 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 22:59:44,039 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 22:59:54,306 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 22:59:54,607 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 2 轮生成与验证
+2025-11-26 22:59:54,750 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:00:25,109 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:00:38,874 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-26 23:00:39,175 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 3 轮生成与验证
+2025-11-26 23:00:39,367 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:01:01,995 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:01:12,891 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-26 23:01:13,193 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 4 轮生成与验证
+2025-11-26 23:01:13,347 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:01:36,342 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:01:47,538 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-26 23:01:47,839 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 5 轮生成与验证
+2025-11-26 23:01:48,040 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:02:11,032 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:02:30,089 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-26 23:02:30,089 - src.workflow - WARNING - workflow.py:142 - 置信度在 10 分差范围内连续重复 5 次([65, 65, 65, 65, 65]), 提前采纳当前SQL。
+2025-11-26 23:02:30,089 - src.workflow - INFO - workflow.py:148 - 采纳SQL: WITH station_info AS (
+    SELECT stn_id, heat_area, stn_name 
+    FROM ods_sc01_ntjt_zhgr_heat_station_info 
+    WHERE heat_area > 0
+),
+monthly_periods AS (
+    SELECT 
+        stn_id,
+        DATE_FORMAT(data_time, '%Y-%m') AS month,
+        MIN(data_time) AS month_start_time,
+        MAX(data_time) AS month_end_time
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data
+    WHERE data_time >= '2024-11-15 00:00:00' 
+        AND data_time < '2025-03-15 00:00:00'
+    GROUP BY stn_id, DATE_FORMAT(data_time, '%Y-%m')
+),
+start_elec AS (
+    SELECT 
+        d.stn_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        d.stn_total_elec AS start_elec
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN monthly_periods p ON d.stn_id = p.stn_id AND d.data_time = p.month_start_time
+),
+end_elec AS (
+    SELECT 
+        d.stn_id,
+        DATE_FORMAT(d.data_time, '%Y-%m') AS month,
+        d.stn_total_elec AS end_elec
+    FROM ods_sc01_ntjt_zhgr_heat_station_inst_data d
+    JOIN monthly_periods p ON d.stn_id = p.stn_id AND d.data_time = p.month_end_time
+),
+electricity_consumption AS (
+    SELECT 
+        s.stn_id,
+        s.month,
+        i.stn_name,
+        (e.end_elec - s.start_elec) * 24 * 120 / i.heat_area / 
+        (TIMESTAMPDIFF(HOUR, p.month_start_time, p.month_end_time) + 1) AS monthly_electricity_consumption
+    FROM start_elec s
+    JOIN end_elec e ON s.stn_id = e.stn_id AND s.month = e.month
+    JOIN monthly_periods p ON s.stn_id = p.stn_id AND s.month = p.month
+    JOIN station_info i ON s.stn_id = i.stn_id
+    WHERE e.end_elec > s.start_elec
+),
+ranked_stations AS (
+    SELECT 
+        stn_id,
+        stn_name,
+        month,
+        monthly_electricity_consumption,
+        ROW_NUMBER() OVER (PARTITION BY month ORDER BY monthly_electricity_consumption DESC) AS rank_num
+    FROM electricity_consumption
+)
+SELECT 
+    stn_id,
+    stn_name,
+    month,
+    monthly_electricity_consumption
+FROM ranked_stations
+WHERE rank_num <= 5
+ORDER BY month, rank_num;
+2025-11-26 23:02:30,089 - src.excel_processor - INFO - excel_processor.py:41 - 处理第3行问题: 2024-2025供暖季商河热网损失率是多少？
+2025-11-26 23:02:30,169 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:02:57,679 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 1 轮生成与验证
+2025-11-26 23:02:57,894 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:03:19,211 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:03:28,509 - src.workflow - INFO - workflow.py:123 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 23:03:28,810 - src.workflow - INFO - workflow.py:117 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 2 轮生成与验证
+2025-11-26 23:03:28,996 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"

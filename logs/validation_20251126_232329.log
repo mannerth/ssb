@@ -1,0 +1,258 @@
+2025-11-26 23:23:29,481 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？
+2025-11-26 23:23:30,118 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:23:55,805 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 1 轮生成与验证
+2025-11-26 23:23:56,042 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:24:20,907 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:24:32,693 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 23:24:32,994 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 2 轮生成与验证
+2025-11-26 23:24:33,170 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:24:58,849 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:25:11,163 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-26 23:25:11,464 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 3 轮生成与验证
+2025-11-26 23:25:11,646 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:25:39,199 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:25:48,547 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-26 23:25:48,848 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 4 轮生成与验证
+2025-11-26 23:25:49,007 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:26:16,251 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:26:26,816 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-26 23:26:27,117 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 5 轮生成与验证
+2025-11-26 23:26:27,284 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:26:53,524 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:27:07,862 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-26 23:27:08,163 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 6 轮生成与验证
+2025-11-26 23:27:08,321 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:27:32,435 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:27:45,075 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-26 23:27:45,377 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 7 轮生成与验证
+2025-11-26 23:27:45,529 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:28:09,046 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:28:21,764 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-26 23:28:22,065 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 8 轮生成与验证
+2025-11-26 23:28:22,223 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:28:45,383 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:28:57,228 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 8/20
+2025-11-26 23:28:57,529 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 9 轮生成与验证
+2025-11-26 23:28:57,698 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:29:21,851 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:29:33,722 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 9/20
+2025-11-26 23:29:34,023 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 10 轮生成与验证
+2025-11-26 23:29:34,195 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:29:57,958 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:30:09,424 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 10/20
+2025-11-26 23:30:09,725 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 11 轮生成与验证
+2025-11-26 23:30:09,895 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:30:34,480 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:30:45,914 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 11/20
+2025-11-26 23:30:46,216 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 12 轮生成与验证
+2025-11-26 23:30:46,437 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:31:09,527 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:31:19,749 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 12/20
+2025-11-26 23:31:20,050 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 13 轮生成与验证
+2025-11-26 23:31:20,217 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:31:43,727 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:31:54,981 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 13/20
+2025-11-26 23:31:55,282 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 14 轮生成与验证
+2025-11-26 23:31:55,483 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:32:18,347 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:32:30,867 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 14/20
+2025-11-26 23:32:31,169 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 15 轮生成与验证
+2025-11-26 23:32:31,345 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:32:54,713 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:33:03,570 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 15/20
+2025-11-26 23:33:03,871 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 16 轮生成与验证
+2025-11-26 23:33:04,033 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:33:27,636 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:33:39,093 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 16/20
+2025-11-26 23:33:39,394 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 17 轮生成与验证
+2025-11-26 23:33:39,569 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:34:01,533 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:34:12,263 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 17/20
+2025-11-26 23:34:12,565 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 18 轮生成与验证
+2025-11-26 23:34:12,726 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:34:39,197 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:34:51,763 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 18/20
+2025-11-26 23:34:52,065 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 19 轮生成与验证
+2025-11-26 23:34:52,269 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:35:20,531 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:35:30,147 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 19/20
+2025-11-26 23:35:30,448 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 20 轮生成与验证
+2025-11-26 23:35:30,622 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:35:59,021 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:36:09,629 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 20/20
+2025-11-26 23:36:09,930 - src.excel_processor - INFO - excel_processor.py:41 - 处理第3行问题: 2024-2025供暖季商河热网损失率是多少？
+2025-11-26 23:36:10,074 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:36:35,659 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 1 轮生成与验证
+2025-11-26 23:36:35,816 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:36:54,234 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:37:03,414 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 23:37:03,715 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 2 轮生成与验证
+2025-11-26 23:37:03,893 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:37:21,853 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:37:32,890 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-26 23:37:33,191 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 3 轮生成与验证
+2025-11-26 23:37:33,366 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:37:54,005 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:38:04,886 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-26 23:38:05,187 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 4 轮生成与验证
+2025-11-26 23:38:05,340 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:38:25,995 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:38:36,104 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-26 23:38:36,405 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 5 轮生成与验证
+2025-11-26 23:38:36,560 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:38:55,497 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:39:03,852 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-26 23:39:04,152 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 6 轮生成与验证
+2025-11-26 23:39:04,312 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:39:24,009 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:39:33,889 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-26 23:39:34,192 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 7 轮生成与验证
+2025-11-26 23:39:34,379 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:39:54,908 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:40:03,079 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-26 23:40:03,380 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 8 轮生成与验证
+2025-11-26 23:40:03,583 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:40:24,797 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:40:34,455 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 8/20
+2025-11-26 23:40:34,756 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 9 轮生成与验证
+2025-11-26 23:40:34,933 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:40:54,554 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:41:08,117 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 9/20
+2025-11-26 23:41:08,418 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 10 轮生成与验证
+2025-11-26 23:41:08,600 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:41:31,641 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:41:42,244 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 10/20
+2025-11-26 23:41:42,545 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 11 轮生成与验证
+2025-11-26 23:41:42,722 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:42:06,719 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:42:20,508 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 11/20
+2025-11-26 23:42:20,809 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 12 轮生成与验证
+2025-11-26 23:42:20,981 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:42:43,732 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:42:52,997 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 12/20
+2025-11-26 23:42:53,299 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 13 轮生成与验证
+2025-11-26 23:42:53,475 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:43:16,276 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:43:30,663 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 13/20
+2025-11-26 23:43:30,967 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 14 轮生成与验证
+2025-11-26 23:43:31,142 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:44:05,303 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:44:19,011 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 14/20
+2025-11-26 23:44:19,312 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 15 轮生成与验证
+2025-11-26 23:44:19,491 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:44:42,102 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:44:51,037 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 15/20
+2025-11-26 23:44:51,338 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 16 轮生成与验证
+2025-11-26 23:44:51,510 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:45:09,339 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:45:19,934 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 16/20
+2025-11-26 23:45:20,240 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 17 轮生成与验证
+2025-11-26 23:45:20,417 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:45:42,202 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:45:52,059 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 17/20
+2025-11-26 23:45:52,360 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 18 轮生成与验证
+2025-11-26 23:45:52,533 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:46:16,528 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:46:27,902 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 18/20
+2025-11-26 23:46:28,204 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 19 轮生成与验证
+2025-11-26 23:46:28,387 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:46:52,410 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:47:02,668 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 19/20
+2025-11-26 23:47:02,969 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河热网损失率是多少？》- 第 20 轮生成与验证
+2025-11-26 23:47:03,168 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:47:26,472 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:47:36,739 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 20/20
+2025-11-26 23:47:37,042 - src.excel_processor - INFO - excel_processor.py:41 - 处理第4行问题: 商河恒泰24-25供热季燃气用量
+2025-11-26 23:47:37,119 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:48:01,121 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 1 轮生成与验证
+2025-11-26 23:48:01,268 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:48:18,870 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:48:27,553 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 23:48:27,855 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 2 轮生成与验证
+2025-11-26 23:48:28,026 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:48:45,151 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:48:53,287 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-26 23:48:53,589 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 3 轮生成与验证
+2025-11-26 23:48:53,760 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:49:11,181 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:49:18,177 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-26 23:49:18,478 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 4 轮生成与验证
+2025-11-26 23:49:18,699 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:49:37,866 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:49:49,654 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-26 23:49:49,960 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 5 轮生成与验证
+2025-11-26 23:49:50,113 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:50:09,894 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:50:17,929 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-26 23:50:18,231 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 6 轮生成与验证
+2025-11-26 23:50:18,384 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:50:39,475 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:50:48,363 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-26 23:50:48,664 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 7 轮生成与验证
+2025-11-26 23:50:48,834 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:51:07,631 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:51:16,345 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 7/20
+2025-11-26 23:51:16,647 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 8 轮生成与验证
+2025-11-26 23:51:16,817 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:51:37,340 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:51:45,745 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 8/20
+2025-11-26 23:51:46,046 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 9 轮生成与验证
+2025-11-26 23:51:46,228 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:52:07,102 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:52:14,883 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 9/20
+2025-11-26 23:52:15,184 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 10 轮生成与验证
+2025-11-26 23:52:15,382 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:52:35,484 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:52:43,634 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 10/20
+2025-11-26 23:52:43,935 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 11 轮生成与验证
+2025-11-26 23:52:44,115 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:53:03,577 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:53:14,665 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 11/20
+2025-11-26 23:53:14,967 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 12 轮生成与验证
+2025-11-26 23:53:15,125 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:53:34,719 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:53:42,417 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 12/20
+2025-11-26 23:53:42,719 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 13 轮生成与验证
+2025-11-26 23:53:42,879 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:54:03,072 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:54:12,992 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 13/20
+2025-11-26 23:54:13,293 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 14 轮生成与验证
+2025-11-26 23:54:13,500 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:54:28,867 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:54:43,141 - src.workflow - INFO - workflow.py:125 - 评估置信度: 45, 当前重试轮数: 14/20
+2025-11-26 23:54:43,442 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 15 轮生成与验证
+2025-11-26 23:54:43,624 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:54:50,991 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:55:04,588 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 15/20
+2025-11-26 23:55:04,890 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 16 轮生成与验证
+2025-11-26 23:55:05,077 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:55:25,241 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:55:35,415 - src.workflow - INFO - workflow.py:125 - 评估置信度: 45, 当前重试轮数: 16/20
+2025-11-26 23:55:35,715 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 17 轮生成与验证
+2025-11-26 23:55:35,895 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:55:56,865 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:56:06,397 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 17/20
+2025-11-26 23:56:06,698 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 18 轮生成与验证
+2025-11-26 23:56:07,064 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:56:28,732 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:56:45,281 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 18/20
+2025-11-26 23:56:45,581 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 19 轮生成与验证
+2025-11-26 23:56:45,736 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:56:55,188 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:57:05,859 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 19/20
+2025-11-26 23:57:06,160 - src.workflow - INFO - workflow.py:119 - 问题《商河恒泰24-25供热季燃气用量》- 第 20 轮生成与验证
+2025-11-26 23:57:06,316 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:57:28,324 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:57:37,081 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 20/20
+2025-11-26 23:57:37,383 - src.excel_processor - INFO - excel_processor.py:41 - 处理第5行问题: 2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？
+2025-11-26 23:57:37,457 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:58:01,295 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 1 轮生成与验证
+2025-11-26 23:58:01,457 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:58:25,269 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:58:34,914 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-26 23:58:35,215 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 2 轮生成与验证
+2025-11-26 23:58:35,395 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:59:00,172 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 23:59:10,788 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-26 23:59:11,088 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季豪门又一城站各月水单耗最高的是那一个月？》- 第 3 轮生成与验证
+2025-11-26 23:59:11,247 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"

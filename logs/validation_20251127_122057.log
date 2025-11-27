@@ -1,0 +1,57 @@
+2025-11-27 12:20:57,968 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？
+2025-11-27 12:20:58,647 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:21:27,490 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 1 轮生成与验证
+2025-11-27 12:21:27,715 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:22:09,172 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:22:20,336 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 1/20
+2025-11-27 12:22:20,637 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 2 轮生成与验证
+2025-11-27 12:22:20,814 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:22:50,508 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:23:04,614 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 2/20
+2025-11-27 12:23:04,916 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 3 轮生成与验证
+2025-11-27 12:23:05,079 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:23:36,335 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:23:52,102 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 3/20
+2025-11-27 12:23:52,403 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 4 轮生成与验证
+2025-11-27 12:23:52,573 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:24:24,056 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:24:38,676 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 4/20
+2025-11-27 12:24:38,977 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 5 轮生成与验证
+2025-11-27 12:24:39,142 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:25:10,264 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:25:22,423 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 5/20
+2025-11-27 12:25:22,724 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 6 轮生成与验证
+2025-11-27 12:25:22,878 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:25:54,104 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:26:05,397 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 6/20
+2025-11-27 12:26:05,699 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 7 轮生成与验证
+2025-11-27 12:26:05,846 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:26:28,430 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:26:40,494 - src.workflow - INFO - workflow.py:125 - 评估置信度: 45, 当前重试轮数: 7/20
+2025-11-27 12:26:40,795 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 8 轮生成与验证
+2025-11-27 12:26:40,954 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:27:09,570 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:27:23,604 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 8/20
+2025-11-27 12:27:23,905 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 9 轮生成与验证
+2025-11-27 12:27:24,038 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:27:53,795 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:28:04,892 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 9/20
+2025-11-27 12:28:05,195 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 10 轮生成与验证
+2025-11-27 12:28:05,391 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:28:35,834 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:28:47,268 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 10/20
+2025-11-27 12:28:47,569 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 11 轮生成与验证
+2025-11-27 12:28:47,753 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:29:16,478 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:29:25,159 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 11/20
+2025-11-27 12:29:25,461 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 12 轮生成与验证
+2025-11-27 12:29:25,622 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:29:54,525 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:30:04,840 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 12/20
+2025-11-27 12:30:05,141 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 13 轮生成与验证
+2025-11-27 12:30:05,299 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:30:28,065 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:30:39,458 - src.workflow - INFO - workflow.py:125 - 评估置信度: 65, 当前重试轮数: 13/20
+2025-11-27 12:30:39,759 - src.workflow - INFO - workflow.py:119 - 问题《2024-2025供暖季商河所有换热站各月电单耗最高的5个换热站分别是哪5个？》- 第 14 轮生成与验证
+2025-11-27 12:30:39,979 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 12:31:09,649 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"

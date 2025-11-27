@@ -93,15 +93,15 @@ def load_settings() -> AppSettings:
         max_retries=_int_env("GENERATION_MAX_RETRIES", 5),
     )
     workflow = WorkflowConfig(
-        confidence_threshold=_int_env("CONFIDENCE_THRESHOLD", 85),#通过置信度
+        confidence_threshold=_int_env("CONFIDENCE_THRESHOLD", 90),#通过置信度
         max_retry_rounds=_int_env("MAX_RETRY_ROUNDS", 20),#最大重试轮数
         validation_temperature=_float_env("VALIDATION_TEMPERATURE", 0.1),
         validation_max_tokens=_int_env("VALIDATION_MAX_TOKENS", 4000),
         confidence_repeat_count=_int_env("CONFIDENCE_REPEAT_COUNT", 5),#重复打分跳出
-        confidence_variation_threshold=_int_env("CONFIDENCE_VARIATION_THRESHOLD", 10),#允许分差
+        confidence_variation_threshold=_int_env("CONFIDENCE_VARIATION_THRESHOLD", 30),#允许分差
     )
     excel = ExcelConfig(
-        file_path=os.getenv("EXCEL_INPUT_FILE", "算法训练集（75道问题及sql语句）.xlsx"),
+        file_path=os.getenv("EXCEL_INPUT_FILE", "复赛-算法打榜评测结果集上传文档.xlsx"),
         start_row=_int_env("EXCEL_START_ROW", 2),
         start_col=_int_env("EXCEL_START_COL", 2),
         output_col=_int_env("EXCEL_OUTPUT_COL", 3),
