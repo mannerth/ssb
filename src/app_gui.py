@@ -252,7 +252,7 @@ def _execute_pipeline(
     workflow = _build_workflow(settings, context)
 
     handler = context.create_log_handler()
-    # Attach to root logger to capture all logs from all modules
+    # 捕获所有日志
     root_logger = logging.getLogger()
     root_logger.addHandler(handler)
 
@@ -333,16 +333,9 @@ async def websocket_endpoint(websocket: WebSocket):
             mode = data.get("mode", "single")
             question = data.get("question", "")
             
-            # Reconstruct settings
+            # 重建设置
             base_settings = load_settings()
-            # Helper to merge dict into settings object (simplified version of _build_settings_from_form)
-            # We assume the frontend sends a structured JSON matching the form fields or similar
-            # For simplicity, let's reuse _build_settings_from_form logic but adapted for dict
-            # Or just map manually here since we have the dict.
-            
-            # Let's assume the frontend sends flat keys like "llm.api_key" or structured.
-            # To reuse existing logic, let's flatten if needed or just use the dict.
-            # _build_settings_from_form expects a dict-like object.
+            # 辅助合并设置
             
             settings = _build_settings_from_form(settings_dict, base_settings)
             
@@ -479,5 +472,5 @@ if __name__ == "__main__":
     import uvicorn
 
     port = int(os.getenv("PORT", 8000))
-    print(f"访问http://localhost:{port}")
+    print(f"访问 http://localhost:{port}")
     uvicorn.run("src.app_gui:app", host="0.0.0.0", port=port, reload=True)

@@ -14,7 +14,7 @@ class PromptBuilder:
         self.common_expressions = common_expressions
         self.few_shot_examples = few_shot_examples
 
-    #系统提示词
+    # 系统提示词
     def build_system_prompt(self) -> str:
         few_shot = "\n".join(
             f"示例 {idx + 1}:\n问题: {item['question']}\nSQL: {item['sql']}\n"
@@ -50,16 +50,16 @@ class PromptBuilder:
 
 ## 可用数据表结构：
 """
-        #添加表结构描述
+        # 添加表结构
         for table in self.table_descriptions:
             prompt += f"\n### {table.get('name')}\n描述: {table.get('describe')}\n字段详情:\n{table.get('detail')}\n"
 
-        #添加公式描述
+        # 添加公式描述
         prompt += "\n## 重要计算公式：\n"
         for name, desc in self.formula_descriptions.items():
             prompt += f"\n### {name}\n{desc}\n"
 
-        #添加常用表达
+        # 添加常用表达
         prompt += "\n## 常用业务表达：\n"
         for expr in self.common_expressions:
             prompt += f"- {expr}\n"
@@ -71,6 +71,34 @@ class PromptBuilder:
 2. 正确处理时间范围查询
 3. 使用合适的聚合函数
 请根据用户的问题生成对应的SQL查询语句，只返回SQL代码，不需要解释。
+"""
+        return prompt
+
+    # 生成提示词
+    def build_generation_prompt(self, question: str, analysis: str) -> str:
+        return (
+            "请将以下自然语言问题转换为符合要求的 SQL 查询语句，只返回 SQL，不要解释。\n"
+            f"问题描述:\n{question}\n\n"
+            f"问题分析（供参考）:\n{analysis}"
+        )
+
+    # 重试提示词
+    def build_retry_prompt(self, question: str, analysis: str, previous_sql: str, feedback: str) -> str:
+        return (
+            "此前的 SQL 未通过验证，请基于反馈重新生成。\n"
+            f"问题:\n{question}\n\n"
+            f"问题分析:\n{analysis}\n\n"
+            f"上一次 SQL:\n{previous_sql}\n\n"
+            f"验证反馈:\n{feedback}\n\n"
+            "请直接输出改进后的 SQL。"
+        )
+
+    # TODO: 评分规则
+    # 验证提示词
+    def build_validation_prompt(self, question: str, sql_query: str) -> str:
+        prompt = f"""
+你是一个SQL验证专家，需要评估生成的SQL是否能正确解决用户的问题。
+```
 """
         return prompt
 

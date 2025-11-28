@@ -21,7 +21,7 @@ def _load_json(config_dir: str, filename: str, default: Any):
 
 
 def load_introduction_text(config_dir: str) -> str:
-    """加载系统简介文本"""
+    """加载简介"""
     filepath = os.path.join(config_dir, "introduction.txt")
     try:
         with open(filepath, "r", encoding="utf-8") as fp:

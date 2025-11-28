@@ -3,7 +3,7 @@ import os
 import sys
 from pathlib import Path
 
-# 添加项目根目录到 Python 路径，以便直接运行此文件
+# 添加根目录到路径
 project_root = Path(__file__).parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
@@ -63,10 +63,10 @@ def build_workflow(settings: AppSettings) -> SQLGenerationWorkflow:
 def main():
     settings = load_settings()
     
-    # 将相对路径转换为基于项目根目录的绝对路径
+    # 转绝对路径
     project_root = Path(__file__).parent.parent
     
-    # 修正配置目录路径
+    # 修正配置路径
     if not os.path.isabs(settings.config_dir):
         config_dir = project_root / settings.config_dir
     else:
@@ -78,19 +78,19 @@ def main():
     else:
         training_file_path = Path(settings.training_file_path)
     
-    # 修正 Excel 文件路径
+    # 修正 Excel 路径
     if not os.path.isabs(settings.excel.file_path):
         excel_file_path = project_root / settings.excel.file_path
     else:
         excel_file_path = Path(settings.excel.file_path)
     
-    # 修正日志目录路径
+    # 修正日志路径
     if not os.path.isabs(settings.logging.log_dir):
         log_dir = project_root / settings.logging.log_dir
     else:
         log_dir = Path(settings.logging.log_dir)
     
-    # 创建更新后的 settings 对象
+    # 更新 settings 对象
     updated_settings = AppSettings(
         llm=settings.llm,
         workflow=settings.workflow,

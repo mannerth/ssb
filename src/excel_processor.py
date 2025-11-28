@@ -13,7 +13,7 @@ class ExcelProcessor:
         self.logger = logging.getLogger(__name__)
 
     def process_single_question(self, question: str) -> Dict:
-        """处理单个问题并返回结果和验证信息"""
+        """处理单题"""
         self.logger.info("处理单个问题: %s", question)
         try:
             sql_query = self.workflow.generate_sql_with_validation(question)

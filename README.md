@@ -48,6 +48,39 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
+#### 方式三：Docker 部署
+
+1.  **配置环境变量（可选）**:
+    复制示例配置文件并填入 API Key：
+    ```bash
+    cp .env.example .env
+    # 编辑 .env 文件，填入 DEEPSEEK_API_KEY
+    ```
+
+2.  **构建并启动容器**:
+    ```bash
+    docker-compose up --build -d
+    ```
+
+3.  **访问应用**:
+    启动完成后，访问浏览器 `http://localhost:8000`。
+
+#### 方式四：离线镜像部署 (.tar)  （要求的方式）
+
+1.  **加载镜像**:
+    ```bash
+    docker load -i nl2sql-app.tar
+    ```
+
+2.  **运行容器**:
+    请将 `your_api_key` 替换为您实际的 DeepSeek API Key。
+    ```bash
+    docker run -d --name nl2sql-gui -p 8000:8000 -e DEEPSEEK_API_KEY=your-key nl2sql-gui-app
+    ```
+
+3.  **访问应用**:
+    访问浏览器 `http://localhost:8000`。
+
 ## 📂 项目结构
 
 ```

@@ -46,11 +46,11 @@ class SQLGenerationWorkflow:
             self.max_retry_rounds = max_retry_rounds
 
     def _clean_sql(self, sql_query: str) -> str:
-        """验证和清理SQL语句，确保只包含SELECT查询"""
-        # 移除Markdown代码块标记
+        """清理SQL"""
+        # 移除Markdown
         sql_query = sql_query.replace('```sql', '').replace('```', '').strip()
 
-        # 检查是否包含危险的SQL操作
+        # 检查危险操作
         dangerous_keywords = ['INSERT', 'UPDATE', 'DELETE', 'DROP', 'ALTER', 'CREATE', 'TRUNCATE']
         sql_upper = sql_query.upper()
 
@@ -60,11 +60,11 @@ class SQLGenerationWorkflow:
         return sql_query
 
     def validate_and_clean_sql(self, sql_query):
-        """验证和清理SQL语句，确保只包含SELECT查询"""
-        # 移除Markdown代码块标记
+        """清理SQL"""
+        # 移除Markdown
         sql_query = sql_query.replace('```sql', '').replace('```', '').strip()
 
-        # 检查是否包含危险的SQL操作
+        # 检查危险操作
         dangerous_keywords = ['INSERT', 'UPDATE', 'DELETE', 'DROP', 'ALTER', 'CREATE', 'TRUNCATE']
         sql_upper = sql_query.upper()
 
@@ -168,12 +168,12 @@ class SQLGenerationWorkflow:
                 same_s_repeat_count = 1
 
 
-            # # 检查置信度是否在容差范围内重复n次
+            # # 检查重复置信度
             # if len(question_results) >= self.confidence_repeat_count:
             #     recent_confidences = [
             #         res["validation"]["confidence"] for res in question_results[-self.confidence_repeat_count:]
             #     ]
-            #     # 计算最大值和最小值的差
+            #     # 计算差值
             #     confidence_range = max(recent_confidences) - min(recent_confidences)
             #     if confidence_range <= self.confidence_variation_threshold:
             #         self.logger.warning(

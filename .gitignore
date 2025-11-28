@@ -1,3 +1,4 @@
 __pycache__/
 *_with_sql.xlsx
 *_with_sql_validation_details.json
+*.tar

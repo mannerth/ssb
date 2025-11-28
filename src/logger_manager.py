@@ -7,10 +7,7 @@ from typing import Optional, Union
 
 
 class LogManager:
-    """
-    日志管理工具类
-    功能：每次程序运行时自动创建新的日志文件
-    """
+    """日志管理器"""
 
     def __init__(self,
                  log_dir: Optional[Union[str, Path]] = None,
@@ -19,17 +16,7 @@ class LogManager:
                  format_string: Optional[str] = None,
                  max_file_size: int = 10 * 1024 * 1024,  # 10MB
                  backup_count: int = 5):
-        """
-        初始化日志管理器
-
-        Args:
-            log_dir: 日志目录路径，如果为None则使用当前目录下的logs文件夹
-            log_name: 日志文件基础名称，如果为None则使用程序名称
-            level: 日志级别
-            format_string: 日志格式字符串
-            max_file_size: 单个日志文件最大大小（字节）
-            backup_count: 备份文件数量
-        """
+        """初始化"""
         self.log_dir = self._setup_log_dir(log_dir)
         self.log_name = log_name or self._get_default_log_name()
         self.level = level
@@ -40,7 +27,7 @@ class LogManager:
         self.current_log_file = None
 
     def _setup_log_dir(self, log_dir: Optional[Union[str, Path]]) -> Path:
-        """设置并创建日志目录"""
+        """设置日志目录"""
         if log_dir is None:
             log_dir = Path.cwd() / "logs"
         else:
@@ -50,28 +37,20 @@ class LogManager:
         return log_dir
 
     def _get_default_log_name(self) -> str:
-        """获取默认日志名称"""
+        """获取默认名称"""
         return Path(sys.argv[0]).stem if sys.argv[0] else "app"
 
     def _get_default_format(self) -> str:
-        """获取默认日志格式"""
+        """获取默认格式"""
         return '%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s'
 
     def _generate_log_filename(self) -> str:
-        """生成唯一的日志文件名，包含时间戳"""
+        """生成文件名"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         return f"{self.log_name}_{timestamp}.log"
 
     def get_logger(self, name: Optional[str] = None) -> logging.Logger:
-        """
-        获取配置好的logger实例
-
-        Args:
-            name: logger名称，如果为None则使用基础日志名称
-
-        Returns:
-            logging.Logger: 配置好的logger实例
-        """
+        """获取logger"""
         if self.logger is not None:
             return self.logger
 
@@ -105,11 +84,11 @@ class LogManager:
         return logger
 
     def get_current_log_path(self) -> Optional[Path]:
-        """获取当前日志文件路径"""
+        """获取当前路径"""
         return self.current_log_file
 
     def change_log_level(self, level: int):
-        """动态修改日志级别"""
+        """修改级别"""
         self.level = level
         if self.logger:
             self.logger.setLevel(level)
@@ -117,13 +96,7 @@ class LogManager:
                 handler.setLevel(level)
 
     def add_file_handler(self, filename: str, level: Optional[int] = None):
-        """
-        添加额外的文件handler
-
-        Args:
-            filename: 文件名
-            level: 日志级别，如果为None则使用当前级别
-        """
+        """添加文件handler"""
         if not self.logger:
             return
 
@@ -135,12 +108,7 @@ class LogManager:
         self.logger.addHandler(file_handler)
 
     def cleanup_old_logs(self, days: int = 30):
-        """
-        清理指定天数前的旧日志文件
-
-        Args:
-            days: 保留天数
-        """
+        """清理旧日志"""
         cutoff_time = datetime.now().timestamp() - (days * 24 * 60 * 60)
 
         for log_file in self.log_dir.glob(f"{self.log_name}_*.log"):
@@ -192,7 +160,7 @@ def get_app_logger(name: Optional[str] = None) -> logging.Logger:
 
 # 使用示例
 def __demo_usage():
-    """演示使用方法"""
+    """演示用法"""
 
     # 基本用法
     log_manager = LogManager()
