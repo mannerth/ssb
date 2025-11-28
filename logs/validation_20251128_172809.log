@@ -1,0 +1,36 @@
+2025-11-28 17:28:09,908 - validation - INFO - app_gui.py:207 - 开始处理...
+2025-11-28 17:28:10,213 - validation - INFO - app_gui.py:207 - 开始批量处理Excel文件...
+2025-11-28 17:28:10,216 - validation - INFO - app_gui.py:207 - 处理第 1/3 个问题: SELECT stn_id FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 17:28:10,830 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:28:18,466 - validation - INFO - app_gui.py:207 - 正在发送停止信号...
+2025-11-28 17:28:24,370 - src.workflow - WARNING - workflow.py:127 - 任务被用户中断。
+2025-11-28 17:28:24,415 - validation - INFO - app_gui.py:207 - 处理被用户中断。
+2025-11-28 17:28:24,417 - validation - INFO - app_gui.py:207 - 
+批量处理完成。共处理 1 个问题。
+2025-11-28 17:28:24,422 - validation - INFO - app_gui.py:207 - 结果已保存到: D:/allwork/AAAproject/AI/validation/验证-75道题目_with_sql.xlsx
+2025-11-28 17:31:53,478 - validation - INFO - app_gui.py:207 - 开始处理...
+2025-11-28 17:31:53,790 - validation - INFO - app_gui.py:207 - 开始批量处理Excel文件...
+2025-11-28 17:31:53,792 - validation - INFO - app_gui.py:207 - 处理第 1/3 个问题: 豪门又一城站的换热站ID是多少？
+2025-11-28 17:31:54,068 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:06,076 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站ID是多少？》- 第 1 轮生成与验证
+2025-11-28 17:32:06,256 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:08,884 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:13,412 - src.workflow - INFO - workflow.py:144 - 评估置信度: 95, 当前重试轮数: 1/2
+2025-11-28 17:32:13,413 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT stn_id FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 17:32:13,438 - validation - INFO - app_gui.py:207 - 处理第 2/3 个问题: 豪门又一城站的换热站编码是多少？
+2025-11-28 17:32:13,506 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:29,430 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站编码是多少？》- 第 1 轮生成与验证
+2025-11-28 17:32:29,594 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:32,060 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:38,521 - src.workflow - INFO - workflow.py:144 - 评估置信度: 95, 当前重试轮数: 1/2
+2025-11-28 17:32:38,521 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT stn_id FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-28 17:32:38,599 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:32:38,615 - validation - INFO - app_gui.py:207 - 处理第 3/3 个问题: 豪门又一城站的换热站状态是什么？
+2025-11-28 17:32:59,188 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站状态是什么？》- 第 1 轮生成与验证
+2025-11-28 17:32:59,348 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:33:01,509 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:33:06,195 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 17:33:06,195 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT stn_state FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 17:33:06,211 - validation - INFO - app_gui.py:207 - 
+批量处理完成。共处理 3 个问题。
+2025-11-28 17:33:06,213 - validation - INFO - app_gui.py:207 - 结果已保存到: D:/allwork/AAAproject/AI/validation/算法训练集（75道问题及sql语句）_with_sql.xlsx

@@ -1,6 +1,7 @@
 import logging
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Optional
 
 
 @dataclass
@@ -38,6 +39,10 @@ class LoggingConfig:
     log_dir: str
     log_name: str
     level: int
+    level_str: Optional[str] = field(default="INFO", init=False)
+
+    def __post_init__(self):
+        self.level_str = logging.getLevelName(self.level)
 
 
 @dataclass
@@ -68,7 +73,7 @@ def _log_level_env(name: str, default: str) -> int:
     raw = os.getenv(name, default)
     if raw.isdigit():
         return int(raw)
-    return getattr(logging, raw.upper(), getattr(logging, default.upper(), logging.INFO))
+    return getattr(logging, raw.upper(), logging.INFO)
 
 
 def load_settings() -> AppSettings:

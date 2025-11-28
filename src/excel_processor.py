@@ -12,6 +12,22 @@ class ExcelProcessor:
         self.workflow = workflow
         self.logger = logging.getLogger(__name__)
 
+    def process_single_question(self, question: str) -> Dict:
+        """处理单个问题并返回结果和验证信息"""
+        self.logger.info("处理单个问题: %s", question)
+        try:
+            sql_query = self.workflow.generate_sql_with_validation(question)
+            validation_info = self.workflow.validation_results.get(question, {})
+            return {
+                "sql": sql_query,
+                "validation": validation_info.get("validation", {}),
+                "success": True,
+            }
+        except Exception as exc:
+            error_msg = f"问题处理失败: {exc}"
+            self.logger.error(error_msg)
+            return {"error": str(exc), "success": False}
+
     def process(
         self,
         file_path: str,
@@ -40,7 +56,8 @@ class ExcelProcessor:
                 continue
             self.logger.info("处理第%s行问题: %s", row, question)
             try:
-                sql_query = self.workflow.generate_sql_with_validation(question)
+                result = self.process_single_question(question)
+                sql_query = result.get("sql", f"ERROR: {result.get('error')}")
                 validation_info = self.workflow.validation_results.get(question, {})
                 worksheet.cell(row=row, column=output_col).value = sql_query
                 stats["total_questions"] += 1
@@ -67,4 +84,3 @@ class ExcelProcessor:
             "validation_stats": stats,
             "errors": errors,
         }
-

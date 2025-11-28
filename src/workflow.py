@@ -2,7 +2,8 @@ import json
 import logging
 import re
 import time
-from typing import Dict, Optional
+from typing import Dict, Optional, Callable
+import threading
 
 from .analyzer import QuestionAnalyzer
 from .llm_client import LLMClient
@@ -21,6 +22,8 @@ class SQLGenerationWorkflow:
         validation_max_tokens: int = 4000,
         confidence_repeat_count: int = 3,
         confidence_variation_threshold: int = 3,
+        stop_event: Optional[threading.Event] = None,
+        status_callback: Optional[Callable[[str], None]] = None,
     ):
         self.llm_client = llm_client
         self.prompt_builder = prompt_builder
@@ -31,6 +34,8 @@ class SQLGenerationWorkflow:
         self.validation_max_tokens = validation_max_tokens
         self.confidence_repeat_count = confidence_repeat_count
         self.confidence_variation_threshold = confidence_variation_threshold
+        self.stop_event = stop_event or threading.Event()
+        self.status_callback = status_callback
         self.validation_results: Dict[str, Dict[str, Dict]] = {}
         self.logger = logging.getLogger(__name__)
 
@@ -110,17 +115,31 @@ class SQLGenerationWorkflow:
         }
 
     def generate_sql_with_validation(self, question: str) -> str:
+        if self.status_callback:
+            self.status_callback("环节: 正在分析问题...")
         analysis = self.analyzer.analyze(question)
         retry_round = 0
         question_results = []
         last_val_s:int = 0
         same_s_repeat_count = 0
         while retry_round < self.max_retry_rounds:
+            if self.stop_event.is_set():
+                self.logger.warning("任务被用户中断。")
+                break
+
             self.logger.info("问题《%s》- 第 %s 轮生成与验证", question, retry_round + 1)
+
+            if self.status_callback:
+                self.status_callback(f"环节: [第{retry_round + 1}/{self.max_retry_rounds}轮] 正在生成SQL...")
+
             previous_sql = question_results[-1]["sql"] if question_results else None
             feedback = question_results[-1]["validation"]["feedback"] if question_results else None
             sql_query = self._generate_sql(question, analysis, previous_sql, feedback)
             time.sleep(0.1)
+
+            if self.status_callback:
+                self.status_callback(f"环节: [第{retry_round + 1}/{self.max_retry_rounds}轮] 正在评估SQL...")
+
             validation = self._validate_sql(question, sql_query)
             self.logger.info(
                 "评估置信度: %s, 当前重试轮数: %s/%s",
