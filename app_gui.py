@@ -27,6 +27,7 @@ from src.config_loader import (
     load_formula_descriptions,
     load_few_shot_examples,
     load_table_descriptions,
+    load_introduction_text,
 )
 from src.excel_processor import ExcelProcessor
 from src.llm_client import LLMClient
@@ -50,6 +51,7 @@ class AppGui:
         self.root.geometry("1200x800")
 
         self.settings = load_settings()
+        self.introduction_text = load_introduction_text(self.settings.config_dir)
         self.vars = {}
         self.worker_thread = None
         self.stop_event = threading.Event()
@@ -180,9 +182,18 @@ class AppGui:
         self.stop_button = ttk.Button(action_frame, text="停止", command=self.stop_processing, state='disabled')
         self.stop_button.pack(side=tk.LEFT, padx=5)
 
+        info_button = ttk.Button(action_frame, text="系统简介", command=self.show_introduction)
+        info_button.pack(side=tk.LEFT, padx=5)
+
         self.mode_var = tk.StringVar(value="single")
         ttk.Radiobutton(action_frame, text="处理单个问题", variable=self.mode_var, value="single").pack(side=tk.RIGHT, padx=5)
         ttk.Radiobutton(action_frame, text="处理文件", variable=self.mode_var, value="batch").pack(side=tk.RIGHT, padx=5)
+
+        # Result Display Area
+        result_frame = ttk.LabelFrame(parent, text="最终结果")
+        result_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=(10, 5))
+        self.result_text = scrolledtext.ScrolledText(result_frame, height=8, wrap=tk.WORD, state='disabled')
+        self.result_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
     def select_file(self):
         file_path = filedialog.askopenfilename(
@@ -192,6 +203,10 @@ class AppGui:
         )
         if file_path:
             self.file_path_var.set(file_path)
+
+    def show_introduction(self):
+        """显示系统简介信息框"""
+        messagebox.showinfo("系统简介", self.introduction_text)
 
     def log(self, message, level=logging.INFO):
         self.log_queue.put((message, level))
@@ -210,6 +225,13 @@ class AppGui:
     def update_status(self, text: str):
         """Thread-safe method to update the status label."""
         self.root.after(0, lambda: self.status_label.config(text=f"状态: {text}"))
+
+    def update_result_text(self, text: str):
+        """Thread-safe method to update the result text widget."""
+        self.result_text.configure(state='normal')
+        self.result_text.delete(1.0, tk.END)
+        self.result_text.insert(tk.END, text)
+        self.result_text.configure(state='disabled')
 
     def get_current_settings(self) -> AppSettings:
         # Helper to safely convert var to int/float
@@ -273,6 +295,8 @@ class AppGui:
         self.log_text.configure(state='normal')
         self.log_text.delete(1.0, tk.END)
         self.log_text.configure(state='disabled')
+
+        self.update_result_text("")  # Clear previous result
 
         self.log("开始处理...")
         self.update_status("准备中...")
@@ -396,6 +420,7 @@ class AppGui:
 
             sql_query = workflow.generate_sql_with_validation(question)
             self.log(f"\n--- 生成的SQL ---\n{sql_query}\n--------------------")
+            self.root.after(0, self.update_result_text, sql_query)
 
             validation_info = workflow.validation_results.get(question, {})
             if validation_info:
@@ -450,6 +475,7 @@ class AppGui:
                         self.app_gui.log(f"处理第 {idx + 1}/{num_questions} 个问题: {question}")
                         try:
                             sql = self.workflow.generate_sql_with_validation(question)
+                            self.app_gui.root.after(0, self.app_gui.update_result_text, sql)
                             worksheet.cell(row=row_num, column=kwargs.get('output_col', 3)).value = sql
                             processed_count += 1
                         except Exception as e:

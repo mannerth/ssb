@@ -20,6 +20,20 @@ def _load_json(config_dir: str, filename: str, default: Any):
     return default
 
 
+def load_introduction_text(config_dir: str) -> str:
+    """加载系统简介文本"""
+    filepath = os.path.join(config_dir, "introduction.txt")
+    try:
+        with open(filepath, "r", encoding="utf-8") as fp:
+            return fp.read()
+    except FileNotFoundError:
+        logger.warning("简介文件未找到: %s", filepath)
+        return "系统简介文件 (introduction.txt) 未找到。"
+    except Exception as exc:
+        logger.error("读取简介文件失败(%s): %s", filepath, exc)
+        return f"读取简介文件失败: {exc}"
+
+
 def load_formula_descriptions(config_dir: str) -> Dict[str, str]:
     return _load_json(config_dir, "formula_descriptions.json", {})
 
@@ -69,4 +83,3 @@ def load_few_shot_examples(training_file_path: str, num_examples: int = 75) -> L
     except Exception as exc:
         logger.error("加载 few-shot 示例失败: %s", exc)
         return []
-
