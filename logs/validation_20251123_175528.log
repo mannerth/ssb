@@ -1,7 +1,0 @@
-2025-11-23 17:55:28,909 - src.excel_processor - INFO - excel_processor.py:41 - 处理第2行问题: 豪门又一城站的换热站ID是多少？
-2025-11-23 17:55:29,566 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-23 17:55:42,464 - src.workflow - INFO - workflow.py:95 - 问题《豪门又一城站的换热站ID是多少？》- 第 1 轮生成与验证
-2025-11-23 17:55:42,655 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-23 17:55:49,092 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
-2025-11-23 17:55:53,915 - src.excel_processor - INFO - excel_processor.py:41 - 处理第3行问题: 豪门又一城站的换热站编码是多少？
-2025-11-23 17:55:54,024 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"

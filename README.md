@@ -12,7 +12,23 @@
 *   **Web 可视化界面**: 提供现代化的 Web 界面，支持实时日志显示、结果预览和文件下载。
 *   **高度可配置**: 支持自定义表结构描述、公式描述和常用表达，以适应不同的业务场景。
 
-## 🚀 快速开始
+## 运行镜像
+
+1.  **加载镜像**:
+    ```bash
+    docker load -i nl2sql-gui-app.tar
+    ```
+
+2.  **运行容器**:
+    请将 `api_key` 替换为实际的 DeepSeek API Key，或者跳过此选项参数，在WebUI中输入
+    ```bash
+    docker run -d --name nl2sql-gui -p 8000:8000 -e DEEPSEEK_API_KEY=your_api_key nl2sql-gui-app
+    ```
+
+3.  **访问应用**:
+    访问浏览器 `http://localhost:8000`
+
+## 🚀 运行代码
 
 ### 1. 环境要求
 
@@ -38,7 +54,7 @@ pip install -r requirements.txt
 
 #### 方式一：启动 Web 界面 (推荐)
 
-启动后，访问浏览器 `http://localhost:8000` 即可使用。
+启动src/app_gui.py，访问浏览器 `http://localhost:8000` 即可使用。
 
 #### 方式二：命令行运行 (批量处理)
 
@@ -65,21 +81,6 @@ python src/main.py
 3.  **访问应用**:
     启动完成后，访问浏览器 `http://localhost:8000`。
 
-#### 方式四：离线镜像部署 (.tar)  （要求的方式）
-
-1.  **加载镜像**:
-    ```bash
-    docker load -i nl2sql-app.tar
-    ```
-
-2.  **运行容器**:
-    请将 `your_api_key` 替换为您实际的 DeepSeek API Key。
-    ```bash
-    docker run -d --name nl2sql-gui -p 8000:8000 -e DEEPSEEK_API_KEY=your-key nl2sql-gui-app
-    ```
-
-3.  **访问应用**:
-    访问浏览器 `http://localhost:8000`。
 
 ## 📂 项目结构
 
