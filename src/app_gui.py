@@ -17,7 +17,8 @@ import sys
 
 from openpyxl.reader.excel import load_workbook
 
-project_root = Path(__file__).parent
+# Adjust project root since this file is now in src/
+project_root = Path(__file__).parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 

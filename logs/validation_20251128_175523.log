@@ -1,0 +1,22 @@
+2025-11-28 17:55:23,743 - src.config_loader - ERROR - config_loader.py:17 - 配置文件未找到: D:\allwork\AAAproject\AI\validation\src\config\formula_descriptions.json
+2025-11-28 17:55:23,744 - src.config_loader - ERROR - config_loader.py:17 - 配置文件未找到: D:\allwork\AAAproject\AI\validation\src\config\common_expressions.json
+2025-11-28 17:55:23,744 - src.config_loader - ERROR - config_loader.py:17 - 配置文件未找到: D:\allwork\AAAproject\AI\validation\src\config\table_descriptions.json
+2025-11-28 17:55:23,744 - src.config_loader - WARNING - config_loader.py:51 - few-shot 训练文件不存在: D:\allwork\AAAproject\AI\validation\src\算法训练集（75道问题及sql语句）.xlsx
+2025-11-28 17:55:23,849 - validation - INFO - app_gui.py:222 - 开始处理...
+2025-11-28 17:55:24,059 - validation - INFO - app_gui.py:222 - 正在处理问题: 请回答你好
+2025-11-28 17:55:25,641 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:55:35,944 - src.workflow - INFO - workflow.py:130 - 问题《请回答你好》- 第 1 轮生成与验证
+2025-11-28 17:55:36,020 - validation - INFO - app_gui.py:222 - 问题《请回答你好》- 第 1 轮生成与验证
+2025-11-28 17:55:36,037 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:55:37,139 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 17:55:39,643 - src.workflow - INFO - workflow.py:144 - 评估置信度: 100, 当前重试轮数: 1/20
+2025-11-28 17:55:39,644 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT '你好' AS greeting;
+2025-11-28 17:55:39,722 - validation - INFO - app_gui.py:222 - 评估置信度: 100, 当前重试轮数: 1/20
+2025-11-28 17:55:39,723 - validation - INFO - app_gui.py:222 - 采纳SQL: SELECT '你好' AS greeting;
+2025-11-28 17:55:39,723 - validation - INFO - app_gui.py:222 - 
+--- 生成的SQL ---
+SELECT '你好' AS greeting;
+--------------------
+2025-11-28 17:55:39,723 - validation - INFO - app_gui.py:222 - 最终置信度: 100
+2025-11-28 17:55:39,724 - validation - INFO - app_gui.py:222 - 
+处理完成。

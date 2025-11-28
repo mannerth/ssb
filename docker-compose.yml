@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  nl2sql-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nl2sql-gui-app
+    container_name: nl2sql-gui
+    # 将宿主机的DISPLAY环境变量传递给容器
+    environment:
+      - DISPLAY=${DISPLAY}
+    # 挂载X11套接字，允许容器访问宿主机的显示服务
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    # (可选) 如果需要将容器内的日志或输出文件保存到宿主机，可以取消下面的注释
+    #  - ./logs:/app/logs
+    #  - ./data_output:/app/data
+    # 设置网络模式为host，简化X11连接（尤其是在某些Linux发行版上）
+    # 注意：这会使容器共享宿主机的网络栈，安全性较低。如果不需要，可以注释掉。
+    network_mode: "host"
+
