@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>自然语言转 SQL 工具</title>
+  <style>
+    body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; padding: 0; background: #f6f7fb; }
+    header { background: #1f4d8f; color: #fff; padding: 18px 28px; }
+    main { padding: 24px; max-width: 1200px; margin: auto; }
+    section { background: #fff; border-radius: 8px; padding: 18px; margin-bottom: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    h2 { margin-top: 0; }
+    textarea, input, select { width: 100%; padding: 8px; margin: 6px 0 12px; border: 1px solid #cfd8e3; border-radius: 4px; }
+    button { background: #1f4d8f; color: #fff; border: none; padding: 10px 22px; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #163a6a; }
+    details { margin-bottom: 12px; }
+    .flex { display: flex; gap: 18px; flex-wrap: wrap; }
+    .flex > div { flex: 1; min-width: 260px; }
+    .status-list { list-style: none; padding-left: 18px; }
+    .status-list li::before { content: "• "; color: #1f4d8f; }
+    .logs { width: 100%; height: 180px; }
+    .error { color: #d93025; font-weight: bold; }
+    .result-box { background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; }
+    .download-links a { margin-right: 12px; }
+    
+    /* Loading Spinner */
+    .spinner-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #1f4d8f;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>自然语言转 SQL 工具</h1>
+</header>
+<main>
+  <section>
+    <h2>系统简介</h2>
+    <pre style="white-space: pre-wrap;">{{ introduction }}</pre>
+  </section>
+
+  {% if error %}
+  <section class="error">提示：{{ error }}</section>
+  {% endif %}
+
+  <section>
+    <h2>参数配置与处理</h2>
+    <form method="post" action="/process" enctype="multipart/form-data">
+      <div>
+        <label><input type="radio" name="mode" value="single" {% if mode == "single" %}checked{% endif %}/> 单个问题</label>
+        <label><input type="radio" name="mode" value="batch" {% if mode == "batch" %}checked{% endif %}/> 批量上传</label>
+      </div>
+
+      <div id="single-wrapper">
+        <label>问题描述</label>
+        <textarea name="question" rows="4" placeholder="请输入自然语言问题">{{ question_text }}</textarea>
+      </div>
+
+      <div id="batch-wrapper">
+        <label>Excel 文件</label>
+        <input type="file" name="excel_file" accept=".xlsx" />
+      </div>
+
+      <details open>
+        <summary>LLM 设置</summary>
+        <div class="flex">
+          <div><label>API Key</label><input name="llm.api_key" value="{{ settings.llm.api_key }}"/></div>
+          <div><label>Base URL</label><input name="llm.base_url" value="{{ settings.llm.base_url }}"/></div>
+          <div><label>Model</label><input name="llm.model" value="{{ settings.llm.model }}"/></div>
+        </div>
+        <div class="flex">
+          <div><label>Temperature</label><input name="llm.temperature" value="{{ settings.llm.temperature }}"/></div>
+          <div><label>Max Tokens</label><input name="llm.max_tokens" value="{{ settings.llm.max_tokens }}"/></div>
+          <div><label>Max Retries</label><input name="llm.max_retries" value="{{ settings.llm.max_retries }}"/></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>工作流设置</summary>
+        <div class="flex">
+          <div><label>通过置信度</label><input name="workflow.confidence_threshold" value="{{ settings.workflow.confidence_threshold }}"/></div>
+          <div><label>最大重试轮数</label><input name="workflow.max_retry_rounds" value="{{ settings.workflow.max_retry_rounds }}"/></div>
+          <div><label>验证 Temperature</label><input name="workflow.validation_temperature" value="{{ settings.workflow.validation_temperature }}"/></div>
+        </div>
+        <div class="flex">
+          <div><label>验证 Max Tokens</label><input name="workflow.validation_max_tokens" value="{{ settings.workflow.validation_max_tokens }}"/></div>
+          <div><label>置信度重复次数</label><input name="workflow.confidence_repeat_count" value="{{ settings.workflow.confidence_repeat_count }}"/></div>
+          <div><label>置信度容差</label><input name="workflow.confidence_variation_threshold" value="{{ settings.workflow.confidence_variation_threshold }}"/></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Excel 设置</summary>
+        <div class="flex">
+          <div><label>开始行</label><input name="excel.start_row" value="{{ settings.excel.start_row }}"/></div>
+          <div><label>问题列</label><input name="excel.start_col" value="{{ settings.excel.start_col }}"/></div>
+          <div><label>输出列</label><input name="excel.output_col" value="{{ settings.excel.output_col }}"/></div>
+        </div>
+        <div class="flex">
+          <div><label>问题数量</label><input name="excel.num_questions" value="{{ settings.excel.num_questions }}"/></div>
+          <div><label>Sheet 名称</label><input name="excel.sheet_name" value="{{ settings.excel.sheet_name }}"/></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>路径与日志设���</summary>
+        <div class="flex">
+          <div><label>配置目录</label><input name="config_dir" value="{{ settings.config_dir }}"/></div>
+          <div><label>训练文件</label><input name="training_file_path" value="{{ settings.training_file_path }}"/></div>
+        </div>
+        <div class="flex">
+          <div><label>日志目录</label><input name="logging.log_dir" value="{{ settings.logging.log_dir }}"/></div>
+          <div><label>日志名称</label><input name="logging.log_name" value="{{ settings.logging.log_name }}"/></div>
+          <div><label>日志级别</label><input name="logging.level_str" value="{{ settings.logging.level_str }}"/></div>
+        </div>
+      </details>
+
+      <button type="submit">开始处理</button>
+    </form>
+  </section>
+
+  {% if status_updates %}
+  <section>
+    <h2>环节进度</h2>
+    <ul class="status-list">
+      {% for item in status_updates %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if result %}
+  <section>
+    <h2>处理结果</h2>
+    {% if result.mode == "single" %}
+      <p><strong>问题：</strong>{{ result.question }}</p>
+      <p><strong>置信度：</strong>{{ result.confidence or "N/A" }}</p>
+      <div class="result-box">{{ result.sql }}</div>
+    {% else %}
+      <p>已处理 {{ result.summary.processed_count }} / {{ result.summary.total_questions }} 个问题。</p>
+      <p>平均置信度：{{ result.summary.validation_stats.average_confidence | round(2) }}</p>
+      <div class="download-links">
+        <a href="{{ request.url_for('download', path=result.output_file) }}" target="_blank">下载带 SQL 的 Excel</a>
+        <a href="{{ request.url_for('download', path=result.validation_file) }}" target="_blank">下载验证详情</a>
+      </div>
+      {% if result.summary.errors %}
+        <details>
+          <summary>错误详情</summary>
+          <ul>
+            {% for err in result.summary.errors %}
+            <li>{{ err }}</li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if logs %}
+  <section>
+    <h2>运行日志</h2>
+    <textarea class="logs" readonly>{{ "\n".join(logs) }}</textarea>
+  </section>
+  {% endif %}
+</main>
+
+<div class="spinner-overlay" id="loadingSpinner">
+  <div class="spinner"></div>
+  <div style="font-size: 1.2em; color: #333;">正在处理中，请稍候...</div>
+</div>
+
+<script>
+  function toggleMode(mode) {
+    const single = document.getElementById("single-wrapper");
+    const batch = document.getElementById("batch-wrapper");
+    single.style.display = mode === "single" ? "block" : "none";
+    batch.style.display = mode === "batch" ? "block" : "none";
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const radios = document.querySelectorAll('input[name="mode"]');
+    radios.forEach(r => r.addEventListener("change", e => toggleMode(e.target.value)));
+    const initial = "{{ mode }}" || "single";
+    toggleMode(initial);
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", () => {
+      document.getElementById("loadingSpinner").style.display = "flex";
+    });
+  });
+</script>
+</body>
+</html>
+

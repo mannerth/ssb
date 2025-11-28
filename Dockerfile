@@ -4,8 +4,8 @@ FROM python:3.11
 # Set the working directory in the container
 WORKDIR /app
 
-# Install tkinter dependencies
-RUN apt-get update && apt-get install -y tk-dev tcl-dev
+# Install system dependencies (if any)
+# RUN apt-get update && apt-get install -y ...
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt .

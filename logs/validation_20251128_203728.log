@@ -1,0 +1,23 @@
+2025-11-28 20:37:31,018 - src.excel_processor - INFO - excel_processor.py:57 - 处理第2行问题: 豪门又一城站的换热站ID是多少？
+2025-11-28 20:37:31,018 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的换热站ID是多少？
+2025-11-28 20:37:36,584 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.379929 seconds
+2025-11-28 20:37:41,973 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.835603 seconds
+2025-11-28 20:37:54,840 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.439897 seconds
+2025-11-28 20:38:00,288 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.974507 seconds
+2025-11-28 20:38:13,329 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.409800 seconds
+2025-11-28 20:38:18,750 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.780913 seconds
+2025-11-28 20:38:31,557 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.492162 seconds
+2025-11-28 20:38:37,084 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.917919 seconds
+2025-11-28 20:38:50,079 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.492170 seconds
+2025-11-28 20:38:55,601 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.927321 seconds
+2025-11-28 20:39:01,558 - src.excel_processor - ERROR - excel_processor.py:28 - 问题处理失败: LLM 请求失败: Request timed out.
+2025-11-28 20:39:01,558 - src.excel_processor - INFO - excel_processor.py:57 - 处理第3行问题: 豪门又一城站的换热站编码是多少？
+2025-11-28 20:39:01,558 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的换热站编码是多少？
+2025-11-28 20:39:06,586 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.393614 seconds
+2025-11-28 20:39:12,005 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.836258 seconds
+2025-11-28 20:39:24,871 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.492006 seconds
+2025-11-28 20:39:30,371 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.795106 seconds
+2025-11-28 20:39:43,192 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.498134 seconds
+2025-11-28 20:39:48,694 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.875989 seconds
+2025-11-28 20:40:01,617 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.429807 seconds
+2025-11-28 20:40:07,053 - openai._base_client - INFO - _base_client.py:1071 - Retrying request to /chat/completions in 0.810710 seconds

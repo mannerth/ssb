@@ -1,0 +1,4 @@
+2025-11-28 20:32:50,073 - src.config_loader - WARNING - config_loader.py:51 - few-shot 训练文件不存在: D:\allwork\AAAproject\AI\validation\算法训练集（75道问题及sql语句）.xlsx
+2025-11-28 20:32:52,775 - src.excel_processor - WARNING - excel_processor.py:55 - 第2行问题为空，跳过
+2025-11-28 20:32:52,775 - src.excel_processor - WARNING - excel_processor.py:55 - 第3行问题为空，跳过
+2025-11-28 20:32:52,775 - src.excel_processor - WARNING - excel_processor.py:55 - 第4行问题为空，跳过

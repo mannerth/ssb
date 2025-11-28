@@ -123,6 +123,6 @@ def load_settings() -> AppSettings:
         workflow=workflow,
         excel=excel,
         config_dir=os.getenv("APP_CONFIG_DIR", "config"),
-        training_file_path=os.getenv("TRAINING_FILE", "算法训练集（75道问题及sql语句）.xlsx"),
+        training_file_path=os.getenv("TRAINING_FILE", "data/算法训练集（75道问题及sql语句）.xlsx"),
         logging=logging_cfg,
     )
