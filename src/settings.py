@@ -80,8 +80,6 @@ def load_settings() -> AppSettings:
     llm = LLMConfig(
         api_key=os.getenv(
             "DEEPSEEK_API_KEY",
-            #"82dbf778c5834eecad2bb21c1df632f9"
-            "sk-ccaa87bceda64383a44a36bd0c60c32b"
         ),
         base_url=os.getenv(
             "DEEPSEEK_BASE_URL",
@@ -106,11 +104,11 @@ def load_settings() -> AppSettings:
         confidence_variation_threshold=_int_env("CONFIDENCE_VARIATION_THRESHOLD", 30),#允许分差
     )
     excel = ExcelConfig(
-        file_path=os.getenv("EXCEL_INPUT_FILE", "复赛-算法打榜评测结果集上传文档.xlsx"),
+        file_path=os.getenv("EXCEL_INPUT_FILE"),
         start_row=_int_env("EXCEL_START_ROW", 2),
         start_col=_int_env("EXCEL_START_COL", 2),
         output_col=_int_env("EXCEL_OUTPUT_COL", 3),
-        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 75),
+        num_questions=_int_env("EXCEL_NUM_QUESTIONS", 25),
         sheet_name=os.getenv("EXCEL_SHEET_NAME", "Sheet1"),
     )
     logging_cfg = LoggingConfig(

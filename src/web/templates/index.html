@@ -4,43 +4,278 @@
   <meta charset="UTF-8" />
   <title>自然语言转 SQL 工具</title>
   <style>
-    body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; padding: 0; background: #f6f7fb; }
-    header { background: #1f4d8f; color: #fff; padding: 18px 28px; }
-    main { padding: 24px; max-width: 1200px; margin: auto; }
-    section { background: #fff; border-radius: 8px; padding: 18px; margin-bottom: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-    h2 { margin-top: 0; }
-    textarea, input, select { width: 100%; padding: 8px; margin: 6px 0 12px; border: 1px solid #cfd8e3; border-radius: 4px; }
-    button { background: #1f4d8f; color: #fff; border: none; padding: 10px 22px; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #163a6a; }
-    details { margin-bottom: 12px; }
-    .flex { display: flex; gap: 18px; flex-wrap: wrap; }
-    .flex > div { flex: 1; min-width: 260px; }
-    .status-list { list-style: none; padding-left: 18px; }
-    .status-list li::before { content: "• "; color: #1f4d8f; }
-    .logs { width: 100%; height: 180px; }
-    .error { color: #d93025; font-weight: bold; }
-    .result-box { background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; }
-    .download-links a { margin-right: 12px; }
-    
+    :root {
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-secondary: #64748b;
+      --border-color: #e2e8f0;
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --error-color: #ef4444;
+      --code-bg: #0f172a;
+      --code-text: #e2e8f0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #fff;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      border-bottom: 2px solid var(--bg-color);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    textarea, input[type="text"], input[type="number"], select, input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+
+    textarea:focus, input:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--bg-color);
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+
+    .radio-group label {
+      margin: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-main);
+    }
+
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--primary-hover);
+    }
+
+    button[type="submit"]:active {
+      transform: scale(0.98);
+    }
+
+    details {
+      background: var(--bg-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    details summary {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-main);
+      user-select: none;
+      transition: background-color 0.2s;
+    }
+
+    details summary:hover {
+      background-color: #e2e8f0;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    details > div {
+      padding: 1.5rem;
+    }
+
+    .flex {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .flex > div {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .logs {
+      width: 100%;
+      height: 300px;
+      background-color: var(--code-bg);
+      color: var(--code-text);
+      font-family: 'Consolas', 'Monaco', monospace;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      resize: vertical;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .result-box {
+      background-color: var(--code-bg);
+      color: var(--code-text);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Consolas', 'Monaco', monospace;
+      margin-top: 0.5rem;
+    }
+
+    .result-item {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #fff;
+    }
+
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .badge-success { background: #d1fae5; color: #065f46; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+
+    .progress-container {
+      background: var(--border-color);
+      border-radius: 9999px;
+      height: 12px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--primary-color);
+      border-radius: 9999px;
+      transition: width 0.3s ease;
+    }
+
+    .download-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--primary-color);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .download-links a:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
     /* Loading Spinner */
     .spinner-overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       z-index: 9999;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      backdrop-filter: blur(4px);
     }
     .spinner {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #1f4d8f;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid var(--primary-color);
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       animation: spin 1s linear infinite;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -55,82 +290,93 @@
 <main>
   <section>
     <h2>系统简介</h2>
-    <pre style="white-space: pre-wrap;">{{ introduction }}</pre>
+    <pre style="white-space: pre-wrap; font-family: inherit; color: var(--text-secondary);">{{ introduction }}</pre>
   </section>
 
   {% if error %}
-  <section class="error">提示：{{ error }}</section>
+  <section style="border-left: 4px solid var(--error-color); background: #fef2f2;">
+    <h3 style="color: var(--error-color); margin: 0 0 0.5rem 0;">错误提示</h3>
+    <p style="margin: 0;">{{ error }}</p>
+  </section>
   {% endif %}
 
   <section>
     <h2>参数配置与处理</h2>
     <form method="post" action="/process" enctype="multipart/form-data">
-      <div>
-        <label><input type="radio" name="mode" value="single" {% if mode == "single" %}checked{% endif %}/> 单个问题</label>
-        <label><input type="radio" name="mode" value="batch" {% if mode == "batch" %}checked{% endif %}/> 批量上传</label>
+      <div class="radio-group">
+        <label><input type="radio" name="mode" value="single" {% if mode == "single" %}checked{% endif %}/> 单个问题模式</label>
+        <label><input type="radio" name="mode" value="batch" {% if mode == "batch" %}checked{% endif %}/> 批量处理模式</label>
       </div>
 
       <div id="single-wrapper">
         <label>问题描述</label>
-        <textarea name="question" rows="4" placeholder="请输入自然语言问题">{{ question_text }}</textarea>
+        <textarea name="question" rows="4" placeholder="请输入自然语言问题...">{{ question_text }}</textarea>
       </div>
 
       <div id="batch-wrapper">
-        <label>Excel 文件</label>
+        <label>Excel 文件上传</label>
         <input type="file" name="excel_file" accept=".xlsx" />
       </div>
 
       <details open>
         <summary>LLM 设置</summary>
-        <div class="flex">
-          <div><label>API Key</label><input name="llm.api_key" value="{{ settings.llm.api_key }}"/></div>
-          <div><label>Base URL</label><input name="llm.base_url" value="{{ settings.llm.base_url }}"/></div>
-          <div><label>Model</label><input name="llm.model" value="{{ settings.llm.model }}"/></div>
-        </div>
-        <div class="flex">
-          <div><label>Temperature</label><input name="llm.temperature" value="{{ settings.llm.temperature }}"/></div>
-          <div><label>Max Tokens</label><input name="llm.max_tokens" value="{{ settings.llm.max_tokens }}"/></div>
-          <div><label>Max Retries</label><input name="llm.max_retries" value="{{ settings.llm.max_retries }}"/></div>
+        <div>
+          <div class="flex">
+            <div><label>API Key</label><input type="text" name="llm.api_key" value="{{ settings.llm.api_key }}"/></div>
+            <div><label>Base URL</label><input type="text" name="llm.base_url" value="{{ settings.llm.base_url }}"/></div>
+            <div><label>Model</label><input type="text" name="llm.model" value="{{ settings.llm.model }}"/></div>
+          </div>
+          <div class="flex">
+            <div><label>Temperature</label><input type="number" step="0.1" name="llm.temperature" value="{{ settings.llm.temperature }}"/></div>
+            <div><label>Max Tokens</label><input type="number" name="llm.max_tokens" value="{{ settings.llm.max_tokens }}"/></div>
+            <div><label>Max Retries</label><input type="number" name="llm.max_retries" value="{{ settings.llm.max_retries }}"/></div>
+          </div>
         </div>
       </details>
 
       <details>
         <summary>工作流设置</summary>
-        <div class="flex">
-          <div><label>通过置信度</label><input name="workflow.confidence_threshold" value="{{ settings.workflow.confidence_threshold }}"/></div>
-          <div><label>最大重试轮数</label><input name="workflow.max_retry_rounds" value="{{ settings.workflow.max_retry_rounds }}"/></div>
-          <div><label>验证 Temperature</label><input name="workflow.validation_temperature" value="{{ settings.workflow.validation_temperature }}"/></div>
-        </div>
-        <div class="flex">
-          <div><label>验证 Max Tokens</label><input name="workflow.validation_max_tokens" value="{{ settings.workflow.validation_max_tokens }}"/></div>
-          <div><label>置信度重复次数</label><input name="workflow.confidence_repeat_count" value="{{ settings.workflow.confidence_repeat_count }}"/></div>
-          <div><label>置信度容差</label><input name="workflow.confidence_variation_threshold" value="{{ settings.workflow.confidence_variation_threshold }}"/></div>
+        <div>
+          <div class="flex">
+            <div><label>通过置信度 (%)</label><input type="number" name="workflow.confidence_threshold" value="{{ settings.workflow.confidence_threshold }}"/></div>
+            <div><label>最大重试轮数</label><input type="number" name="workflow.max_retry_rounds" value="{{ settings.workflow.max_retry_rounds }}"/></div>
+            <div><label>验证 Temperature</label><input type="number" step="0.1" name="workflow.validation_temperature" value="{{ settings.workflow.validation_temperature }}"/></div>
+          </div>
+          <div class="flex">
+            <div><label>验证 Max Tokens</label><input type="number" name="workflow.validation_max_tokens" value="{{ settings.workflow.validation_max_tokens }}"/></div>
+            <div><label>置信度重复次数</label><input type="number" name="workflow.confidence_repeat_count" value="{{ settings.workflow.confidence_repeat_count }}"/></div>
+            <div><label>置信度容差</label><input type="number" name="workflow.confidence_variation_threshold" value="{{ settings.workflow.confidence_variation_threshold }}"/></div>
+          </div>
         </div>
       </details>
 
-      <details>
+      <details id="excel-settings-details">
         <summary>Excel 设置</summary>
-        <div class="flex">
-          <div><label>开始行</label><input name="excel.start_row" value="{{ settings.excel.start_row }}"/></div>
-          <div><label>问题列</label><input name="excel.start_col" value="{{ settings.excel.start_col }}"/></div>
-          <div><label>输出列</label><input name="excel.output_col" value="{{ settings.excel.output_col }}"/></div>
-        </div>
-        <div class="flex">
-          <div><label>问题数量</label><input name="excel.num_questions" value="{{ settings.excel.num_questions }}"/></div>
-          <div><label>Sheet 名称</label><input name="excel.sheet_name" value="{{ settings.excel.sheet_name }}"/></div>
+        <div>
+          <div class="flex">
+            <div><label>开始行</label><input type="number" name="excel.start_row" value="{{ settings.excel.start_row }}"/></div>
+            <div><label>问题列</label><input type="number" name="excel.start_col" value="{{ settings.excel.start_col }}"/></div>
+            <div><label>输出列</label><input type="number" name="excel.output_col" value="{{ settings.excel.output_col }}"/></div>
+          </div>
+          <div class="flex">
+            <div><label>问题数量</label><input type="number" name="excel.num_questions" value="{{ settings.excel.num_questions }}"/></div>
+            <div><label>Sheet 名称</label><input type="text" name="excel.sheet_name" value="{{ settings.excel.sheet_name }}"/></div>
+          </div>
         </div>
       </details>
 
       <details>
-        <summary>路径与日志设���</summary>
-        <div class="flex">
-          <div><label>配置目录</label><input name="config_dir" value="{{ settings.config_dir }}"/></div>
-          <div><label>训练文件</label><input name="training_file_path" value="{{ settings.training_file_path }}"/></div>
-        </div>
-        <div class="flex">
-          <div><label>日志目录</label><input name="logging.log_dir" value="{{ settings.logging.log_dir }}"/></div>
-          <div><label>日志名称</label><input name="logging.log_name" value="{{ settings.logging.log_name }}"/></div>
-          <div><label>日志级别</label><input name="logging.level_str" value="{{ settings.logging.level_str }}"/></div>
+        <summary>路径与日志设置</summary>
+        <div>
+          <div class="flex">
+            <div><label>配置目录</label><input type="text" name="config_dir" value="{{ settings.config_dir }}"/></div>
+            <div><label>训练文件</label><input type="text" name="training_file_path" value="{{ settings.training_file_path }}"/></div>
+          </div>
+          <div class="flex">
+            <div><label>日志目录</label><input type="text" name="logging.log_dir" value="{{ settings.logging.log_dir }}"/></div>
+            <div><label>日志名称</label><input type="text" name="logging.log_name" value="{{ settings.logging.log_name }}"/></div>
+            <div><label>日志级别</label><input type="text" name="logging.level_str" value="{{ settings.logging.level_str }}"/></div>
+          </div>
         </div>
       </details>
 
@@ -140,14 +386,16 @@
 
   <section id="progress-section" style="display:none;">
     <h2>处理进度</h2>
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <div id="status-text" style="font-weight: bold; color: #1f4d8f;">准备就绪</div>
-        <div id="progress-count" style="font-weight: bold; color: #333;"></div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <div id="status-text" style="font-weight: 600; color: var(--primary-color);">准备就绪</div>
+        <div id="progress-count" style="font-weight: 600; color: var(--text-secondary);"></div>
     </div>
-    <div id="progress-bar-container" style="width: 100%; background: #e2e8f0; border-radius: 4px; height: 20px; margin-bottom: 10px; display: none;">
-      <div id="progress-bar" style="width: 0%; height: 100%; background: #1f4d8f; border-radius: 4px; transition: width 0.3s;"></div>
+    <div id="progress-bar-container" style="display: none;">
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+      </div>
     </div>
-    <div id="results-container">
+    <div id="results-container" style="margin-top: 1.5rem;">
       <!-- Dynamic results will appear here -->
     </div>
   </section>
@@ -166,15 +414,27 @@
 
 <div class="spinner-overlay" id="loadingSpinner">
   <div class="spinner"></div>
-  <div style="font-size: 1.2em; color: #333;">正在处理中，请稍候...</div>
+  <div style="font-size: 1.1rem; font-weight: 500; color: var(--text-main);">正在处理中，请稍候...</div>
 </div>
 
 <script>
   function toggleMode(mode) {
     const single = document.getElementById("single-wrapper");
     const batch = document.getElementById("batch-wrapper");
+    const excelSettings = document.getElementById("excel-settings-details");
+    
     single.style.display = mode === "single" ? "block" : "none";
     batch.style.display = mode === "batch" ? "block" : "none";
+    if (excelSettings) {
+      excelSettings.style.display = mode === "batch" ? "block" : "none";
+    }
+  }
+
+  function scrollToElement(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -198,14 +458,15 @@
       document.getElementById("progress-bar").style.width = "0%";
       document.getElementById("progress-count").innerText = "";
       
+      // Auto-scroll to progress section
+      setTimeout(() => scrollToElement("progress-section"), 100);
+
       const formData = new FormData(form);
       const mode = formData.get("mode");
       const settings = {};
       
-      // Convert FormData to object for settings
       for (let [key, value] of formData.entries()) {
         if (key.includes(".")) {
-           // Handle nested keys if needed, or just pass flat
            settings[key] = value;
         } else {
            settings[key] = value;
@@ -226,7 +487,7 @@
              if (!resp.ok) throw new Error("Upload failed");
              const json = await resp.json();
              filePath = json.file_path;
-             settings["excel.file_path"] = filePath; // Override path
+             settings["excel.file_path"] = filePath;
            } catch (err) {
              alert("文件上传失败: " + err.message);
              return;
@@ -237,7 +498,6 @@
         }
       }
 
-      // Connect WebSocket
       const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
       const ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
       
@@ -270,13 +530,24 @@
         } else if (msg.type === "row_result") {
           const container = document.getElementById("results-container");
           const div = document.createElement("div");
-          div.style.borderBottom = "1px solid #eee";
-          div.style.padding = "8px 0";
-          const passed = msg.data.validation.passed ? "✅" : "⚠️";
-          div.innerHTML = `<strong>${passed} [Round ${msg.data.round}]</strong> ${msg.data.question}<br/>
-                           <small>置信度: ${msg.data.validation.confidence || 0}%</small>
-                           <details><summary>SQL</summary><pre style="background:#f1f5f9;padding:4px;">${msg.data.sql}</pre></details>`;
+          div.className = "result-item";
+          const passed = msg.data.validation.passed;
+          const badgeClass = passed ? "badge-success" : "badge-warning";
+          const badgeText = passed ? "通过" : "未通过";
+          
+          div.innerHTML = `
+            <div class="result-header">
+              <span class="badge ${badgeClass}">${badgeText} [Round ${msg.data.round}]</span>
+              <small style="color: var(--text-secondary)">置信度: ${msg.data.validation.confidence || 0}%</small>
+            </div>
+            <div style="margin-bottom: 0.5rem; font-weight: 500;">${msg.data.question}</div>
+            <details>
+              <summary style="font-size: 0.9rem; color: var(--primary-color);">查看 SQL</summary>
+              <pre style="background: var(--bg-color); padding: 0.75rem; border-radius: 6px; margin-top: 0.5rem; overflow-x: auto;">${msg.data.sql}</pre>
+            </details>
+          `;
           container.appendChild(div);
+          // Optional: scroll to new result if needed, but might be annoying in batch
         } else if (msg.type === "done") {
           document.getElementById("status-text").innerText = "处理完成";
           const resultSection = document.getElementById("final-result-section");
@@ -286,18 +557,24 @@
           const res = msg.result;
           if (res.mode === "batch") {
              resultContent.innerHTML = `
-               <p>已处理 ${res.summary.processed_count} / ${res.summary.total_questions}</p>
-               <div class="download-links">
-                 <a href="/download?path=${res.output_file}" target="_blank">下载结果 Excel</a>
-                 <a href="/download?path=${res.validation_file}" target="_blank">下载验证详情</a>
+               <div style="text-align: center; padding: 2rem;">
+                 <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">已成功处理 ${res.summary.processed_count} / ${res.summary.total_questions} 个问题</p>
+                 <div class="download-links">
+                   <a href="/download?path=${res.output_file}" target="_blank">📥 下载结果 Excel</a>
+                   <a href="/download?path=${res.validation_file}" target="_blank">📥 下载验证详情</a>
+                 </div>
                </div>`;
           } else {
              resultContent.innerHTML = `
-               <p><strong>SQL:</strong></p>
+               <p><strong>生成的 SQL:</strong></p>
                <pre class="result-box">${res.sql}</pre>
-               <p>置信度: ${res.confidence}</p>`;
+               <p style="margin-top: 1rem;"><strong>置信度:</strong> <span class="badge ${res.confidence >= 80 ? 'badge-success' : 'badge-warning'}">${res.confidence}%</span></p>`;
           }
           ws.close();
+          
+          // Auto-scroll to final result
+          setTimeout(() => scrollToElement("final-result-section"), 100);
+          
         } else if (msg.type === "error") {
           alert("错误: " + msg.content);
           ws.close();

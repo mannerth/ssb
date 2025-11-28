@@ -38,10 +38,7 @@ pip install -r requirements.txt
 
 #### 方式一：启动 Web 界面 (推荐)
 
-```bash
-python src/app_gui.py
-```
-启动后，访问浏览器 `http://127.0.0.1:8000` 即可使用。
+启动后，访问浏览器 `http://localhost:8000` 即可使用。
 
 #### 方式二：命令行运行 (批量处理)
 
@@ -49,12 +46,6 @@ python src/app_gui.py
 
 ```bash
 python src/main.py
-```
-
-#### 方式三：Docker 部署
-
-```bash
-docker-compose up -d
 ```
 
 ## 📂 项目结构

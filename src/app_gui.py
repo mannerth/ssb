@@ -478,4 +478,6 @@ async def download(path: str):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("src.app_gui:app", host="127.0.0.1", port=int(os.getenv("PORT", 8000)), reload=True)
+    port = int(os.getenv("PORT", 8000))
+    print(f"访问http://localhost:{port}")
+    uvicorn.run("src.app_gui:app", host="0.0.0.0", port=port, reload=True)

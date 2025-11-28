@@ -16,5 +16,14 @@ COPY src/ ./src/
 COPY config/ ./config/
 COPY data/ ./data/
 
+# Create logs directory
+RUN mkdir -p logs
+
+# Set PYTHONPATH
+ENV PYTHONPATH=/app
+
+# Expose the port
+EXPOSE 8000
+
 # Command to run the application
 CMD ["python", "src/app_gui.py"]
