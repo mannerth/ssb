@@ -9,8 +9,8 @@ from openpyxl.utils import get_column_letter
 import logging
 
 training_file_path = "算法训练集（75道问题及sql语句）.xlsx"
-DEEPSEEK_MODEL = "DeepSeek-V3"
-#DEEPSEEK_MODEL = "deepseek-chat"
+# DEEPSEEK_MODEL = "DeepSeek-V3"
+DEEPSEEK_MODEL = "deepseek-chat"
 
 class DeepSeekTextToSQL:
     def __init__(self, api_key, config_dir="config", base_url="https://api.deepseek.com/v1"):
@@ -706,10 +706,10 @@ class DeepSeekTextToSQL:
 # 使用示例
 def main():
     # 初始化配置
-    #API_KEY = "sk-ccaa87bceda64383a44a36bd0c60c32b"  # DeepSeek API Key
+    API_KEY = "sk-ccaa87bceda64383a44a36bd0c60c32b"  # DeepSeek API Key
 
-    API_KEY = "82dbf778c5834eecad2bb21c1df632f9"    #平台api key
-    DEEPSEEK_BASE_URL = "https://www.ssfssp.com:8888/ssp/openApi/GkfFhhUy/kvshB4Rh/LNslKxsF/v1"
+    # API_KEY = "82dbf778c5834eecad2bb21c1df632f9"    #平台api key
+    # DEEPSEEK_BASE_URL = "https://www.ssfssp.com:8888/ssp/openApi/GkfFhhUy/kvshB4Rh/LNslKxsF/v1"
 
     CONFIG_DIR = "config"  # 配置文件目录
 
@@ -718,11 +718,11 @@ def main():
         print(f"配置目录 '{CONFIG_DIR}' 不存在，请创建并添加配置文件")
         return
 
-    text_to_sql = DeepSeekTextToSQL(API_KEY, CONFIG_DIR, DEEPSEEK_BASE_URL)
+    text_to_sql = DeepSeekTextToSQL(API_KEY, CONFIG_DIR)
 
     # 设置验证参数（可选）
     text_to_sql.set_validation_parameters(
-        confidence_threshold=70,  # 置信度阈值
+        confidence_threshold=65,  # 置信度阈值
         max_retry_rounds=20  # 最大重试轮数
     )
 
