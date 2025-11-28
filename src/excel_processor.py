@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, Optional
+from typing import Dict, Optional, Callable
 
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
@@ -36,6 +36,7 @@ class ExcelProcessor:
         output_col: int,
         num_questions: int,
         sheet_name: Optional[str] = None,
+        progress_callback: Optional[Callable[[int, int], None]] = None,
     ) -> Dict:
         workbook = load_workbook(file_path)
         worksheet = workbook[sheet_name] if sheet_name else workbook.active
@@ -48,6 +49,9 @@ class ExcelProcessor:
         processed = 0
         errors = []
         for idx in range(num_questions):
+            if progress_callback:
+                progress_callback(idx, num_questions)
+            
             row = start_row + idx
             question_cell = worksheet.cell(row=row, column=start_col)
             question = (question_cell.value or "").strip()
@@ -72,6 +76,10 @@ class ExcelProcessor:
                 errors.append(error_msg)
                 worksheet.cell(row=row, column=output_col).value = f"ERROR: {exc}"
                 self.logger.error(error_msg)
+        
+        if progress_callback:
+            progress_callback(num_questions, num_questions)
+
         if stats["total_questions"]:
             stats["average_confidence"] /= stats["total_questions"]
         output_file = file_path.replace(".xlsx", "_with_sql.xlsx")

@@ -171,12 +171,15 @@ def setup_logging(
         format_string=format_string,
     )
     base_logger = _global_log_manager.get_logger()
-    base_logger.propagate = False
+    # base_logger.propagate = False  # Allow propagation to root if needed, or handle root explicitly
+    
+    # Configure root logger to capture everything
     root_logger = logging.getLogger()
     root_logger.handlers.clear()
     for handler in base_logger.handlers:
         root_logger.addHandler(handler)
     root_logger.setLevel(base_logger.level)
+    
     return _global_log_manager
 
 

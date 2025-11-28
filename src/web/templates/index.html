@@ -138,51 +138,30 @@
     </form>
   </section>
 
-  {% if status_updates %}
-  <section>
-    <h2>环节进度</h2>
-    <ul class="status-list">
-      {% for item in status_updates %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
+  <section id="progress-section" style="display:none;">
+    <h2>处理进度</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <div id="status-text" style="font-weight: bold; color: #1f4d8f;">准备就绪</div>
+        <div id="progress-count" style="font-weight: bold; color: #333;"></div>
+    </div>
+    <div id="progress-bar-container" style="width: 100%; background: #e2e8f0; border-radius: 4px; height: 20px; margin-bottom: 10px; display: none;">
+      <div id="progress-bar" style="width: 0%; height: 100%; background: #1f4d8f; border-radius: 4px; transition: width 0.3s;"></div>
+    </div>
+    <div id="results-container">
+      <!-- Dynamic results will appear here -->
+    </div>
   </section>
-  {% endif %}
 
-  {% if result %}
-  <section>
-    <h2>处理结果</h2>
-    {% if result.mode == "single" %}
-      <p><strong>问题：</strong>{{ result.question }}</p>
-      <p><strong>置信度：</strong>{{ result.confidence or "N/A" }}</p>
-      <div class="result-box">{{ result.sql }}</div>
-    {% else %}
-      <p>已处理 {{ result.summary.processed_count }} / {{ result.summary.total_questions }} 个问题。</p>
-      <p>平均置信度：{{ result.summary.validation_stats.average_confidence | round(2) }}</p>
-      <div class="download-links">
-        <a href="{{ request.url_for('download', path=result.output_file) }}" target="_blank">下载带 SQL 的 Excel</a>
-        <a href="{{ request.url_for('download', path=result.validation_file) }}" target="_blank">下载验证详情</a>
-      </div>
-      {% if result.summary.errors %}
-        <details>
-          <summary>错误详情</summary>
-          <ul>
-            {% for err in result.summary.errors %}
-            <li>{{ err }}</li>
-            {% endfor %}
-          </ul>
-        </details>
-      {% endif %}
-    {% endif %}
-  </section>
-  {% endif %}
-
-  {% if logs %}
-  <section>
+  <section id="logs-section" style="display:none;">
     <h2>运行日志</h2>
-    <textarea class="logs" readonly>{{ "\n".join(logs) }}</textarea>
+    <textarea class="logs" id="logs-area" readonly></textarea>
   </section>
-  {% endif %}
+
+  <section id="final-result-section" style="display:none;">
+    <h2>最终结果</h2>
+    <div id="final-result-content"></div>
+  </section>
+
 </main>
 
 <div class="spinner-overlay" id="loadingSpinner">
@@ -197,6 +176,7 @@
     single.style.display = mode === "single" ? "block" : "none";
     batch.style.display = mode === "batch" ? "block" : "none";
   }
+
   document.addEventListener("DOMContentLoaded", () => {
     const radios = document.querySelectorAll('input[name="mode"]');
     radios.forEach(r => r.addEventListener("change", e => toggleMode(e.target.value)));
@@ -204,8 +184,130 @@
     toggleMode(initial);
 
     const form = document.querySelector("form");
-    form.addEventListener("submit", () => {
-      document.getElementById("loadingSpinner").style.display = "flex";
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      // Reset UI
+      document.getElementById("progress-section").style.display = "block";
+      document.getElementById("logs-section").style.display = "block";
+      document.getElementById("final-result-section").style.display = "none";
+      document.getElementById("results-container").innerHTML = "";
+      document.getElementById("logs-area").value = "";
+      document.getElementById("status-text").innerText = "正在初始化...";
+      document.getElementById("progress-bar-container").style.display = "none";
+      document.getElementById("progress-bar").style.width = "0%";
+      document.getElementById("progress-count").innerText = "";
+      
+      const formData = new FormData(form);
+      const mode = formData.get("mode");
+      const settings = {};
+      
+      // Convert FormData to object for settings
+      for (let [key, value] of formData.entries()) {
+        if (key.includes(".")) {
+           // Handle nested keys if needed, or just pass flat
+           settings[key] = value;
+        } else {
+           settings[key] = value;
+        }
+      }
+
+      let filePath = "";
+      
+      if (mode === "batch") {
+        const fileInput = document.querySelector('input[name="excel_file"]');
+        if (fileInput.files.length > 0) {
+           const uploadData = new FormData();
+           uploadData.append("file", fileInput.files[0]);
+           
+           try {
+             document.getElementById("status-text").innerText = "正在上传文件...";
+             const resp = await fetch("/upload", { method: "POST", body: uploadData });
+             if (!resp.ok) throw new Error("Upload failed");
+             const json = await resp.json();
+             filePath = json.file_path;
+             settings["excel.file_path"] = filePath; // Override path
+           } catch (err) {
+             alert("文件上传失败: " + err.message);
+             return;
+           }
+        } else {
+            alert("请选择 Excel 文件");
+            return;
+        }
+      }
+
+      // Connect WebSocket
+      const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+      const ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
+      
+      ws.onopen = () => {
+        document.getElementById("status-text").innerText = "已连接，开始处理...";
+        ws.send(JSON.stringify({
+          action: "start",
+          mode: mode,
+          question: formData.get("question"),
+          settings: settings
+        }));
+      };
+      
+      ws.onmessage = (event) => {
+        const msg = JSON.parse(event.data);
+        if (msg.type === "log") {
+          const logsArea = document.getElementById("logs-area");
+          logsArea.value += msg.content + "\n";
+          logsArea.scrollTop = logsArea.scrollHeight;
+        } else if (msg.type === "status") {
+          document.getElementById("status-text").innerText = msg.content;
+        } else if (msg.type === "progress") {
+          const { current, total } = msg.content;
+          const percent = Math.round((current / total) * 100);
+          const barContainer = document.getElementById("progress-bar-container");
+          const bar = document.getElementById("progress-bar");
+          barContainer.style.display = "block";
+          bar.style.width = percent + "%";
+          document.getElementById("progress-count").innerText = `已处理: ${current} / ${total} (${percent}%)`;
+        } else if (msg.type === "row_result") {
+          const container = document.getElementById("results-container");
+          const div = document.createElement("div");
+          div.style.borderBottom = "1px solid #eee";
+          div.style.padding = "8px 0";
+          const passed = msg.data.validation.passed ? "✅" : "⚠️";
+          div.innerHTML = `<strong>${passed} [Round ${msg.data.round}]</strong> ${msg.data.question}<br/>
+                           <small>置信度: ${msg.data.validation.confidence || 0}%</small>
+                           <details><summary>SQL</summary><pre style="background:#f1f5f9;padding:4px;">${msg.data.sql}</pre></details>`;
+          container.appendChild(div);
+        } else if (msg.type === "done") {
+          document.getElementById("status-text").innerText = "处理完成";
+          const resultSection = document.getElementById("final-result-section");
+          const resultContent = document.getElementById("final-result-content");
+          resultSection.style.display = "block";
+          
+          const res = msg.result;
+          if (res.mode === "batch") {
+             resultContent.innerHTML = `
+               <p>已处理 ${res.summary.processed_count} / ${res.summary.total_questions}</p>
+               <div class="download-links">
+                 <a href="/download?path=${res.output_file}" target="_blank">下载结果 Excel</a>
+                 <a href="/download?path=${res.validation_file}" target="_blank">下载验证详情</a>
+               </div>`;
+          } else {
+             resultContent.innerHTML = `
+               <p><strong>SQL:</strong></p>
+               <pre class="result-box">${res.sql}</pre>
+               <p>置信度: ${res.confidence}</p>`;
+          }
+          ws.close();
+        } else if (msg.type === "error") {
+          alert("错误: " + msg.content);
+          ws.close();
+        }
+      };
+      
+      ws.onerror = (err) => {
+        console.error("WebSocket error", err);
+        document.getElementById("status-text").innerText = "连接发生错误";
+      };
     });
   });
 </script>

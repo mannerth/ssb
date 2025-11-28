@@ -1,0 +1,54 @@
+2025-11-28 21:01:59,166 - src.excel_processor - INFO - excel_processor.py:57 - 处理第2行问题: 豪门又一城站的换热站ID是多少？
+2025-11-28 21:01:59,166 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的换热站ID是多少？
+2025-11-28 21:02:01,670 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:16,647 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站ID是多少？》- 第 1 轮生成与验证
+2025-11-28 21:02:16,868 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:19,211 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:24,328 - src.workflow - INFO - workflow.py:144 - 评估置信度: 95, 当前重试轮数: 1/2
+2025-11-28 21:02:24,328 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT stn_id FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-28 21:02:24,329 - src.excel_processor - INFO - excel_processor.py:57 - 处理第3行问题: 豪门又一城站的换热站编码是多少？
+2025-11-28 21:02:24,329 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的换热站编码是多少？
+2025-11-28 21:02:24,405 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:40,869 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站编码是多少？》- 第 1 轮生成与验证
+2025-11-28 21:02:41,060 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:43,250 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:02:48,298 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 21:02:48,298 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT heatstation_code FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 21:02:48,299 - src.excel_processor - INFO - excel_processor.py:57 - 处理第4行问题: 豪门又一城站的换热站状态是什么？
+2025-11-28 21:02:48,300 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的换热站状态是什么？
+2025-11-28 21:02:48,413 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:07,190 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的换热站状态是什么？》- 第 1 轮生成与验证
+2025-11-28 21:03:07,351 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:09,803 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:13,816 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 21:03:13,816 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT stn_state FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 21:03:13,817 - src.excel_processor - INFO - excel_processor.py:57 - 处理第5行问题: 豪门又一城站的机组数量是多少？
+2025-11-28 21:03:13,817 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的机组数量是多少？
+2025-11-28 21:03:13,901 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:28,092 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的机组数量是多少？》- 第 1 轮生成与验证
+2025-11-28 21:03:28,293 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:31,460 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:36,362 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 21:03:36,363 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT plan_num FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 21:03:36,363 - src.excel_processor - INFO - excel_processor.py:57 - 处理第6行问题: 豪门又一城站的站点性质是什么？
+2025-11-28 21:03:36,364 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的站点性质是什么？
+2025-11-28 21:03:36,443 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:54,121 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的站点性质是什么？》- 第 1 轮生成与验证
+2025-11-28 21:03:54,301 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:03:57,762 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:02,130 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 21:04:02,132 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT build_type FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name LIKE '%豪门又一城%';
+2025-11-28 21:04:02,132 - src.excel_processor - INFO - excel_processor.py:57 - 处理第7行问题: 豪门又一城站2024-2025供暖季的建筑面积是多少？
+2025-11-28 21:04:02,132 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站2024-2025供暖季的建筑面积是多少？
+2025-11-28 21:04:02,223 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:18,931 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站2024-2025供暖季的建筑面积是多少？》- 第 1 轮生成与验证
+2025-11-28 21:04:19,097 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:22,125 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:28,222 - src.workflow - INFO - workflow.py:144 - 评估置信度: 90, 当前重试轮数: 1/2
+2025-11-28 21:04:28,222 - src.workflow - INFO - workflow.py:152 - 采纳SQL: SELECT heat_area FROM ods_sc01_ntjt_zhgr_heat_station_info WHERE stn_name = '豪门又一城站';
+2025-11-28 21:04:28,223 - src.excel_processor - INFO - excel_processor.py:57 - 处理第8行问题: 豪门又一城站的热源数量是多少？
+2025-11-28 21:04:28,223 - src.excel_processor - INFO - excel_processor.py:17 - 处理单个问题: 豪门又一城站的热源数量是多少？
+2025-11-28 21:04:28,309 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:49,170 - src.workflow - INFO - workflow.py:130 - 问题《豪门又一城站的热源数量是多少？》- 第 1 轮生成与验证
+2025-11-28 21:04:49,361 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:04:52,138 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
